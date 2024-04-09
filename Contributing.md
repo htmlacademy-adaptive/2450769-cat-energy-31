@@ -32,7 +32,7 @@ git clone git@github.com:htmlacademy-adaptive/2450769-cat-energy-31.git
 3. Когда обновишь `master`, создай и перейди в ветку нового задания:
 
 	```shell
-	git switch -с <имя_новой_ветки>
+	git switch -c <имя_новой_ветки>
 	```
 
 ---
