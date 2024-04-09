@@ -3,7 +3,7 @@
 [![Project check][check-image]][check-url]
 
 * Студент: [Андрей Катасонов](https://up.htmlacademy.ru/adaptive/31/user/2450769).
-* Наставник: `Неизвестно`.
+* Наставник: `Сергей Артёмов`.
 
 ---
 
