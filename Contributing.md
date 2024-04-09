@@ -29,13 +29,7 @@ git clone git@github.com:htmlacademy-adaptive/2450769-cat-energy-31.git
 	git pull origin master
 	```
 
-3. Отправь изменения в форк на Гитхабе
-
-	```shell
-	git push
-	```
-
-4. Когда обновишь `master`, создай и перейди в ветку нового задания:
+3. Когда обновишь `master`, создай и перейди в ветку нового задания:
 
 	```shell
 	git switch -с <имя_новой_ветки>
