@@ -1,0 +1,8 @@
+node_modules
+build
+.idea
+.DS_Store
+source/**/*.jpg
+source/**/*.jpeg
+source/**/*.png
+!source/favicons/**/*.png
