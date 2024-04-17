@@ -1,27 +1,10 @@
-<!DOCTYPE html>
-<html class="page" lang="ru">
+{% extends "./templates/layout.njk" %}
 
-<head>
-	<meta charset="UTF-8">
-	<title>404</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="styles/styles.css">
-	<script src="scripts/index.js" defer></script>
-</head>
+{% block main %}
+<main class="main-container">
 
-<body class="page__body">
+	<h1>404</h1>
+	<p>Страница не найдена. <a href="/">Перейти на главную</a>.</p>
 
-	{% include "./templates/header.njk" %}
-
-	<main class="main-container">
-
-		<h1>404</h1>
-		<p>Страница не найдена. <a href="/">Перейти на главную</a>.</p>
-
-	</main>
-
-	{% include "./templates/footer.njk" %}
-
-</body>
-
-</html>
+</main>
+{% endblock %}
