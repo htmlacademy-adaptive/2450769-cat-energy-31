@@ -3,13 +3,27 @@ import js from "@eslint/js"
 import stylisticJs from "@stylistic/eslint-plugin-js"
 
 export default [
-	js.configs.recommended,
 	{
+		files: [`source/**/*.js`],
 		languageOptions: {
 			globals: {
-				...globals.nodeBuildIn,
+				...globals.browser,
 			},
 		},
+	},
+	{
+		ignores: [`source/**/*.js`],
+		languageOptions: {
+			globals: {
+				...globals.nodeBuiltin,
+			},
+		},
+	},
+	{
+		ignores: [`source/vendor/`, `build/`],
+	},
+	js.configs.recommended,
+	{
 		rules: {
 			"accessor-pairs": `error`,
 			"arrow-body-style": [
