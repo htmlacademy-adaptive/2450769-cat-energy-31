@@ -1,5 +1,21 @@
 {
 	"project": {
 		"name": "Cat Energy"
-	}
+	},
+	"navLinks": [
+		{
+			"text": "Главная",
+			"path": "/"
+		},
+		{
+			"text": "Каталог продукции",
+			"path": "/catalog"
+		},
+		{
+			"text": "Подбор программы",
+			"path": "/form"
+		}
+	],
+	"socialLinks": [],
+	"products": []
 }
