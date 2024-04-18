@@ -1,24 +1,26 @@
-<header class="main-header">
-	<a class="main-header__logo logo" href="index.html">
-		<div class="logo__image">Изображения логотипа</div>
-		<div class="logo__text">Кэт энерджи</div>
-	</a>
-	<nav class="main-header__nav main-nav">
-		<button class="main-nav__toggle" type="button">
-			<span class="visually-hidden">Открыть меню</span>
-		</button>
-		<div class="main-nav__wrapper">
-			<ul class="main-nav__list nav-list">
-				<li class="nav-list__item">
-					<a class="nav-list__link" href="index.html">Главная</a>
-				</li>
-				<li class="nav-list__item">
-					<a class="nav-list__link" href="catalog.html">Каталог продукции</a>
-				</li>
-				<li class="nav-list__item">
-					<a class="nav-list__link" href="form.html">Подбор программы</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-</header>
+{% macro header() %}
+	<header class="main-header">
+		<a class="main-header__logo logo" href={{ project.root ~ "/" }}>
+			<div class="logo__image">Изображения логотипа</div>
+			<div class="logo__text">Кэт энерджи</div>
+		</a>
+		<nav class="main-header__nav main-nav">
+			<button class="main-nav__toggle" type="button">
+				<span class="visually-hidden">Открыть меню</span>
+			</button>
+			<div class="main-nav__wrapper">
+				<ul class="main-nav__list nav-list">
+					<li class="nav-list__item">
+						<a class="nav-list__link" href={{ project.root ~ "/" }}>Главная</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link" href={{ project.root ~ "/catalog" }}>Каталог продукции</a>
+					</li>
+					<li class="nav-list__item">
+						<a class="nav-list__link" href={{ project.root ~ "/form" }}>Подбор программы</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+{% endmacro %}

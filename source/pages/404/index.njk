@@ -1,0 +1,16 @@
+{%- extends "./layouts/base.njk" -%}
+
+{%- set page = {
+	title: "404",
+	link: "/404",
+	lang: "ru"
+} -%}
+
+{% block main %}
+<main class="main-container">
+
+	<h1>404</h1>
+	<p>Страница не найдена. <a href={{ project.root ~ "/" }}>Перейти на главную</a>.</p>
+
+</main>
+{% endblock %}

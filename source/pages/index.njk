@@ -1,4 +1,12 @@
-{% extends "./templates/layout.njk" %}
+{%- extends "./layouts/base.njk" -%}
+
+{%- from "./templates/contacts.njk" import contacts with context -%}
+
+{%- set page = {
+	title: "Главная",
+	link: "/",
+	lang: "ru"
+} -%}
 
 {% block main %}
 <main class="main-container">
@@ -64,7 +72,7 @@
 		<div class="example__slider"></div>
 	</section>
 
-	{% include "./templates/contacts.njk" %}
+	{{ contacts() }}
 
 </main>
 

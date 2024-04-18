@@ -54,10 +54,13 @@ export async function processMarkup () {
 
 	data.project.root = getProjectRoot()
 
-	return src(`${PATH_TO_SOURCE}**/*.html`)
+	return src(`${PATH_TO_SOURCE}pages/**/*.njk`, { base: PATH_TO_SOURCE })
 		.pipe(plumber(plumberOptions))
 		.pipe(nunjucksCompile(data))
 		.pipe(htmlmin({ collapseWhitespace: !IS_DEVELOPMENT }))
+		.pipe(rename((path) => {
+			path.dirname = path.dirname.replace(`pages`, ``)
+		}))
 		.pipe(dest(PATH_TO_DIST))
 		.pipe(server.stream())
 }
@@ -127,14 +130,14 @@ export function startServer () {
 		ui: false,
 	}, (err, bs) => {
 		bs.addMiddleware(`*`, async (req, res) => {
-			res.write(await readFile(`${PATH_TO_DIST}404.html`))
+			res.write(await readFile(`${PATH_TO_DIST}404/index.html`))
 			res.end()
 		})
 	})
 
-	watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup))
-	watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles))
-	watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts))
+	watch(`${PATH_TO_SOURCE}**/*.njk`, series(processMarkup))
+	watch(`${PATH_TO_SOURCE}**/*.scss`, series(processStyles))
+	watch(`${PATH_TO_SOURCE}**/*.js`, series(processScripts))
 	watch(`${PATH_TO_SOURCE}icons/**/*.svg`, series(createStack, reload))
 	watch(PATHS_TO_STATIC, series(reload))
 }
