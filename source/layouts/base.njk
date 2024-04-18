@@ -1,5 +1,5 @@
 {%- from "../templates/header.njk" import header with context -%}
-{%- from "../templates/header.njk" import header with context -%}
+{%- from "../templates/footer.njk" import footer with context -%}
 
 <!DOCTYPE html>
 <html class="page" lang={{ page.lang }}>
@@ -18,7 +18,7 @@
 
 	{% block main %}{% endblock %}
 
-	{{ header() }}
+	{{ footer() }}
 
 </body>
 
