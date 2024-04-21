@@ -18,31 +18,74 @@
 	],
 	"socialLinks": [
 		{
-			"text": "Мы в Вконтакте",
+			"text": "Мы в Вконтакте",
 			"path": "https://vk.com/htmlacademy"
 		},
 		{
-			"text": "Мы в Ютубе",
+			"text": "Мы в Ютубе",
 			"path": "https://www.youtube.com/user/htmlacademyru"
 		},
 		{
-			"text": "Мы в Телеграме",
+			"text": "Мы в Телеграме",
 			"path": "https://t.me/htmlacademy"
 		}
 	],
-	"productSpecific": [
+	"productCards": [
 		{
-			"description": "Масса",
-			"value": "500 г"
+			"name": "Cat Energy Pro",
+			"weight": "500 г",
+			"taste": "Курица",
+			"price": "700 ₽",
+			"image": "pro-chicken-500",
+			"alt": "Маленькая банка корма со вкусом курицы"
 		},
 		{
-			"description": "Вкус",
-			"value": "Курица"
+			"name": "Cat Energy Pro",
+			"weight": "1000 г",
+			"taste": "Курица",
+			"price": "1000 ₽",
+			"image": "pro-chicken-1000",
+			"alt": "Большая банка корма со вкусом курицы"
 		},
 		{
-			"description": "Цена",
-			"value": "700 ₽"
+			"name": "Cat Energy Pro",
+			"weight": "500 г",
+			"taste": "Рыба",
+			"price": "700 ₽",
+			"image": "pro-fish-500",
+			"alt": "Маленькая банка корма со вкусом рыбы"
+		},
+		{
+			"name": "Cat Energy Pro",
+			"weight": "1000 г",
+			"taste": "Рыба",
+			"price": "1000 ₽",
+			"image": "pro-fish-1000",
+			"alt": "Большая банка корма со вкусом рыбы"
+		},
+		{
+			"name": "Cat Energy Slim",
+			"weight": "500 г",
+			"taste": "Гречка",
+			"price": "400 ₽",
+			"image": "pro-buckwheat-500",
+			"alt": "Маленькая банка корма со вкусом гречки"
+		},
+		{
+			"name": "Cat Energy Slim",
+			"weight": "1000 г",
+			"taste": "Гречка",
+			"price": "700 ₽",
+			"image": "pro-buckwheat-1000",
+			"alt": "Большая банка корма со вкусом гречки"
+		},
+		{
+			"name": "Cat Energy Slim",
+			"weight": "500 г",
+			"taste": "Рис",
+			"price": "500 ₽",
+			"image": "pro-rice-500",
+			"alt": "Маленькая банка корма со вкусом риса"
 		}
-	],
-	"productCard": []
+	]
 }
