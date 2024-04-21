@@ -4,21 +4,13 @@
 			<div class="logo__text">Кэт энерджи</div>
 		</a>
 		<ul class="main-footer__social social">
+			{% for link in socialLinks %}
 			<li class="social__item">
-				<a class="social__link" href="https://vk.com/htmlacademy">
-					<span class="visually-hidden">Мы в Вконтакте</span>
+				<a class="social__link" href={{ link.path }}>
+					<span class="visually-hidden">{{ link.text }}</span>
 				</a>
 			</li>
-			<li class="social__item">
-				<a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
-					<span class="visually-hidden">Мы в Ютубе</span>
-				</a>
-			</li>
-			<li class="social__item">
-				<a class="social__link" href="https://t.me/htmlacademy">
-					<span class="visually-hidden">Мы в Телеграме</span>
-				</a>
-			</li>
+			{%endfor%}
 		</ul>
 		<div class="main-footer__copyright copyright">
 			<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">

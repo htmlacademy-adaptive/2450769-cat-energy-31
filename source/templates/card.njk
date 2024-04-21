@@ -1,0 +1,21 @@
+{% macro card(product, bemElem = "") %}
+	<article class="{{ bemElem }} card">
+		<h2 class="card__title">{{ product.name }} {{ product.weight }}</h2>
+		<dl class="card__specifications specifications">
+			<div class="specifications__item">
+				<dt class="specifications__description">Вес</dt>
+				<dd class="specifications__value">{{ product.weight }}</dd>
+			</div>
+			<div class="specifications__item">
+				<dt class="specifications__description">Вкус</dt>
+				<dd class="specifications__value">{{ product.taste }}</dd>
+			</div>
+			<div class="specifications__item">
+				<dt class="specifications__description">Цена</dt>
+				<dd class="specifications__value">{{ product.price }}</dd>
+			</div>
+		</dl>
+		<div class="card__image">{{ product.image }}</div>
+		<button class="card__button button" type="button">Заказать</button>
+	</article>
+{%endmacro%}
