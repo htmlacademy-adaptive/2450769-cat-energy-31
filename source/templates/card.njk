@@ -1,0 +1,17 @@
+{% macro product() %}
+<section class="main-container__products card-products">
+	<article class="card-products__item">
+		<h2 class="card-products__title">Cat Energy PRO 500 г</h2>
+		<dl class="card-products__specifications specifications">
+			<div class="specifications__item">
+				{% for link in productSpecific %}
+				<dt class="specifications__description">{{ link.description }}</dt>
+				<dd class="specifications__value">{{ link.value}}</dd>
+				{%endfor%}
+			</div>
+		</dl>
+		<div class="card-products__imag"></div>
+		<button class="card-products__buy buy-button" type="button">Заказать</button>
+	</article>
+</section>
+{%endmacro%}

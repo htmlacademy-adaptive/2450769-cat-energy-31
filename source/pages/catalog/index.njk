@@ -1,0 +1,16 @@
+{%- extends "./layouts/base.njk" -%}
+
+{%- set page = {
+	title: "Каталог продукции",
+	link: "/catalog",
+	lang: "ru"
+} -%}
+
+{% block main %}
+<main class="main-container">
+
+	<h1>{{ page.title }}</h1>
+	{%- from "/source/templates/card" import product with context -%}
+
+</main>
+{% endblock %}

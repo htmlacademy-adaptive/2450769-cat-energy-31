@@ -16,6 +16,33 @@
 			"path": "/form"
 		}
 	],
-	"socialLinks": [],
-	"products": []
+	"socialLinks": [
+		{
+			"text": "Мы в Вконтакте",
+			"path": "https://vk.com/htmlacademy"
+		},
+		{
+			"text": "Мы в Ютубе",
+			"path": "https://www.youtube.com/user/htmlacademyru"
+		},
+		{
+			"text": "Мы в Телеграме",
+			"path": "https://t.me/htmlacademy"
+		}
+	],
+	"productSpecific": [
+		{
+			"description": "Масса",
+			"value": "500 г"
+		},
+		{
+			"description": "Вкус",
+			"value": "Курица"
+		},
+		{
+			"description": "Цена",
+			"value": "700 ₽"
+		}
+	],
+	"productCard": []
 }
