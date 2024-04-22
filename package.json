@@ -6,11 +6,10 @@
 	"engines": {
 		"node": "^18.18 || ^20.9"
 	},
-	"packageManager": "pnpm@9.0.1",
+	"packageManager": "pnpm@9.0.4",
 	"browserslist": [
 		"last 2 versions",
 		"not dead",
-		"not op_mini all",
 		"not and_uc > 0",
 		"not < 0.2%"
 	],
@@ -32,15 +31,15 @@
 	},
 	"devDependencies": {
 		"@csstools/postcss-sass": "^5.1.1",
-		"@eslint/js": "^9.0.0",
-		"@firefoxic/conjure": "^0.1.2",
+		"@eslint/js": "^9.1.1",
+		"@firefoxic/conjure": "^1.0.0",
 		"@htmlacademy/editorconfig-cli": "^3.0.0",
 		"@linthtml/linthtml": "^0.9.6",
 		"@stylistic/eslint-plugin-js": "^1.7.2",
 		"@stylistic/stylelint-plugin": "^2.1.1",
 		"browser-sync": "^3.0.2",
 		"browserslist-to-esbuild": "^2.1.1",
-		"eslint": "^9.0.0",
+		"eslint": "^9.1.0",
 		"globals": "^15.0.0",
 		"gulp": "^5.0.0",
 		"gulp-esbuild": "^0.12.0",

@@ -7,10 +7,10 @@
 	└── favicons/
 		├── favicon-180.png   # для старых iPhone
 		├── favicon-192.png
+		├── favicon-192.webp
 		├── favicon-512.png
+		├── favicon-512.webp
 		└── favicon.svg
 ```
 
-Для их генерации сюда нужно положить svg-фавиконку и запустить команду `pnpm optimize:favicons`.
-
-Кроме этих файлов также будут сгенерированы ещё два: `favicon.ico` и `favicon.webmanifest` — их нужно переместить в `source/` (то есть в корень исходников), переименовать манифест в `site.webmanifest` или `manifest.webmanifest`.
+Для их генерации сюда нужно положить svg-файлы фавиконкок из макета (`touch.svg`, `32.svg` и если есть `16.svg`) и запустить команду `pnpm optimize:favicons`. Подробности в [Workflow.md](./Workflow.md#Фавиконки).
