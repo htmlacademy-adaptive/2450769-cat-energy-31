@@ -25,6 +25,9 @@ lang: "ru"
 			<div class="card__image"></div>
 			<a class="card__button button" href="#">Показать все</a>
 		</article>
+		{% for additionalProduct in additionalProduct %}
+		{{ additional(additionalProduct) }}
+		{% endfor %}
 	</section>
 
 </main>
