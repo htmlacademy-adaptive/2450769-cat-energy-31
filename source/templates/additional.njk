@@ -1,0 +1,10 @@
+{% macro additional() %}
+<article class="products__additional additional">
+	<h2 class="additional__title">{{ additionalProduct.name }}</h2>
+	<dl class="additional__definition definition">
+		<dt class="definition__package">{{ additionalProduct.package }}</dt>
+		<dd class="definition__price">{{ additionalProduct.price }}</dd>
+	</dl>
+	<a class="additional__button button" href="#">Заказать</a>
+</article>
+{%endmacro%}

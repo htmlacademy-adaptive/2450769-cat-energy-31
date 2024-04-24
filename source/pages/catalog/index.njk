@@ -1,11 +1,12 @@
 {%- extends "./layouts/base.njk" -%}
 
 {%- from "./templates/card.njk" import card with context -%}
+{%- from "./templates/additional.njk" import additional with context -%}
 
 {%- set page = {
-	title: "Каталог продукции",
-	link: "/catalog",
-	lang: "ru"
+title: "Каталог продукции",
+link: "/catalog",
+lang: "ru"
 } -%}
 
 {% block main %}
