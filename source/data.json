@@ -30,7 +30,7 @@
 			"path": "https://t.me/htmlacademy"
 		}
 	],
-	"productCards": [
+	"mainProducts": [
 		{
 			"name": "Cat Energy Pro",
 			"weight": "500 г",
@@ -88,26 +88,28 @@
 			"alt": "Маленькая банка корма со вкусом риса"
 		}
 	],
-	"additionalProduct": [
+	"additionalProducts": [
 		{
 			"name": "Сахарозаменитель",
-			"package": "1 упаковка (100 г)",
-			"price": "200 ₽"
+			"package": "1 упаковка",
+			"weight": "100 г",
+			"price": "200 ₽"
 		},
 		{
-			"name": " Питьевая вода",
-			"package": "5 литров",
-			"price": "50 ₽"
+			"name": "Питьевая вода",
+			"package": "5 литров",
+			"price": "50 ₽"
 		},
 		{
 			"name": "Молоко",
-			"package": "1 литр",
-			"price": "100 ₽"
+			"package": "1 литр",
+			"price": "100 ₽"
 		},
 		{
 			"name": "Витамины",
-			"package": "1 упаковка (30 г)",
-			"price": "300 ₽"
+			"package": "1 упаковка",
+			"weight": "30 г",
+			"price": "300 ₽"
 		}
 	]
 }

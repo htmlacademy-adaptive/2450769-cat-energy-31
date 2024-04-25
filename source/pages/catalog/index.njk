@@ -1,12 +1,11 @@
 {%- extends "./layouts/base.njk" -%}
 
-{%- from "./templates/card.njk" import card with context -%}
-{%- from "./templates/additional.njk" import additional with context -%}
+{%- from "./templates/cards.njk" import card, simpleCard with context -%}
 
 {%- set page = {
-title: "Каталог продукции",
-link: "/catalog",
-lang: "ru"
+	title: "Каталог продукции",
+	link: "/catalog",
+	lang: "ru"
 } -%}
 
 {% block main %}
@@ -16,7 +15,7 @@ lang: "ru"
 
 	<section class="main-container__products products">
 		<h2 class="products__title">Основные товары</h2>
-		{% for product in productCards %}
+		{% for product in mainProducts %}
 		{{ card(product, "products__item") }}
 		{% endfor %}
 		<article class="products__item card">
@@ -25,12 +24,12 @@ lang: "ru"
 			<div class="card__image"></div>
 			<a class="card__button button" href="#">Показать все</a>
 		</article>
-		{% for additionalProduct in additionalProduct %}
-		{{ additional(additionalProduct) }}
+		{% for product in additionalProducts %}
+		{{ simpleCard(product) }}
 		{% endfor %}
 		<div class="products__present present">
 			<div class="present__image"></div>
-			<div class="present__description">Закажите все и получите чехол для кота в подарок!</div>
+			<div class="present__description">Закажите все и получите чехол для кота в подарок!</div>
 		</div>
 	</section>
 
