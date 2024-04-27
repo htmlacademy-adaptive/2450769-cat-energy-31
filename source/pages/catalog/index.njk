@@ -3,9 +3,9 @@
 {%- from "./templates/cards.njk" import card, simpleCard with context -%}
 
 {%- set page = {
-	title: "Каталог продукции",
-	link: "/catalog",
-	lang: "ru"
+title: "Каталог продукции",
+link: "/catalog",
+lang: "ru"
 } -%}
 
 {% block main %}
@@ -20,12 +20,15 @@
 		{% endfor %}
 		<article class="products__item card">
 			<h2 class="card__title">Показать еще 100500 товаров</h2>
-			<div class="card__description">На самом деле вкусов гораздо больше!</div>
+			<div class="card__description">На самом деле вкусов гораздо больше!</div>
 			<div class="card__image"></div>
 			<a class="card__button button" href="#">Показать все</a>
 		</article>
 		{% for product in additionalProducts %}
 		{{ simpleCard(product) }}
+		<h2 class="products__additional-title">Дополнительные товары</h2>
+		{% for additionalProduct in additionalProduct %}
+		{{ additional(additionalProduct) }}
 		{% endfor %}
 		<div class="products__present present">
 			<div class="present__image"></div>
