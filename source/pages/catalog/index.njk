@@ -24,7 +24,9 @@ lang: "ru"
 			<div class="card__image"></div>
 			<a class="card__button button" href="#">Показать все</a>
 		</article>
-		<h2 class="products__additional-title">Дополнительные товары</h2>
+	</section>
+	<section class="main-container__additional additional">
+		<h2 class="additional__title">Дополнительные товары</h2>
 		{% for product in additionalProducts %}
 		{{ simpleCard(product) }}
 		{% endfor %}
