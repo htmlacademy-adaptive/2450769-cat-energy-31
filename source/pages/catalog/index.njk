@@ -24,12 +24,9 @@ lang: "ru"
 			<div class="card__image"></div>
 			<a class="card__button button" href="#">Показать все</a>
 		</article>
+		<h2 class="products__additional-title">Дополнительные товары</h2>
 		{% for product in additionalProducts %}
 		{{ simpleCard(product) }}
-		<h2 class="products__additional-title">Дополнительные товары</h2>
-		{% for additionalProduct in additionalProduct %}
-		{{ additional(additionalProduct) }}
-		{% endfor %}
 		<div class="products__present present">
 			<div class="present__image"></div>
 			<div class="present__description">Закажите все и получите чехол для кота в подарок!</div>
