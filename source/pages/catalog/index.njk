@@ -15,15 +15,29 @@
 
 	<section class="main-container__products products">
 		<h2 class="products__title">Основные товары</h2>
-		{% for product in productCards %}
+		{% for product in mainProducts %}
 		{{ card(product, "products__item") }}
 		{% endfor %}
-		<article class="products__item card">
-			<h2 class="card__title">Показать еще 100500 товаров</h2>
-			<div class="card__description">На самом деле вкусов гораздо больше!</div>
-			<div class="card__image"></div>
-			<a class="card__button button" href="#">Показать все</a>
-		</article>
+		{% set showMore = {
+			"title": "Показать еще 100500 товаров",
+			"description": "На самом деле вкусов гораздо больше!",
+			"cta": {
+				"text": "Показать все",
+				"url": "#"
+			}
+		} %}
+		{{ card(showMore, "card--has-icon products__item") }}
+	</section>
+
+	<section class="main-container__products products">
+		<h2 class="products__title">Дополнительные товары</h2>
+		{% for product in additionalProducts %}
+		{{ card(product, "card--view_line products__item") }}
+		{% endfor %}
+		<div class="products__present present">
+			<div class="present__image"></div>
+			<div class="present__description">Закажите все и получите чехол для кота в подарок!</div>
+		</div>
 	</section>
 
 </main>

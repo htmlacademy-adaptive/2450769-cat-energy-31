@@ -1,21 +1,20 @@
-{% macro card(product, bemElem = "") %}
-	<article class="{{ bemElem }} card">
-		<h2 class="card__title">{{ product.name }} {{ product.weight }}</h2>
-		<dl class="card__specifications specifications">
-			<div class="specifications__item">
-				<dt class="specifications__description">Вес</dt>
-				<dd class="specifications__value">{{ product.weight }}</dd>
+{% macro card(product, classes = "") %}
+	<article class="card {{ classes }}">
+		<h3 class="card__title">{{ product.title }}</h3>
+		{% if product.description %}
+		<div class="card__description">{{ product.description }}</div>
+		{% endif %}
+		<dl class="card__specs specs">
+			{% for spec in product.specs %}
+			<div class="specs__item">
+				<dt class="specs__name">{{ spec.name }}</dt>
+				<dd class="specs__value">{{ spec.value }}</dd>
 			</div>
-			<div class="specifications__item">
-				<dt class="specifications__description">Вкус</dt>
-				<dd class="specifications__value">{{ product.taste }}</dd>
-			</div>
-			<div class="specifications__item">
-				<dt class="specifications__description">Цена</dt>
-				<dd class="specifications__value">{{ product.price }}</dd>
-			</div>
+			{% endfor %}
 		</dl>
-		<div class="card__image">{{ product.image }}</div>
-		<a class="card__button button" href="#">Заказать</a>
+		{% if product.image %}
+		<div class="card__image">{{ product.image.name }} / {{ product.image.alt }}</div>
+		{% endif %}
+		<a class="card__button button" href="{{ product.cta.url }}">{{ product.cta.text }}</a>
 	</article>
 {%endmacro%}
