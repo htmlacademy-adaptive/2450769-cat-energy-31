@@ -32,84 +32,249 @@
 	],
 	"mainProducts": [
 		{
-			"name": "Cat Energy Pro",
-			"weight": "500 г",
-			"taste": "Курица",
-			"price": "700 ₽",
-			"image": "pro-chicken-500",
-			"alt": "Маленькая банка корма со вкусом курицы"
+			"title": "Cat Energy Pro 500 г",
+			"specs": [
+				{
+					"name": "Вес",
+					"value": "500 г"
+				},
+				{
+					"name": "Вкус",
+					"value": "Курица"
+				},
+				{
+					"name": "Цена",
+					"value": "700 ₽"
+				}
+			],
+			"image": {
+				"name": "products/chicken-500",
+				"alt": "Маленькая банка корма со вкусом курицы"
+			},
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		},
 		{
-			"name": "Cat Energy Pro",
-			"weight": "1000 г",
-			"taste": "Курица",
-			"price": "1000 ₽",
-			"image": "pro-chicken-1000",
-			"alt": "Большая банка корма со вкусом курицы"
+			"title": "Cat Energy Pro 1000 г",
+			"specs": [
+				{
+					"name": "Вес",
+					"value": "1000 г"
+				},
+				{
+					"name": "Вкус",
+					"value": "Курица"
+				},
+				{
+					"name": "Цена",
+					"value": "1000 ₽"
+				}
+			],
+			"image": {
+				"name": "products/chicken-1000",
+				"alt": "Большая банка корма со вкусом курицы"
+			},
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		},
 		{
-			"name": "Cat Energy Pro",
-			"weight": "500 г",
-			"taste": "Рыба",
-			"price": "700 ₽",
-			"image": "pro-fish-500",
-			"alt": "Маленькая банка корма со вкусом рыбы"
+			"title": "Cat Energy Pro 500 г",
+			"specs": [
+				{
+					"name": "Вес",
+					"value": "500 г"
+				},
+				{
+					"name": "Вкус",
+					"value": "Рыба"
+				},
+				{
+					"name": "Цена",
+					"value": "700 ₽"
+				}
+			],
+			"image": {
+				"name": "products/fish-500",
+				"alt": "Маленькая банка корма со вкусом рыбы"
+			},
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		},
 		{
-			"name": "Cat Energy Pro",
-			"weight": "1000 г",
-			"taste": "Рыба",
-			"price": "1000 ₽",
-			"image": "pro-fish-1000",
-			"alt": "Большая банка корма со вкусом рыбы"
+			"title": "Cat Energy Pro 1000 г",
+			"specs": [
+				{
+					"name": "Вес",
+					"value": "1000 г"
+				},
+				{
+					"name": "Вкус",
+					"value": "Рыба"
+				},
+				{
+					"name": "Цена",
+					"value": "1000 ₽"
+				}
+			],
+			"image": {
+				"name": "products/fish-1000",
+				"alt": "Большая банка корма со вкусом рыбы"
+			},
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		},
 		{
-			"name": "Cat Energy Slim",
-			"weight": "500 г",
-			"taste": "Гречка",
-			"price": "400 ₽",
-			"image": "pro-buckwheat-500",
-			"alt": "Маленькая банка корма со вкусом гречки"
+			"title": "Cat Energy Slim 500 г",
+			"specs": [
+				{
+					"name": "Вес",
+					"value": "500 г"
+				},
+				{
+					"name": "Вкус",
+					"value": "Гречка"
+				},
+				{
+					"name": "Цена",
+					"value": "400 ₽"
+				}
+			],
+			"image": {
+				"name": "products/buckwheat-500",
+				"alt": "Маленькая банка корма со вкусом гречки"
+			},
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		},
 		{
-			"name": "Cat Energy Slim",
-			"weight": "1000 г",
-			"taste": "Гречка",
-			"price": "700 ₽",
-			"image": "pro-buckwheat-1000",
-			"alt": "Большая банка корма со вкусом гречки"
+			"title": "Cat Energy Slim 1000 г",
+			"specs": [
+				{
+					"name": "Вес",
+					"value": "1000 г"
+				},
+				{
+					"name": "Вкус",
+					"value": "Гречка"
+				},
+				{
+					"name": "Цена",
+					"value": "700 ₽"
+				}
+			],
+			"image": {
+				"name": "products/buckwheat-1000",
+				"alt": "Большая банка корма со вкусом гречки"
+			},
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		},
 		{
-			"name": "Cat Energy Slim",
-			"weight": "500 г",
-			"taste": "Рис",
-			"price": "500 ₽",
-			"image": "pro-rice-500",
-			"alt": "Маленькая банка корма со вкусом риса"
+			"title": "Cat Energy Slim 500 г",
+			"specs": [
+				{
+					"name": "Вес",
+					"value": "500 г"
+				},
+				{
+					"name": "Вкус",
+					"value": "Рис"
+				},
+				{
+					"name": "Цена",
+					"value": "500 ₽"
+				}
+			],
+			"image": {
+				"name": "products/rice-500",
+				"alt": "Маленькая банка корма со вкусом риса"
+			},
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		}
 	],
 	"additionalProducts": [
 		{
-			"name": "Сахарозаменитель",
-			"package": "1 упаковка",
-			"weight": "100 г",
-			"price": "200 ₽"
+			"title": "Сахарозаменитель",
+			"specs": [
+				{
+					"name": "Количество",
+					"value": "1 упаковка (100 г)"
+				},
+				{
+					"name": "Цена",
+					"value": "200 ₽"
+				}
+			],
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		},
 		{
-			"name": "Питьевая вода",
-			"package": "5 литров",
-			"price": "50 ₽"
+			"title": "Питьевая вода",
+			"specs": [
+				{
+					"name": "Количество",
+					"value": "5 литров"
+				},
+				{
+					"name": "Цена",
+					"value": "50 ₽"
+				}
+			],
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		},
 		{
-			"name": "Молоко",
-			"package": "1 литр",
-			"price": "100 ₽"
+			"title": "Молоко",
+			"specs": [
+				{
+					"name": "Количество",
+					"value": "1 литр"
+				},
+				{
+					"name": "Цена",
+					"value": "100 ₽"
+				}
+			],
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		},
 		{
-			"name": "Витамины",
-			"package": "1 упаковка",
-			"weight": "30 г",
-			"price": "300 ₽"
+			"title": "Витамины",
+			"specs": [
+				{
+					"name": "Количество",
+					"value": "1 упаковка (30 г)"
+				},
+				{
+					"name": "Цена",
+					"value": "300 ₽"
+				}
+			],
+			"cta": {
+				"text": "Заказать",
+				"url": "#"
+			}
 		}
 	]
 }
