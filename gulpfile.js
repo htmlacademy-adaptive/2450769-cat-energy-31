@@ -153,7 +153,7 @@ export function startServer () {
 	const sharedPaths = ROOT_SHARED_PATHS.map((PATH) => `${SRC}${PATH}`)
 	const staticPaths = ROOT_STATIC_PATHS.map((PATH) => `${SRC}${PATH}`)
 
-	watch(`${SRC}/**/*.{html,njk}`, series(processMarkup))
+	watch(`${SRC}/**/*.{html,njk,json}`, series(processMarkup))
 	watch(`${SRC}/**/*.scss`, series(processStyles))
 	watch(`${SRC}/**/*.js`, series(processScripts))
 	watch(`${SRC}/icons/**/*.svg`, series(createStack, reloadServer))
