@@ -1,7 +1,6 @@
 {%- extends "./layouts/base.njk" -%}
 
 {%- from "./templates/card.njk" import card with context -%}
-{%- from "./templates/input-form.njk" import input-form with context -%}
 
 {%- set page = {
 title: "Каталог продукции",
@@ -42,9 +41,14 @@ lang: "ru"
 	</section>
 
 	<form class="main-container__subscription input-form">
-
-		{{ input-form() }}
-
+		<fieldset class="input-form">
+			<legend class="input-form__title">Акции и новинки</legend>
+			<div class="input-form__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</div>
+			<div class=" input-form__item">
+				<label class="input-form__label" for="e-mail"></label>
+				<input class="input-form__content" type="text" name="name" id="e-mail" placeholder="кuklachev@gmail.com">
+			</div>
+		</fieldset>
 		<button class="input-form__button" type="submit">Подписаться</button>
 	</form>
 
