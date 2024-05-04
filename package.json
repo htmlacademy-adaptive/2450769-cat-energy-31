@@ -27,7 +27,7 @@
 		"optimize": "conjure all -i source -r",
 		"optimize:icons": "conjure icons -i source/icons",
 		"optimize:images": "conjure images -i source/images -r",
-		"optimize:favicons": "conjure favicons -i source/favicons"
+		"optimize:favicons": "conjure favicons -i source/favicons -r"
 	},
 	"devDependencies": {
 		"@csstools/postcss-sass": "^5.1.1",
