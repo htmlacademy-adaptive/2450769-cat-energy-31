@@ -6,7 +6,7 @@
 	"engines": {
 		"node": "^18.18 || ^20.9"
 	},
-	"packageManager": "pnpm@9.0.4",
+	"packageManager": "pnpm@9.0.6",
 	"browserslist": [
 		"last 2 versions",
 		"not dead",
@@ -31,16 +31,16 @@
 	},
 	"devDependencies": {
 		"@csstools/postcss-sass": "^5.1.1",
-		"@eslint/js": "^9.1.1",
+		"@eslint/js": "^9.2.0",
 		"@firefoxic/conjure": "^1.0.0",
 		"@htmlacademy/editorconfig-cli": "^3.0.0",
 		"@linthtml/linthtml": "^0.9.6",
-		"@stylistic/eslint-plugin-js": "^1.7.2",
-		"@stylistic/stylelint-plugin": "^2.1.1",
+		"@stylistic/eslint-plugin-js": "^1.8.0",
+		"@stylistic/stylelint-plugin": "^2.1.2",
 		"browser-sync": "^3.0.2",
 		"browserslist-to-esbuild": "^2.1.1",
-		"eslint": "^9.1.0",
-		"globals": "^15.0.0",
+		"eslint": "^9.2.0",
+		"globals": "^15.1.0",
 		"gulp": "^5.0.0",
 		"gulp-esbuild": "^0.12.0",
 		"gulp-html-bemlinter": "^3.0.1",
@@ -52,12 +52,12 @@
 		"gulp-stacksvg": "^3.0.0",
 		"linthtml-config-htmlacademy": "^1.0.20",
 		"postcss": "^8.4.38",
-		"postcss-custom-media": "^10.0.4",
+		"postcss-custom-media": "^10.0.5",
 		"postcss-import": "^16.1.0",
 		"postcss-lightningcss": "^1.0.0",
 		"postcss-url": "^10.1.3",
-		"stylelint": "^16.3.1",
-		"stylelint-config-htmlacademy": "^4.2.0",
-		"w3c-html-validator": "^1.7.0"
+		"stylelint": "^16.5.0",
+		"stylelint-config-htmlacademy": "^4.2.1",
+		"w3c-html-validator": "^1.8.1"
 	}
 }
