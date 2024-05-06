@@ -1,24 +1,24 @@
 {% macro footer() %}
-	<footer class="main-footer">
-		<a class="main-footer__logo logo" href={{ project.root ~ "/" }}>
-			<div class="logo__text">Кэт энерджи</div>
+<footer class="main-footer">
+	<a class="main-footer__logo logo" href={{ project.root ~ "/" }}>
+		<img src="images/logo-text.svg" srcset="images/logo-text.svg" width="118" height="21" alt="Логотип Сat Energy">
+	</a>
+	<ul class="main-footer__social social">
+		{% for link in socialLinks %}
+		<li class="social__item">
+			<a class="social__link" href={{ link.path }}>
+				<span class="visually-hidden">{{ link.text }}</span>
+			</a>
+		</li>
+		{%endfor%}
+	</ul>
+	<div class="main-footer__copyright copyright">
+		<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+			<span class="visually-hidden">Htmlacademy</span>
 		</a>
-		<ul class="main-footer__social social">
-			{% for link in socialLinks %}
-			<li class="social__item">
-				<a class="social__link" href={{ link.path }}>
-					<span class="visually-hidden">{{ link.text }}</span>
-				</a>
-			</li>
-			{%endfor%}
-		</ul>
-		<div class="main-footer__copyright copyright">
-			<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-				<span class="visually-hidden">Htmlacademy</span>
-			</a>
-			<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-				<span class="visually-hidden">Htmlacademy Logo</span>
-			</a>
-		</div>
-	</footer>
+		<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+			<span class="visually-hidden">Htmlacademy Logo</span>
+		</a>
+	</div>
+</footer>
 {% endmacro %}
