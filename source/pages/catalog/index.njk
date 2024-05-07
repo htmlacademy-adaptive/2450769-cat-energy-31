@@ -1,5 +1,7 @@
 {%- extends "./layouts/base.njk" -%}
 
+{%- from "./templates/contacts.njk" import contacts with context -%}
+
 {%- from "./templates/card.njk" import card with context -%}
 
 {%- set page = {
@@ -51,6 +53,8 @@ lang: "ru"
 		</fieldset>
 		<button class="input-form__button" type="submit">Подписаться</button>
 	</form>
+
+	{{ contacts() }}
 
 </main>
 {% endblock %}
