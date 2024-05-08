@@ -1,11 +1,9 @@
 {%- extends "./layouts/base.njk" -%}
 
-{%- from "./templates/contacts.njk" import contacts with context -%}
-
 {%- set page = {
-title: "404",
-link: "/404",
-lang: "ru"
+	title: "404",
+	link: "/404",
+	lang: "ru"
 } -%}
 
 {% block main %}
@@ -13,8 +11,6 @@ lang: "ru"
 
 	<h1>404</h1>
 	<p>Страница не найдена. <a href={{ project.root ~ "/" }}>Перейти на главную</a>.</p>
-
-	{{ contacts() }}
 
 </main>
 {% endblock %}
