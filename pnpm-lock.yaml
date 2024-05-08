@@ -15,8 +15,8 @@ importers:
         specifier: ^9.2.0
         version: 9.2.0
       '@firefoxic/conjure':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.2
+        version: 1.0.2
       '@htmlacademy/editorconfig-cli':
         specifier: ^3.0.0
         version: 3.0.0
@@ -24,8 +24,8 @@ importers:
         specifier: ^0.9.6
         version: 0.9.6
       '@stylistic/eslint-plugin-js':
-        specifier: ^1.8.0
-        version: 1.8.0(eslint@9.2.0)
+        specifier: ^2.1.0
+        version: 2.1.0(eslint@9.2.0)
       '@stylistic/stylelint-plugin':
         specifier: ^2.1.2
         version: 2.1.2(stylelint@16.5.0)
@@ -39,8 +39,8 @@ importers:
         specifier: ^9.2.0
         version: 9.2.0
       globals:
-        specifier: ^15.1.0
-        version: 15.1.0
+        specifier: ^15.2.0
+        version: 15.2.0
       gulp:
         specifier: ^5.0.0
         version: 5.0.0
@@ -48,8 +48,8 @@ importers:
         specifier: ^0.12.0
         version: 0.12.0
       gulp-html-bemlinter:
-        specifier: ^3.0.1
-        version: 3.0.1
+        specifier: ^4.0.0
+        version: 4.0.0
       gulp-htmlmin:
         specifier: ^5.0.1
         version: 5.0.1
@@ -66,8 +66,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       gulp-stacksvg:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^4.0.0
+        version: 4.0.0
       linthtml-config-htmlacademy:
         specifier: ^1.0.20
         version: 1.0.20
@@ -75,8 +75,8 @@ importers:
         specifier: ^8.4.38
         version: 8.4.38
       postcss-custom-media:
-        specifier: ^10.0.5
-        version: 10.0.5(postcss@8.4.38)
+        specifier: ^10.0.6
+        version: 10.0.6(postcss@8.4.38)
       postcss-import:
         specifier: ^16.1.0
         version: 16.1.0(postcss@8.4.38)
@@ -110,12 +110,12 @@ packages:
     resolution: {integrity: sha512-8lLmua6AVh/8SLJRRVD6V8p73Hir9w5mJrhE+IPpILG31KKlI9iz5zmBYKcWPS59qSfgP9RaSBQSHHE81WKuEw==}
     engines: {node: '>=6.9.0'}
 
-  '@csstools/cascade-layer-name-parser@1.0.10':
-    resolution: {integrity: sha512-LjAul+ouc+TNzFAEJSmfJ253j0brA7GsK3HSK979UbMM7Vm/oRBNnW+3TZquHNp8zt7WFk7K4KeytjyaNrq8zQ==}
+  '@csstools/cascade-layer-name-parser@1.0.11':
+    resolution: {integrity: sha512-yhsonEAhaWRQvHFYhSzOUobH2Ev++fMci+ppFRagw0qVSPlcPV4FnNmlwpM/b2BM10ZeMRkVV4So6YRswD0O0w==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
-      '@csstools/css-parser-algorithms': ^2.6.2
-      '@csstools/css-tokenizer': ^2.3.0
+      '@csstools/css-parser-algorithms': ^2.6.3
+      '@csstools/css-tokenizer': ^2.3.1
 
   '@csstools/css-parser-algorithms@2.6.2':
     resolution: {integrity: sha512-f/K04/bX1nD3nKOOGfG+duxFeULE1k/qpfgZcQumRrW1I/sE4VqkJqszmZKhaDc04frQwNoKYowJc13i1xyyvw==}
@@ -123,8 +123,18 @@ packages:
     peerDependencies:
       '@csstools/css-tokenizer': ^2.3.0
 
+  '@csstools/css-parser-algorithms@2.6.3':
+    resolution: {integrity: sha512-xI/tL2zxzEbESvnSxwFgwvy5HS00oCXxL4MLs6HUiDcYfwowsoQaABKxUElp1ARITrINzBnsECOc1q0eg2GOrA==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-tokenizer': ^2.3.1
+
   '@csstools/css-tokenizer@2.3.0':
     resolution: {integrity: sha512-v1WxYzvjjv5XwrHhSV/xRQFrToAX5FmRcYCAMzRD+ZTdG7962mf3JJXju7vPodWcuk2fJTmL+xbviMG8IxccHQ==}
+    engines: {node: ^14 || ^16 || >=18}
+
+  '@csstools/css-tokenizer@2.3.1':
+    resolution: {integrity: sha512-iMNHTyxLbBlWIfGtabT157LH9DUx9X8+Y3oymFEuMj8HNc+rpE3dPFGFgHjpKfjeFDjLjYIAIhXPGvS2lKxL9g==}
     engines: {node: ^14 || ^16 || >=18}
 
   '@csstools/media-query-list-parser@2.1.10':
@@ -133,6 +143,13 @@ packages:
     peerDependencies:
       '@csstools/css-parser-algorithms': ^2.6.2
       '@csstools/css-tokenizer': ^2.3.0
+
+  '@csstools/media-query-list-parser@2.1.11':
+    resolution: {integrity: sha512-uox5MVhvNHqitPP+SynrB1o8oPxPMt2JLgp5ghJOWf54WGQ5OKu47efne49r1SWqs3wRP8xSWjnO9MBKxhB1dA==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-parser-algorithms': ^2.6.3
+      '@csstools/css-tokenizer': ^2.3.1
 
   '@csstools/postcss-sass@5.1.1':
     resolution: {integrity: sha512-La7bgTcM6YwPBLqlaXg7lMLry82iLv1a+S1RmgvHq2mH2Zd57L2anjZvJC8ACUHWc4M9fXws93dq6gaK0kZyAw==}
@@ -312,8 +329,8 @@ packages:
     resolution: {integrity: sha512-ESiIudvhoYni+MdsI8oD7skpprZ89qKocwRM2KEvhhBJ9nl5MRh7BXU5GTod7Mdygq+AUl+QzId6iWJKR/wABA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@firefoxic/conjure@1.0.0':
-    resolution: {integrity: sha512-IXcfT7/iEOjtj3SKASX4USdGhSAbSK63+6EeuK+lomnEktBjtekYULgXpwg2aTZ57/R3/ofnhX8J4bieSzVUbQ==}
+  '@firefoxic/conjure@1.0.2':
+    resolution: {integrity: sha512-tKE0Mk9k7iE5RlZC/Mbqis2m/mJzHi8GlCC7p9WjSCQD6zWNrM/xZfBeqE9aQbwLc/MvvGlAa9AANoo3DBD4BA==}
     engines: {node: ^18.12 || >=20.9}
     hasBin: true
 
@@ -501,9 +518,9 @@ packages:
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
 
-  '@stylistic/eslint-plugin-js@1.8.0':
-    resolution: {integrity: sha512-jdvnzt+pZPg8TfclZlTZPiUbbima93ylvQ+wNgHLNmup3obY6heQvgewSu9i2CfS61BnRByv+F9fxQLPoNeHag==}
-    engines: {node: ^16.0.0 || >=18.0.0}
+  '@stylistic/eslint-plugin-js@2.1.0':
+    resolution: {integrity: sha512-gdXUjGNSsnY6nPyqxu6lmDTtVrwCOjun4x8PUn0x04d5ucLI74N3MT1Q0UhdcOR9No3bo5PGDyBgXK+KmD787A==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
 
@@ -1242,10 +1259,6 @@ packages:
     resolution: {integrity: sha512-MWkrWZbJsL2UwnjxTX3gG8FneachS/Mwg7tdGXce011sJd5b0JG54vat5KHnfSBODZ3Wvzd2WnjxyzsRoVv+ww==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  espree@9.6.1:
-    resolution: {integrity: sha512-oruZaFkjorTpF32kDSI5/75ViwGeZginGGy2NoOSg3Q9bnwlnmDm4HLnkl0RE3n+njDXR037aY1+x58Z/zFdwQ==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
   esprima@4.0.1:
     resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
     engines: {node: '>=4'}
@@ -1475,8 +1488,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@15.1.0:
-    resolution: {integrity: sha512-926gJqg+4mkxwYKiFvoomM4J0kWESfk3qfTvRL2/oc/tK/eTDBbrfcKnSa2KtfdxB5onoL7D3A3qIHQFpd4+UA==}
+  globals@15.2.0:
+    resolution: {integrity: sha512-FQ5YwCHZM3nCmtb5FzEWwdUc9K5d3V/w9mzcz8iGD1gC/aOTHc6PouYu0kkKipNJqHAT7m51sqzQjEjIP+cK0A==}
     engines: {node: '>=18'}
 
   globby@11.1.0:
@@ -1509,8 +1522,8 @@ packages:
     resolution: {integrity: sha512-6el2YFJK+Wiip18G4iMl1rNuetSxpEZTLT1e6GuAsi3Q/yaeoNUgTX7nlwpbFkymGXMI4NFXisg5++PMe+fNNA==}
     engines: {node: '>=16'}
 
-  gulp-html-bemlinter@3.0.1:
-    resolution: {integrity: sha512-MVy3WYGk+PXtOTZ5AWVpU7y7YJ5bwax1crlVOFbOCobI6H1pzt3hXXfD5V/PCsa9hYpFrO7SAiQvbJsupSULog==}
+  gulp-html-bemlinter@4.0.0:
+    resolution: {integrity: sha512-gugYlOyvPTDgYKbjzBp/2gk1atCRh/6+VKdZnm6FuVHIVKUv2bgsFpwA2j5XJz9XgcCNlnlHx5g8sFh/BIBtTA==}
     engines: {node: ^18.12 || ^20.9}
 
   gulp-htmlmin@5.0.1:
@@ -1544,8 +1557,8 @@ packages:
     resolution: {integrity: sha512-97Vba4KBzbYmR5VBs9mWmK+HwIf5mj+/zioxfZhOKeXtx5ZjBk57KFlePf5nxq9QsTtFl0ejnHE3zTC9MHXqyQ==}
     engines: {node: '>=4'}
 
-  gulp-stacksvg@3.0.0:
-    resolution: {integrity: sha512-b66V1SmGQluYxS1z79J0jztS7IpG/nhApBc7xqNj7nXI9xKS+/QrOz2RNAPUZKJ+EouLuImo6S6I8tXrHOikaA==}
+  gulp-stacksvg@4.0.0:
+    resolution: {integrity: sha512-B4qZ8FHaatrLSt5HEGiRG44rjSped7YbAcN8z2cpGaqY8t8dMZTI0fXEQv1YhFHHxaiMJO+ArBLhxyL0B/XDFA==}
     engines: {node: ^18.18.2 || ^20.9.0}
 
   gulp@5.0.0:
@@ -2287,8 +2300,8 @@ packages:
     resolution: {integrity: sha512-IFroCz/59Lqa2uBvzK3bKDbDDIEaAY8XJ1jFxcLWTqosrsc32//P4VuSB2vZXoHiHqOmx8B5L5hnKOxL/7FlPw==}
     engines: {node: '>=0.4', npm: '>=1.0.0'}
 
-  postcss-custom-media@10.0.5:
-    resolution: {integrity: sha512-K5xuavEfqSK6zzdgg5J5FvHD/iRoacK2G5i861jtphCBtelXvuOzuIFNTXyM9GEIQ31IXyfdCfklyU3r5425iA==}
+  postcss-custom-media@10.0.6:
+    resolution: {integrity: sha512-BjihQoIO4Wjqv9fQNExSJIim8UAmkhLxuJnhJsLTRFSba1y1MhxkJK5awsM//6JJ+/Tu5QUxf624RQAvKHv6SA==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
@@ -3037,21 +3050,32 @@ snapshots:
       js-tokens: 4.0.0
       picocolors: 1.0.0
 
-  '@csstools/cascade-layer-name-parser@1.0.10(@csstools/css-parser-algorithms@2.6.2(@csstools/css-tokenizer@2.3.0))(@csstools/css-tokenizer@2.3.0)':
+  '@csstools/cascade-layer-name-parser@1.0.11(@csstools/css-parser-algorithms@2.6.3(@csstools/css-tokenizer@2.3.1))(@csstools/css-tokenizer@2.3.1)':
     dependencies:
-      '@csstools/css-parser-algorithms': 2.6.2(@csstools/css-tokenizer@2.3.0)
-      '@csstools/css-tokenizer': 2.3.0
+      '@csstools/css-parser-algorithms': 2.6.3(@csstools/css-tokenizer@2.3.1)
+      '@csstools/css-tokenizer': 2.3.1
 
   '@csstools/css-parser-algorithms@2.6.2(@csstools/css-tokenizer@2.3.0)':
     dependencies:
       '@csstools/css-tokenizer': 2.3.0
 
+  '@csstools/css-parser-algorithms@2.6.3(@csstools/css-tokenizer@2.3.1)':
+    dependencies:
+      '@csstools/css-tokenizer': 2.3.1
+
   '@csstools/css-tokenizer@2.3.0': {}
+
+  '@csstools/css-tokenizer@2.3.1': {}
 
   '@csstools/media-query-list-parser@2.1.10(@csstools/css-parser-algorithms@2.6.2(@csstools/css-tokenizer@2.3.0))(@csstools/css-tokenizer@2.3.0)':
     dependencies:
       '@csstools/css-parser-algorithms': 2.6.2(@csstools/css-tokenizer@2.3.0)
       '@csstools/css-tokenizer': 2.3.0
+
+  '@csstools/media-query-list-parser@2.1.11(@csstools/css-parser-algorithms@2.6.3(@csstools/css-tokenizer@2.3.1))(@csstools/css-tokenizer@2.3.1)':
+    dependencies:
+      '@csstools/css-parser-algorithms': 2.6.3(@csstools/css-tokenizer@2.3.1)
+      '@csstools/css-tokenizer': 2.3.1
 
   '@csstools/postcss-sass@5.1.1(postcss@8.4.38)':
     dependencies:
@@ -3165,7 +3189,7 @@ snapshots:
 
   '@eslint/js@9.2.0': {}
 
-  '@firefoxic/conjure@1.0.0':
+  '@firefoxic/conjure@1.0.2':
     dependencies:
       globby: 14.0.1
       ico-endec: 0.1.6
@@ -3340,14 +3364,13 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.2': {}
 
-  '@stylistic/eslint-plugin-js@1.8.0(eslint@9.2.0)':
+  '@stylistic/eslint-plugin-js@2.1.0(eslint@9.2.0)':
     dependencies:
       '@types/eslint': 8.56.10
       acorn: 8.11.3
-      escape-string-regexp: 4.0.0
       eslint: 9.2.0
-      eslint-visitor-keys: 3.4.3
-      espree: 9.6.1
+      eslint-visitor-keys: 4.0.0
+      espree: 10.0.1
 
   '@stylistic/stylelint-plugin@2.1.2(stylelint@16.5.0)':
     dependencies:
@@ -4145,12 +4168,6 @@ snapshots:
       acorn-jsx: 5.3.2(acorn@8.11.3)
       eslint-visitor-keys: 4.0.0
 
-  espree@9.6.1:
-    dependencies:
-      acorn: 8.11.3
-      acorn-jsx: 5.3.2(acorn@8.11.3)
-      eslint-visitor-keys: 3.4.3
-
   esprima@4.0.1: {}
 
   esquery@1.5.0:
@@ -4409,7 +4426,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@15.1.0: {}
+  globals@15.2.0: {}
 
   globby@11.1.0:
     dependencies:
@@ -4462,7 +4479,7 @@ snapshots:
       plugin-error: 2.0.1
       vinyl: 3.0.0
 
-  gulp-html-bemlinter@3.0.1:
+  gulp-html-bemlinter@4.0.0:
     dependencies:
       chalk: 5.3.0
       node-html-parser: 6.1.13
@@ -4510,7 +4527,7 @@ snapshots:
 
   gulp-rename@2.0.0: {}
 
-  gulp-stacksvg@3.0.0:
+  gulp-stacksvg@4.0.0:
     dependencies:
       node-html-parser: 6.1.13
       plugin-error: 2.0.1
@@ -4879,7 +4896,7 @@ snapshots:
 
   log-symbols@4.1.0:
     dependencies:
-      chalk: 4.1.1
+      chalk: 4.1.2
       is-unicode-supported: 0.1.0
 
   lower-case@1.1.4: {}
@@ -5185,12 +5202,12 @@ snapshots:
       async: 2.6.4
       is-number-like: 1.0.8
 
-  postcss-custom-media@10.0.5(postcss@8.4.38):
+  postcss-custom-media@10.0.6(postcss@8.4.38):
     dependencies:
-      '@csstools/cascade-layer-name-parser': 1.0.10(@csstools/css-parser-algorithms@2.6.2(@csstools/css-tokenizer@2.3.0))(@csstools/css-tokenizer@2.3.0)
-      '@csstools/css-parser-algorithms': 2.6.2(@csstools/css-tokenizer@2.3.0)
-      '@csstools/css-tokenizer': 2.3.0
-      '@csstools/media-query-list-parser': 2.1.10(@csstools/css-parser-algorithms@2.6.2(@csstools/css-tokenizer@2.3.0))(@csstools/css-tokenizer@2.3.0)
+      '@csstools/cascade-layer-name-parser': 1.0.11(@csstools/css-parser-algorithms@2.6.3(@csstools/css-tokenizer@2.3.1))(@csstools/css-tokenizer@2.3.1)
+      '@csstools/css-parser-algorithms': 2.6.3(@csstools/css-tokenizer@2.3.1)
+      '@csstools/css-tokenizer': 2.3.1
+      '@csstools/media-query-list-parser': 2.1.11(@csstools/css-parser-algorithms@2.6.3(@csstools/css-tokenizer@2.3.1))(@csstools/css-tokenizer@2.3.1)
       postcss: 8.4.38
 
   postcss-import@16.1.0(postcss@8.4.38):
