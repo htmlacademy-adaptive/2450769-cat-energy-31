@@ -1,9 +1,11 @@
 {%- extends "./layouts/base.njk" -%}
 
+{%- from "./templates/contacts.njk" import contacts with context -%}
+
 {%- set page = {
-title: "Подбор программы",
-link: "/form",
-lang: "ru"
+	title: "Подбор программы",
+	link: "/form",
+	lang: "ru"
 } -%}
 
 {% block main %}
@@ -90,6 +92,8 @@ lang: "ru"
 			<div class="selection-program__annotation">* — Обязательные поля</div>
 		</div>
 	</form>
+
+	{{ contacts() }}
 
 </main>
 {% endblock %}
