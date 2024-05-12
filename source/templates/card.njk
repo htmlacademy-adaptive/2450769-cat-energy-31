@@ -7,17 +7,19 @@
 	{% if product.description %}
 	<div class="card__description">{{ product.description }}</div>
 	{% endif %}
-	<dl class="card__specs specs">
-		{% for spec in product.specs %}
-		<div class="specs__item">
-			<dt class="specs__name">{{ spec.name }}</dt>
-			<dd class="specs__value">{{ spec.value }}</dd>
-		</div>
-		{% endfor %}
-	</dl>
-	{% if product.image %}
-	{{ picture(product.image.name, "card__image", product.image.alt) }}
-	{% endif %}
+	<a class="card__link" href="#">
+		<dl class="card__specs specs">
+			{% for spec in product.specs %}
+			<div class="specs__item">
+				<dt class="specs__name">{{ spec.name }}</dt>
+				<dd class="specs__value">{{ spec.value }}</dd>
+			</div>
+			{% endfor %}
+		</dl>
+		{% if product.image %}
+		{{ picture(product.image.name, "card__image", product.image.alt) }}
+		{% endif %}
+	</a>
 	<a class="card__button button" href="{{ product.cta.url }}">{{ product.cta.text }}</a>
 </article>
 {%endmacro%}
