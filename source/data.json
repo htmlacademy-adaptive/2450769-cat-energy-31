@@ -276,5 +276,26 @@
 				"url": "#"
 			}
 		}
-	]
+	],
+	"images": {
+		"map": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 320,
+					"height": 362
+				},
+				{
+					"breakpoint": 768,
+					"width": 768,
+					"height": 400
+				},
+				{
+					"breakpoint": 1280,
+					"width": 1440,
+					"height": 400
+				}
+			]
+		}
+	}
 }
