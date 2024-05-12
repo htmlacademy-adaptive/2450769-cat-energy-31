@@ -48,7 +48,7 @@
 				}
 			],
 			"image": {
-				"name": "products/chicken-500",
+				"name": "products/chicken500",
 				"alt": "Маленькая банка корма со вкусом курицы"
 			},
 			"cta": {
@@ -73,7 +73,7 @@
 				}
 			],
 			"image": {
-				"name": "products/chicken-1000",
+				"name": "products/chicken1000",
 				"alt": "Большая банка корма со вкусом курицы"
 			},
 			"cta": {
@@ -98,7 +98,7 @@
 				}
 			],
 			"image": {
-				"name": "products/fish-500",
+				"name": "products/fish500",
 				"alt": "Маленькая банка корма со вкусом рыбы"
 			},
 			"cta": {
@@ -123,7 +123,7 @@
 				}
 			],
 			"image": {
-				"name": "products/fish-1000",
+				"name": "products/fish1000",
 				"alt": "Большая банка корма со вкусом рыбы"
 			},
 			"cta": {
@@ -148,7 +148,7 @@
 				}
 			],
 			"image": {
-				"name": "products/buckwheat-500",
+				"name": "products/buckwheat500",
 				"alt": "Маленькая банка корма со вкусом гречки"
 			},
 			"cta": {
@@ -173,7 +173,7 @@
 				}
 			],
 			"image": {
-				"name": "products/buckwheat-1000",
+				"name": "products/buckwheat1000",
 				"alt": "Большая банка корма со вкусом гречки"
 			},
 			"cta": {
@@ -198,7 +198,7 @@
 				}
 			],
 			"image": {
-				"name": "products/rice-500",
+				"name": "products/rice500",
 				"alt": "Маленькая банка корма со вкусом риса"
 			},
 			"cta": {
@@ -294,6 +294,137 @@
 					"breakpoint": 1280,
 					"width": 1440,
 					"height": 400
+				}
+			]
+		},
+		"hero": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 280,
+					"height": 270
+				},
+				{
+					"breakpoint": 768,
+					"width": 709,
+					"height": 609
+				},
+				{
+					"breakpoint": 1280,
+					"width": 552,
+					"height": 499
+				}
+			]
+		},
+		"slider": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 280,
+					"height": 256
+				},
+				{
+					"breakpoint": 768,
+					"width": 560,
+					"height": 512
+				}
+			]
+		},
+		"products/chicken500": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 68,
+					"height": 86
+				},
+				{
+					"breakpoint": 768,
+					"width": 169,
+					"height": 210
+				}
+			]
+		},
+		"products/chicken1000": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 84,
+					"height": 100
+				},
+				{
+					"breakpoint": 768,
+					"width": 169,
+					"height": 210
+				}
+			]
+		},
+		"products/fish500": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 68,
+					"height": 86
+				},
+				{
+					"breakpoint": 768,
+					"width": 169,
+					"height": 210
+				}
+			]
+		},
+		"products/fish1000": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 84,
+					"height": 100
+				},
+				{
+					"breakpoint": 768,
+					"width": 169,
+					"height": 210
+				}
+			]
+		},
+		"products/buckwheat500": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 68,
+					"height": 86
+				},
+				{
+					"breakpoint": 768,
+					"width": 169,
+					"height": 210
+				}
+			]
+		},
+		"products/buckwheat1000": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 84,
+					"height": 100
+				},
+				{
+					"breakpoint": 768,
+					"width": 169,
+					"height": 210
+				}
+			]
+		},
+		"products/rice500": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 68,
+					"height": 86
+				},
+				{
+					"breakpoint": 768,
+					"width": 169,
+					"height": 210
 				}
 			]
 		}

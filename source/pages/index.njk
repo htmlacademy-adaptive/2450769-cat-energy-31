@@ -1,11 +1,12 @@
 {%- extends "./layouts/base.njk" -%}
 
 {%- from "./templates/contacts.njk" import contacts with context -%}
+{%- from "./templates/picture.njk" import picture with context -%}
 
 {%- set page = {
-	title: "Главная",
-	link: "/",
-	lang: "ru"
+title: "Главная",
+link: "/",
+lang: "ru"
 } -%}
 
 {% block main %}
@@ -16,6 +17,7 @@
 			<h1 class="promo__title">Функциональное питание для котов</h1>
 			<div class="promo__description">Занялся собой? Займись котом!</div>
 		</div>
+		{{ picture("hero", "promo__image", "Промо") }}
 		<a class="promo__link" href="#">Подобрать программу</a>
 	</section>
 
@@ -69,7 +71,7 @@
 				<dd class="result__value">15 000 РУБ.</dd>
 			</div>
 		</dl>
-		<div class="example__slider"></div>
+		{{ picture("slider", "example__slider", "Слайдер") }}
 	</section>
 
 	{{ contacts() }}
