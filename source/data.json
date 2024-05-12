@@ -316,7 +316,21 @@
 				}
 			]
 		},
-		"slider": {
+		"slider-fat": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 280,
+					"height": 256
+				},
+				{
+					"breakpoint": 768,
+					"width": 560,
+					"height": 512
+				}
+			]
+		},
+		"slider-thin": {
 			"maxdppx": 2,
 			"sizes": [
 				{
