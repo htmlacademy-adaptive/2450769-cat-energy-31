@@ -3,11 +3,11 @@
 {%- from "./picture.njk" import picture with context -%}
 
 <article class="card {{ classes }}">
-	<h3 class="card__title">{{ product.title }}</h3>
-	{% if product.description %}
-	<div class="card__description">{{ product.description }}</div>
-	{% endif %}
 	<a class="card__link" href="#">
+		<h3 class="card__title">{{ product.title }}</h3>
+		{% if product.description %}
+		<div class="card__description">{{ product.description }}</div>
+		{% endif %}
 		<dl class="card__specs specs">
 			{% for spec in product.specs %}
 			<div class="specs__item">
