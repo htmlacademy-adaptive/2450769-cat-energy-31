@@ -441,6 +441,20 @@
 					"height": 210
 				}
 			]
+		},
+		"presentimage": {
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"width": 280,
+					"height": 290
+				},
+				{
+					"breakpoint": 768,
+					"width": 707,
+					"height": 200
+				}
+			]
 		}
 	}
 }

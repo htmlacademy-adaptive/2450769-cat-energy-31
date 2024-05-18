@@ -1,0 +1,6 @@
+@use "../common/image.scss" as *;
+
+.present {
+	@include image("presentimage@1x.avif");
+	min-height: 300px;
+}
