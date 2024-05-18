@@ -1,0 +1,6 @@
+@use "../common/image.scss" as *;
+
+.present {
+	@include image("cat-in-bag");
+	min-height: 300px;
+}
