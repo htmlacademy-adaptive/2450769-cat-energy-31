@@ -4,6 +4,6 @@
 			url("../../images/#{$name}@1x.avif") type("image/avif") 1x,
 			url("../../images/#{$name}@2x.avif") type("image/avif") 2x,
 			url("../../images/#{$name}@1x.webp") type("image/webp") 1x,
-			url("../../images/#{$name}@1x.webp") type("image/webp") 2x
+			url("../../images/#{$name}@2x.webp") type("image/webp") 2x
 		);
 }
