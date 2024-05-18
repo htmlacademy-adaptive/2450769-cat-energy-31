@@ -2,5 +2,13 @@
 
 .present {
 	@include image("cat-in-bag");
+
+	@media (--not-mobile) {
+		@include image("cat-in-bag-768");
+	}
+
+	@media (--only-desktop) {
+		@include image("cat-in-bag-1280");
+	}
 	min-height: 300px;
 }
