@@ -1,3 +1,7 @@
+//@custom-media используем за счёт плагина postcss
 @custom-media --not-mobile (width >= 768px);
 @custom-media --only-desktop (width >= 1280px);
 @custom-media --only-mobile (width < 768px);
+@custom-media --not-desktop (width < 1280px);
+@custom-media --only-tablet (width = 768px);
+
