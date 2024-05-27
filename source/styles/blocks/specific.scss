@@ -16,17 +16,17 @@
 }
 
 .specific__item--icon_leaf {
-	--icon: url("../../icons/leaf.svg");
+	--icon: var(--icon-leaf);
 }
 
 .specific__item--icon_flask {
-	--icon: url("../../icons/flask.svg");
+	--icon: var(--icon-flask);
 }
 
 .specific__item--icon_scales {
-	--icon: url("../../icons/scales.svg");
+	--icon: var(--icon-scales);
 }
 
 .specific__item--icon_tambleware {
-	--icon: url("../../icons/tableware.svg");
+	--icon: var(--icon-tableware);
 }

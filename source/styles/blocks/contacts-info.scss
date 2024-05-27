@@ -10,9 +10,9 @@
 }
 
 .contacts-info__item--icon_mail {
-	--icon: url("../../icons/mail.svg");
+	--icon: var(--icon-mail);
 }
 
 .contacts-info__item--icon_phone {
-	--icon: url("../../icons/phone.svg");
+	--icon: var(--icon-phone);
 }

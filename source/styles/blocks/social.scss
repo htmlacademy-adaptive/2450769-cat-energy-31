@@ -3,20 +3,29 @@
 	display: block;
 	width: 28px;
 	height: 28px;
-	background-image: var(--icon);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+	mask-image: var(--icon);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	background-color: var(--special-grey-3);
+}
+
+.social__link:hover::before {
+	background-color: var(--basic-green);
+}
+
+.social__link:active::before {
+	opacity: 0.3;
 }
 
 .social__link--icon_vkontakte {
-	--icon: url("../../icons/social/vkontakte.svg");
+	--icon: var(--icon-social-vkontakte);
 }
 
 .social__link--icon_youtube {
-	--icon: url("../../icons/social/youtube.svg");
+	--icon: var(--icon-social-youtube);
 }
 
 .social__link--icon_telegram {
-	--icon: url("../../icons/social/telegram.svg");
+	--icon: var(--icon-social-telegram);
 }

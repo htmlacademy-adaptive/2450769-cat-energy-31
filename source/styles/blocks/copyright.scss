@@ -3,8 +3,17 @@
 	display: block;
 	width: 27px;
 	height: 34px;
-	background-image: url("../../icons/htmlacademy.svg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+	mask-image: var(--icon-htmlacademy);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	background-color: var(--special-grey-3);
+}
+
+.copyright__link--icon_htmlacademy:hover::before {
+	background-color: var(--basic-green);
+}
+
+.copyright__link--icon_htmlacademy:active::before {
+	opacity: 0.3;
 }

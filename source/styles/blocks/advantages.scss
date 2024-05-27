@@ -24,20 +24,25 @@
 	display: block;
 	width: 32px;
 	height: 12px;
-	background-image: url("../../icons/arrow.svg");
-	background-repeat: no-repeat;
-	background-position: -8px center;
-	background-size: contain;
+	mask: var(--icon-arrow);
+	mask-repeat: no-repeat;
+	mask-position: -8px center;
+	mask-size: contain;
+	background-color: #000000;
 }
 
 .advantages__link:hover::after {
-	background-position: center;
+	mask-position: center;
+}
+
+.advantages__link:active::after {
+	opacity: 0.3;
 }
 
 .advantages__item--icon_catsit {
-	--icon: url("../../icons/catsit.svg");
+	--icon: var(--icon-catsit);
 }
 
 .advantages__item--icon_catgo {
-	--icon: url("../../icons/catgo.svg");
+	--icon: var(--icon-catgo);
 }
