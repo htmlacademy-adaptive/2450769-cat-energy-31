@@ -1,4 +1,4 @@
-.contacts-info__item::after {
+.contacts-info__label::after {
 	content: "";
 	display: block;
 	width: 20px;
@@ -9,10 +9,10 @@
 	background-size: contain;
 }
 
-.contacts-info__item--icon_mail {
+.contacts-info__label--icon_mail {
 	--icon: var(--icon-mail);
 }
 
-.contacts-info__item--icon_phone {
+.contacts-info__label--icon_phone {
 	--icon: var(--icon-phone);
 }

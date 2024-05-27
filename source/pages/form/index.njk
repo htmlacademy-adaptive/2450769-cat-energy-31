@@ -3,9 +3,9 @@
 {%- from "./templates/contacts.njk" import contacts with context -%}
 
 {%- set page = {
-title: "Подбор программы",
-link: "/form",
-lang: "ru"
+	title: "Подбор программы",
+	link: "/form",
+	lang: "ru"
 } -%}
 
 {% block main %}
@@ -19,11 +19,11 @@ lang: "ru"
 		<fieldset class="selection-program__main main-info">
 			<legend class="selection-program__subtitle"></legend>
 			<div class="main-info__item">
-				<label class="main-info__title" for="name">Имя:*</label>
+				<label class="main-info__title" for="name">Имя:<span aria-hidden="true">*</span></label>
 				<input class="main-info__input" type="text" name="name" id="name" placeholder="Барсик" required>
 			</div>
 			<div class="main-info__item">
-				<label class="main-info__title" for="weight">Вес (кг):*</label>
+				<label class="main-info__title" for="weight">Вес (кг):<span aria-hidden="true">*</span></label>
 				<input class="main-info__input" type="number" name="weight" id="weight" placeholder="7" required>
 			</div>
 			<div class="main-info__item">
@@ -50,23 +50,24 @@ lang: "ru"
 
 		<fieldset class="selection-program__contacts contacts-info">
 			<legend class="selection-program__subtitle">Контактные данные (владельца кота)</legend>
-			<div class="contacts-info__item contacts-info__item--icon_mail">
-				<label class="contacts-info__mail" for="e-mail">E-mail:*</label>
-				<input class="contacts-info__input" type="text" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
+			<div class="contacts-info__item">
+				<label class="contacts-info__label contacts-info__label--icon_mail" for="e-mail">
+					E-mail:<span aria-hidden="true">*</span>
+					<input class="contacts-info__input" type="text" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
+				</label>
 			</div>
-			<div class="contacts-info__item contacts-info__item--icon_phone">
-				<label class="contacts-info__phone" for="phone">Телефон:*</label>
-				<input class="contacts-info__input" type="number" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+			<div class="contacts-info__item">
+				<label class="contacts-info__label contacts-info__label--icon_phone" for="phone">
+					Телефон:<span aria-hidden="true">*</span>
+					<input class="contacts-info__input" type="number" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+				</label>
 			</div>
 		</fieldset>
 
-		<fieldset class="selection-program__comments comments-info">
-			<legend class="selection-program__subtitle">Комментарий</legend>
-			<div class="comments-info__text">
-				<label for="comments"></label>
-				<input class="comments-info__description" type="text" name="comments" id="comments" placeholder="Расскажите обо всех повАдках кота">
-			</div>
-		</fieldset>
+		<div class="selection-program__comments comments-info">
+			<label class="selection-program__subtitle" for="comments">Комментарий</label>
+			<textarea class="comments-info__description" name="comments" id="comments" placeholder="Расскажите обо всех повaдках кота"></textarea>
+		</div>
 
 		<fieldset class="selection-program__additionally additionally-info">
 			<legend class="selection-program__subtitle">Дополнительно</legend>
@@ -89,7 +90,7 @@ lang: "ru"
 		</fieldset>
 		<div class="selection-program__button">
 			<button class="selection-program__submit" type="submit">отправить заявку</button>
-			<div class="selection-program__annotation">* — Обязательные поля</div>
+			<div class="selection-program__annotation" aria-hidden="true">* — Обязательные поля</div>
 		</div>
 	</form>
 
