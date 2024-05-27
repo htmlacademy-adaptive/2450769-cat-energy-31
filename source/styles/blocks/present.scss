@@ -12,3 +12,14 @@
 	}
 	min-height: 300px;
 }
+
+.present::before {
+	content: "";
+	display: block;
+	width: 80px;
+	height: 80px;
+	background-image: var(--icon-gift);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}

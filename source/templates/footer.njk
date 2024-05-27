@@ -6,7 +6,7 @@
 	<ul class="main-footer__social social">
 		{% for link in socialLinks %}
 		<li class="social__item">
-			<a class="social__link" href={{ link.path }}>
+			<a class="social__link social__link--icon_{{ link.name }}" href={{ link.path }}>
 				<span class="visually-hidden">{{ link.text }}</span>
 			</a>
 		</li>
@@ -16,7 +16,7 @@
 		<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
 			<span class="visually-hidden">Htmlacademy</span>
 		</a>
-		<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+		<a class="copyright__link copyright__link--icon_htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
 			<span class="visually-hidden">Htmlacademy Logo</span>
 		</a>
 	</div>

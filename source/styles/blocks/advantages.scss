@@ -1,0 +1,48 @@
+.advantages__item::before {
+	content: "";
+	display: block;
+	width: 70px;
+	height: 70px;
+	background-image: var(--icon);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	@media (--only-tablet) {
+		width: 270px;
+		height: 270px;
+	}
+
+	@media (--only-desktop) {
+		width: 140px;
+		height: 140px;
+	}
+}
+
+.advantages__link::after {
+	content: "";
+	display: block;
+	width: 32px;
+	height: 12px;
+	mask: var(--icon-arrow);
+	mask-repeat: no-repeat;
+	mask-position: -8px center;
+	mask-size: contain;
+	background-color: #000000;
+}
+
+.advantages__link:hover::after {
+	mask-position: center;
+}
+
+.advantages__link:active::after {
+	opacity: 0.3;
+}
+
+.advantages__title--icon_catsit {
+	--icon: var(--icon-catsit);
+}
+
+.advantages__title--icon_catgo {
+	--icon: var(--icon-catgo);
+}

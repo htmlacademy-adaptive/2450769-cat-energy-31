@@ -1,0 +1,31 @@
+.social__link::before {
+	content: "";
+	display: block;
+	width: 28px;
+	height: 28px;
+	mask-image: var(--icon);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	background-color: var(--special-grey-3);
+}
+
+.social__link:hover::before {
+	background-color: var(--basic-green);
+}
+
+.social__link:active::before {
+	opacity: 0.3;
+}
+
+.social__link--icon_vkontakte {
+	--icon: var(--icon-social-vkontakte);
+}
+
+.social__link--icon_youtube {
+	--icon: var(--icon-social-youtube);
+}
+
+.social__link--icon_telegram {
+	--icon: var(--icon-social-telegram);
+}

@@ -17,7 +17,7 @@
 	<section class="main-container__products products">
 		<h2 class="products__title">Основные товары</h2>
 		{% for product in mainProducts %}
-		{{ card(product, "products__item") }}
+			{{ card(product, "products__item") }}
 		{% endfor %}
 
 		{% set showMore = {
@@ -34,7 +34,7 @@
 	<section class="main-container__products products">
 		<h2 class="products__title">Дополнительные товары</h2>
 		{% for product in additionalProducts %}
-		{{ card(product, "card--view_line products__item") }}
+			{{ card(product, "card--view_line products__item") }}
 		{% endfor %}
 		<div class="products__present present">
 			<div class="present__image"></div>
