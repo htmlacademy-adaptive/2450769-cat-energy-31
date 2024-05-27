@@ -1,4 +1,4 @@
-.social__item::before {
+.social__link::before {
 	content: "";
 	display: block;
 	width: 28px;
@@ -9,14 +9,14 @@
 	background-size: contain;
 }
 
-.social__item--vkontakte {
+.social__link--icon_vkontakte {
 	--icon: url("../../icons/social/vkontakte.svg");
 }
 
-.social__item--youtube {
+.social__link--icon_youtube {
 	--icon: url("../../icons/social/youtube.svg");
 }
 
-.social__item--telegram {
+.social__link--icon_telegram {
 	--icon: url("../../icons/social/telegram.svg");
 }

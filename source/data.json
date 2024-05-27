@@ -18,17 +18,17 @@
 	],
 	"socialLinks": [
 		{
-			"class": "social__item--vkontakte",
+			"name": "vkontakte",
 			"text": "Мы в Вконтакте",
 			"path": "https://vk.com/htmlacademy"
 		},
 		{
-			"class": "social__item--youtube",
+			"name": "youtube",
 			"text": "Мы в Ютубе",
 			"path": "https://www.youtube.com/user/htmlacademyru"
 		},
 		{
-			"class": "social__item--telegram",
+			"name": "telegram",
 			"text": "Мы в Телеграме",
 			"path": "https://t.me/htmlacademy"
 		}

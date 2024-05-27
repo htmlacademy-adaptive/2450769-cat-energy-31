@@ -4,9 +4,9 @@
 {%- from "./templates/contacts.njk" import contacts with context -%}
 
 {%- set page = {
-	title: "Каталог продукции",
-	link: "/catalog",
-	lang: "ru"
+title: "Каталог продукции",
+link: "/catalog",
+lang: "ru"
 } -%}
 
 {% block main %}
@@ -21,14 +21,14 @@
 		{% endfor %}
 
 		{% set showMore = {
-			"title": "Показать еще 100500 товаров",
-			"description": "На самом деле вкусов гораздо больше!",
-			"cta": {
-				"text": "Показать все",
-				"url": "#"
-			}
+		"title": "Показать еще 100500 товаров",
+		"description": "На самом деле вкусов гораздо больше!",
+		"cta": {
+		"text": "Показать все",
+		"url": "#"
+		}
 		} %}
-		{{ card(showMore, "card--has-icon products__item") }}
+		{{ card(showMore, "card--has_icon products__item") }}
 	</section>
 
 	<section class="main-container__products products">
