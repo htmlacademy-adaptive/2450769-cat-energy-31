@@ -1,0 +1,18 @@
+.contacts-info__item::after {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-image: var(--icon);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.contacts-info__item--mail {
+	--icon: url("../../icons/mail.svg");
+}
+
+.contacts-info__item--phone {
+	--icon: url("../../icons/phone.svg");
+}

@@ -12,3 +12,14 @@
 	}
 	min-height: 300px;
 }
+
+.present::before {
+	content: "";
+	display: block;
+	width: 80px;
+	height: 80px;
+	background-image: url("../../icons/gift.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}

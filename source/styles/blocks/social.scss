@@ -1,0 +1,22 @@
+.social__item::before {
+	content: "";
+	display: block;
+	width: 28px;
+	height: 28px;
+	background-image: var(--icon);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.social__item--vkontakte {
+	--icon: url("../../icons/social/vkontakte.svg");
+}
+
+.social__item--youtube {
+	--icon: url("../../icons/social/youtube.svg");
+}
+
+.social__item--telegram {
+	--icon: url("../../icons/social/telegram.svg");
+}

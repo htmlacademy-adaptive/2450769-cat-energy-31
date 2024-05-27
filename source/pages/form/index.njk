@@ -3,9 +3,9 @@
 {%- from "./templates/contacts.njk" import contacts with context -%}
 
 {%- set page = {
-	title: "Подбор программы",
-	link: "/form",
-	lang: "ru"
+title: "Подбор программы",
+link: "/form",
+lang: "ru"
 } -%}
 
 {% block main %}
@@ -50,11 +50,11 @@
 
 		<fieldset class="selection-program__contacts contacts-info">
 			<legend class="selection-program__subtitle">Контактные данные (владельца кота)</legend>
-			<div class="contacts-info__item">
+			<div class="contacts-info__item contacts-info__item--mail">
 				<label class="contacts-info__mail" for="e-mail">E-mail:*</label>
 				<input class="contacts-info__input" type="text" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
 			</div>
-			<div class="contacts-info__item">
+			<div class="contacts-info__item contacts-info__item--phone">
 				<label class="contacts-info__phone" for="phone">Телефон:*</label>
 				<input class="contacts-info__input" type="number" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
 			</div>

@@ -1,0 +1,43 @@
+.advantages__item::before {
+	content: "";
+	display: block;
+	width: 70px;
+	height: 70px;
+	background-image: var(--icon);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	@media (--only-tablet) {
+		width: 270px;
+		height: 270px;
+	}
+
+	@media (--only-desktop) {
+		width: 140px;
+		height: 140px;
+	}
+}
+
+.advantages__link::after {
+	content: "";
+	display: block;
+	width: 32px;
+	height: 12px;
+	background-image: url("../../icons/arrow.svg");
+	background-repeat: no-repeat;
+	background-position: -8px center;
+	background-size: contain;
+}
+
+.advantages__link:hover::after {
+	background-position: center;
+}
+
+.advantages__item--catsit {
+	--icon: url("../../icons/catsit.svg");
+}
+
+.advantages__item--catgo {
+	--icon: url("../../icons/catgo.svg");
+}

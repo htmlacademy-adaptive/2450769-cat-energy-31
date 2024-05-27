@@ -1,0 +1,32 @@
+.specific__item::before {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-image: var(--icon);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-color: var(--basic-green);
+
+	@media (--not-mobile) {
+		width: 80px;
+		height: 80px;
+	}
+}
+
+.specific__item--leaf {
+	--icon: url("../../icons/leaf.svg");
+}
+
+.specific__item--flask {
+	--icon: url("../../icons/flask.svg");
+}
+
+.specific__item--scales {
+	--icon: url("../../icons/scales.svg");
+}
+
+.specific__item--tambleware {
+	--icon: url("../../icons/tableware.svg");
+}
