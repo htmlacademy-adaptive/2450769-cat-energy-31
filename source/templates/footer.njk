@@ -1,7 +1,7 @@
 {% macro footer() %}
 <footer class="main-footer">
-	<a class="main-footer__logo logo" href={{ project.root ~ "/" }}>
-		<img src="images/logo-text.svg" srcset="images/logo-text.svg" width="118" height="21" alt="Логотип Сat Energy">
+	<a class="main-footer__logo logo" href="{{ project.root }}/">
+		<img src="images/logo-text.svg" srcset="{{ project.root }}/images/logo-text.svg" width="118" height="21" alt="Логотип Сat Energy">
 	</a>
 	<ul class="main-footer__social social">
 		{% for link in socialLinks %}

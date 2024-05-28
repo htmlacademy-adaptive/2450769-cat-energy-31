@@ -52,7 +52,7 @@
 		"gulp-rename": "^2.0.0",
 		"gulp-stacksvg": "^4.0.0",
 		"husky": "^9.0.11",
-		"linthtml-config-htmlacademy": "^1.0.24",
+		"linthtml-config-htmlacademy": "^1.0.25",
 		"postcss": "^8.4.38",
 		"postcss-custom-media": "^10.0.6",
 		"postcss-import": "^16.1.0",

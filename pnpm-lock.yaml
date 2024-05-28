@@ -72,8 +72,8 @@ importers:
         specifier: ^9.0.11
         version: 9.0.11
       linthtml-config-htmlacademy:
-        specifier: ^1.0.24
-        version: 1.0.24
+        specifier: ^1.0.25
+        version: 1.0.25
       postcss:
         specifier: ^8.4.38
         version: 8.4.38
@@ -1926,11 +1926,11 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  linthtml-config-htmlacademy@1.0.24:
-    resolution: {integrity: sha512-omlqa41nUUG8b8hiMBr/PfQLFByd3OmyMg3W51v6BsAm6WJGDbYIJQDCN+//AHWXg8DrHujabprTfK/iwk07Qg==}
+  linthtml-config-htmlacademy@1.0.25:
+    resolution: {integrity: sha512-0FSaIbOnUWLwkGkr51T7FvH/diNIIi/zu4UM3zhcGX9rlJvesIo7wMU1qqvl5IUzBgH3JTYg7BdaySmN1fIKGg==}
 
-  linthtml-rules-htmlacademy@1.0.20:
-    resolution: {integrity: sha512-TXF7uHolIgPLrX7Rw+Ckw+lIvc76FYn9FSIY/c3Qrl+zLzZ/NUfrS7T8oMtA8mDjgEbI7RIXAtFV3YbL+e28Vw==}
+  linthtml-rules-htmlacademy@1.0.21:
+    resolution: {integrity: sha512-cnPLjovn5n6KbG6rW/uvofDkfy6lioQN54PSzK34dr0Ge5FnztgRdVcDOjOdkZ11lw1Jy88PWqu2EukWjzJOtg==}
 
   lintspaces@0.11.0:
     resolution: {integrity: sha512-Zi4UWrpPYcIECWVBRDA4UQA4wiFkEQoD0DYroBIO0jtDAAatdm3vs7MOcps0nSpukf3DiyfHeFhJNL5sLegaLA==}
@@ -4847,12 +4847,12 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  linthtml-config-htmlacademy@1.0.24:
+  linthtml-config-htmlacademy@1.0.25:
     dependencies:
       '@linthtml/linthtml': 0.9.6
-      linthtml-rules-htmlacademy: 1.0.20
+      linthtml-rules-htmlacademy: 1.0.21
 
-  linthtml-rules-htmlacademy@1.0.20: {}
+  linthtml-rules-htmlacademy@1.0.21: {}
 
   lintspaces@0.11.0:
     dependencies:

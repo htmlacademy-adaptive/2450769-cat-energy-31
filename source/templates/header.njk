@@ -1,12 +1,12 @@
 {% macro header() %}
 <header class="main-header">
-	<a class="main-header__logo logo" href={{ project.root ~ "/" }}>
+	<a class="main-header__logo logo" href="{{ project.root }}/">
 		<picture>
-			<source type="image/svg+xml" media="(width >= 1280px)" srcset="images/logo-1280.svg">
-			<source type="image/svg+xml" media="(width >= 768px)" srcset="images/logo-768.svg">
-			<img src="images/logo.svg" srcset="images/logo.svg" width="33" height="38" alt="Знак Cat Energy">
+			<source type="image/svg+xml" media="(width >= 1280px)" srcset="{{ project.root }}/images/logo-1280.svg" width="70" height="59">
+			<source type="image/svg+xml" media="(width >= 768px)" srcset="{{ project.root }}/images/logo-768.svg" width="60" height="50">
+			<img src="images/logo.svg" srcset="{{ project.root }}/images/logo.svg" width="33" height="38" alt="Знак Cat Energy">
 		</picture>
-		<img src="images/logo-text.svg" srcset="images/logo-text.svg" width="118" height="21" alt="Логотип Сat Energy">
+		<img src="{{ project.root }}/images/logo-text.svg" srcset="{{ project.root }}/images/logo-text.svg" width="118" height="21" alt="Логотип Сat Energy">
 	</a>
 	<nav class="main-header__nav main-nav">
 		<button class="main-nav__toggle" type="button">
