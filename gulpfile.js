@@ -122,7 +122,7 @@ export async function copyShared () {
 
 	shared.push(`!${SRC}/**/*.md`)
 
-	return src(shared, { base: SRC })
+	return src(shared, { base: SRC, encoding: false })
 		.pipe(dest(DIST))
 }
 
