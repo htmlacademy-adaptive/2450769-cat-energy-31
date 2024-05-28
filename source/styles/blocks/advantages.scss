@@ -1,48 +1,55 @@
-.advantages__item::before {
-	content: "";
-	display: block;
-	width: 70px;
-	height: 70px;
-	background-image: var(--icon);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-
+.advantages__title {
 	@media (--only-tablet) {
-		width: 270px;
-		height: 270px;
+		--icon-size: 270px;
 	}
 
 	@media (--only-desktop) {
-		width: 140px;
-		height: 140px;
+		--icon-size: 140px;
+	}
+
+	&--icon_catsit {
+		--icon: var(--icon-catsit);
+	}
+
+	&--icon_catgo {
+		--icon: var(--icon-catgo);
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		float: inline-start;
+		width: var(--icon-size, 70px);
+		height: var(--icon-size, 70px);
+		background-image: var(--icon);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
 	}
 }
 
-.advantages__link::after {
-	content: "";
-	display: block;
-	width: 32px;
-	height: 12px;
-	mask: var(--icon-arrow);
-	mask-repeat: no-repeat;
-	mask-position: -8px center;
-	mask-size: contain;
-	background-color: #000000;
-}
+.advantages__link {
+	display: inline flex;
+	gap: 25px;
 
-.advantages__link:hover::after {
-	mask-position: center;
-}
+	&:hover {
+		--icon-shift: 0;
+	}
 
-.advantages__link:active::after {
-	opacity: 0.3;
-}
+	&:active {
+		--icon-opacity: 0.3;
+	}
 
-.advantages__title--icon_catsit {
-	--icon: var(--icon-catsit);
-}
-
-.advantages__title--icon_catgo {
-	--icon: var(--icon-catgo);
+	&::after {
+		content: "";
+		display: block;
+		width: 32px;
+		height: 12px;
+		mask: var(--icon-arrow);
+		mask-repeat: no-repeat;
+		mask-position: var(--icon-shift, -8px) center;
+		mask-size: contain;
+		background-color: rgb(0 0 0 / var(--icon-opacity, 1));
+		transition: mask-position 0.1s;
+	}
 }
