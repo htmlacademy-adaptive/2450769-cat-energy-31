@@ -1,19 +1,28 @@
-.copyright__link--icon_htmlacademy::before {
-	content: "";
-	display: block;
-	width: 27px;
-	height: 34px;
-	mask-image: var(--icon-htmlacademy);
-	mask-repeat: no-repeat;
-	mask-position: center;
-	mask-size: contain;
-	background-color: var(--special-grey-3);
-}
+.copyright__link {
+	display: flex;
+	gap: 23px;
 
-.copyright__link--icon_htmlacademy:hover::before {
-	background-color: var(--basic-green);
-}
+	@media (--only-mobile) {
+		justify-content: space-between;
+	}
 
-.copyright__link--icon_htmlacademy:active::before {
-	opacity: 0.3;
+	&:hover {
+		--icon-color: var(--basic-green);
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 27px;
+		height: 34px;
+		mask-image: var(--icon-htmlacademy);
+		mask-repeat: no-repeat;
+		mask-position: center;
+		mask-size: contain;
+		background-color: var(--icon-color, var(--special-grey-3));
+	}
 }

@@ -1,15 +1,20 @@
-.card--has-icon::before {
-	content: "";
-	display: block;
-	width: 30px;
-	height: 30px;
-	background-image: var(--icon-plus);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-
+.card {
 	@media (--not-mobile) {
-		width: 60px;
-		height: 60px;
+		--icon-size: 60px;
+	}
+
+	&--has-icon {
+		--has-icon: "";
+	}
+
+	&::before {
+		content: var(--has-icon, none);
+		display: block;
+		width: var(--icon-size, 30px);
+		height: var(--icon-size, 30px);
+		background-image: var(--icon-plus);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
 	}
 }
