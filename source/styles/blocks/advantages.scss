@@ -1,3 +1,18 @@
+.advantages {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	@media (--only-tablet) {
+		gap: 30px;
+	}
+
+	@media (--only-desktop) {
+		flex-direction: row;
+		gap: 80px;
+	}
+}
+
 .advantages__title {
 	@media (--only-tablet) {
 		--icon-size: 270px;
