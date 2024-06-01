@@ -1,32 +1,33 @@
-.specific__item::before {
-	content: "";
-	display: block;
-	width: 60px;
-	height: 60px;
-	background-image: var(--icon);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	background-color: var(--basic-green);
-
+.specific__item {
 	@media (--not-mobile) {
-		width: 80px;
-		height: 80px;
+		--icon-size: 80px;
 	}
-}
 
-.specific__item--icon_leaf {
-	--icon: var(--icon-leaf);
-}
+	&--icon_leaf {
+		--icon: var(--icon-leaf);
+	}
 
-.specific__item--icon_flask {
-	--icon: var(--icon-flask);
-}
+	&--icon_flask {
+		--icon: var(--icon-flask);
+	}
 
-.specific__item--icon_scales {
-	--icon: var(--icon-scales);
-}
+	&--icon_scales {
+		--icon: var(--icon-scales);
+	}
 
-.specific__item--icon_tambleware {
-	--icon: var(--icon-tableware);
+	&--icon_tambleware {
+		--icon: var(--icon-tableware);
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		width: var(--icon-size, 60px);
+		height: var(--icon-size, 60px);
+		background-image: var(--icon);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		background-color: var(--basic-green);
+	}
 }

@@ -1,6 +1,8 @@
 @use "../common/image.scss" as *;
 
 .present {
+	min-height: 300px;
+
 	@include image("cat-in-bag");
 
 	@media (--not-mobile) {
@@ -10,16 +12,15 @@
 	@media (--only-desktop) {
 		@include image("cat-in-bag-1280");
 	}
-	min-height: 300px;
-}
 
-.present::before {
-	content: "";
-	display: block;
-	width: 80px;
-	height: 80px;
-	background-image: var(--icon-gift);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+	&::before {
+		content: "";
+		display: block;
+		width: 80px;
+		height: 80px;
+		background-image: var(--icon-gift);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
 }

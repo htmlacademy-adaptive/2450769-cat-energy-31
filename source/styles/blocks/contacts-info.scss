@@ -1,18 +1,20 @@
-.contacts-info__label::after {
-	content: "";
-	display: block;
-	width: 20px;
-	height: 20px;
-	background-image: var(--icon);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-}
+.contacts-info__label {
+	&--icon_mail {
+		--icon: var(--icon-mail);
+	}
 
-.contacts-info__label--icon_mail {
-	--icon: var(--icon-mail);
-}
+	&--icon_phone {
+		--icon: var(--icon-phone);
+	}
 
-.contacts-info__label--icon_phone {
-	--icon: var(--icon-phone);
+	&::after {
+		content: "";
+		display: block;
+		width: 20px;
+		height: 20px;
+		background-image: var(--icon);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
 }
