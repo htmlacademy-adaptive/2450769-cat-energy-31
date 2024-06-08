@@ -1,3 +1,20 @@
+.specific__list {
+	display: grid;
+	grid-template-columns: repeat(var(--column-count, 1), 1fr);
+	gap: 20px;
+	padding: 0;
+
+	@media (--only-tablet) {
+		--column-count: 2;
+		gap: 60px;
+	}
+
+	@media (--only-desktop) {
+		--column-count: 4;
+		gap: 80px;
+	}
+}
+
 .specific__item {
 	@media (--not-mobile) {
 		--icon-size: 80px;
@@ -17,6 +34,10 @@
 
 	&--icon_tambleware {
 		--icon: var(--icon-tableware);
+	}
+
+	&::marker {
+		color: transparent;
 	}
 
 	&::before {
