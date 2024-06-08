@@ -1,14 +1,14 @@
 .advantages {
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	gap: 20px;
+	grid-template-columns: repeat(var(--column-count, 1), 1fr);
 
 	@media (--only-tablet) {
 		gap: 30px;
 	}
 
 	@media (--only-desktop) {
-		flex-direction: row;
+		--column-count: 2;
 		gap: 80px;
 	}
 }
