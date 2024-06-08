@@ -1,0 +1,14 @@
+.products__list {
+	display: grid;
+	grid-template-columns: repeat(var(--column-count, 1), 1fr);
+
+	@media (--only-tablet) {
+		--column-count: 2;
+		gap: 60px;
+	}
+
+	@media (--only-desktop) {
+		--column-count: 4;
+		gap: 80px;
+	}
+}

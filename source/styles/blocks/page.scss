@@ -7,3 +7,24 @@
 	display: grid;
 	grid-template-rows: auto 1fr;
 }
+
+.page__centerer {
+	--indent-min: 20;
+	--indent-max: 30;
+	--vp-min: 320;
+	--vp-max: 768;
+
+	--increment-indent: calc(var(--indent-max) - var(--indent-min));
+	--increment-vp: calc(var(--vp-max) - var(--vp-min));
+	--content-indent: calc(var(--indent-min) * 1px + var(--increment-indent) * (100vw - var(--vp-min) * 1px) / var(--increment-vp));
+	margin-inline: var(--content-indent);
+
+	@media (width >= 768px) {
+		--content-indent: calc(var(--indent-max) * 1px);
+	}
+
+	@media (width >= 1280px) {
+		--content-indent: auto;
+		width: 1220px;
+	}
+}

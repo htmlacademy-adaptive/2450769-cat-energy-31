@@ -1,1 +1,18 @@
-/* здесь описывай глобальные стили для html, body, img и так далее */
+html {
+	scroll-behavior: smooth;
+	text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+img {
+	max-inline-size: 100%;
+	block-size: auto;
+	object-fit: contain;
+}
+
+:is(picture, source) {
+	display: contents;
+}
