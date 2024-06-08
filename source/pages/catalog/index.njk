@@ -4,9 +4,9 @@
 {%- from "./templates/contacts.njk" import contacts with context -%}
 
 {%- set page = {
-	title: "Каталог продукции",
-	link: "/catalog",
-	lang: "ru"
+title: "Каталог продукции",
+link: "/catalog",
+lang: "ru"
 } -%}
 
 {% block main %}
@@ -14,27 +14,28 @@
 
 	<h1>{{ page.title }}</h1>
 
-	<section class="main-container__products products">
+	<section class="main-container__products products page__centerer">
 		<h2 class="products__title">Основные товары</h2>
-		{% for product in mainProducts %}
+		<div class="products__list">
+			{% for product in mainProducts %}
 			{{ card(product, "products__item") }}
-		{% endfor %}
-
-		{% set showMore = {
+			{% endfor %}
+			{% set showMore = {
 			"title": "Показать еще 100500 товаров",
 			"description": "На самом деле вкусов гораздо больше!",
 			"cta": {
-				"text": "Показать все",
-				"url": "#"
+			"text": "Показать все",
+			"url": "#"
 			}
-		} %}
-		{{ card(showMore, "card--has-icon products__item") }}
+			} %}
+			{{ card(showMore, "card--has-icon products__item") }}
+		</div>
 	</section>
 
 	<section class="main-container__products products">
 		<h2 class="products__title">Дополнительные товары</h2>
 		{% for product in additionalProducts %}
-			{{ card(product, "card--view_line products__item") }}
+		{{ card(product, "card--view_line products__item") }}
 		{% endfor %}
 		<div class="products__present present">
 			<div class="present__image"></div>
