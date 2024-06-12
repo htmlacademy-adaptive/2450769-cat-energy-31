@@ -32,14 +32,18 @@ lang: "ru"
 		</div>
 	</section>
 
-	<section class="main-container__products products">
-		<h2 class="products__title">Дополнительные товары</h2>
-		{% for product in additionalProducts %}
-		{{ card(product, "card--view_line products__item") }}
-		{% endfor %}
-		<div class="products__present present">
-			<div class="present__image"></div>
-			<div class="present__description">Закажите все и получите чехол для кота в подарок!</div>
+	<section class="main-container__additional-products additional-products page__centerer">
+		<h2 class="additional-products__title">Дополнительные товары</h2>
+		<div class="additional-products__list">
+			<div class="additional-products__list-items">
+				{% for product in additionalProducts %}
+				{{ card(product, "card--view_line additional-products__item") }}
+				{% endfor %}
+			</div>
+			<div class="additional-products__present present">
+				<div class="present__image"></div>
+				<div class="present__description">Закажите все и получите чехол для кота в подарок!</div>
+			</div>
 		</div>
 	</section>
 
