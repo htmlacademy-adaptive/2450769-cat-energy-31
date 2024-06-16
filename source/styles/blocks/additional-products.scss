@@ -1,23 +1,16 @@
 .additional-products__list {
 	display: grid;
-	gap: 35px;
-	grid-template-columns: repeat(var(--column-count, 1), 1fr);
-
-	@media (--only-tablet) {
-		gap: 70px;
-	}
 
 	@media (--only-desktop) {
-		--column-count: 2;
+		grid-template-columns: repeat(4, 1fr);
 		gap: 80px;
 	}
 }
 
 .additional-products__list-items {
 	display: grid;
-	grid-template-columns: repeat(var(--column-count, 1), 1fr);
 
 	@media (--only-desktop) {
-		--column-count: 1;
+		grid-column: 1 / 4;
 	}
 }

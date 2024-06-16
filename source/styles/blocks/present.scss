@@ -11,7 +11,6 @@
 
 	@media (--only-desktop) {
 		@include image("cat-in-bag-1280");
-		grid-column: 2 / 2;
 	}
 
 	&::before {
