@@ -1,0 +1,16 @@
+.additional-products__list {
+	display: grid;
+
+	@media (--only-desktop) {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 80px;
+	}
+}
+
+.additional-products__list-items {
+	display: grid;
+
+	@media (--only-desktop) {
+		grid-column: 1 / 4;
+	}
+}
