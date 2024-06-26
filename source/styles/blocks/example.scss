@@ -1,0 +1,15 @@
+.example {
+	display: grid;
+
+	@media (--only-desktop) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 80px;
+	}
+}
+
+.example__image {
+	@media (--only-desktop) {
+		grid-column: 2 / 3;
+		grid-row: 1 / 4;
+	}
+}
