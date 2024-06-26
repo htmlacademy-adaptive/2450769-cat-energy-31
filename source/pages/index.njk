@@ -54,7 +54,7 @@ lang: "ru"
 		</ul>
 	</section>
 
-	<section class="main-container__example example">
+	<section class="main-container__example example page__centerer">
 		<h2 class="example__title">Живой пример</h2>
 		<div class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</div>
 		<dl class="example__result result">
@@ -71,8 +71,10 @@ lang: "ru"
 				<dd class="result__value">15 000 РУБ.</dd>
 			</div>
 		</dl>
-		{{ picture("slider-fat", "example__slider", "Толстый кот") }}
-		{{ picture("slider-thin", "example__slider", "Худой кот") }}
+		<div class="example__image">
+			{{ picture("slider-fat", "example__slider", "Толстый кот") }}
+			{{ picture("slider-thin", "example__slider", "Худой кот") }}
+		</div>
 	</section>
 
 	{{ contacts() }}
