@@ -1,6 +1,6 @@
 {
-	"name": "cat-energy",
-	"description": "Личный проект «Кэт энерджи» от HTML Academy",
+	"name": "Cat Energy",
+	"description": "Магазин здорового корма для котов",
 	"icons": [
 		{
 			"src": "./favicons/icon-192.png",

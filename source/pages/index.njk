@@ -17,7 +17,7 @@ lang: "ru"
 			<h1 class="promo__title">Функциональное питание для котов</h1>
 			<div class="promo__description">Занялся собой? Займись котом!</div>
 		</div>
-		{{ picture("hero", "promo__image", "Промо") }}
+		{{ picture("hero", { class: "promo__image", alt: "Промо" }) }}
 		<a class="promo__link" href="#">Подобрать программу</a>
 	</section>
 
@@ -72,8 +72,8 @@ lang: "ru"
 			</div>
 		</dl>
 		<div class="example__image">
-			{{ picture("slider-fat", "example__slider", "Толстый кот") }}
-			{{ picture("slider-thin", "example__slider", "Худой кот") }}
+			{{ picture("slider-fat", { class: "example__slider", alt: "Толстый кот" }) }}
+			{{ picture("slider-thin", { class: "example__slider", alt: "Худой кот" }) }}
 		</div>
 	</section>
 

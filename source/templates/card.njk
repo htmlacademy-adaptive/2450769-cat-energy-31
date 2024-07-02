@@ -16,7 +16,7 @@
 		{% endfor %}
 	</dl>
 	{% if product.image %}
-	<a class="card__link" href="#">{{ picture(product.image.name, "card__image", product.image.alt) }}</a>
+	<a class="card__link" href="#">{{ picture(product.image.name, { class: "card__image", alt: product.image.alt }) }}</a>
 	{% endif %}
 	<a class="card__button button" href="{{ product.cta.url }}">{{ product.cta.text }}</a>
 </article>

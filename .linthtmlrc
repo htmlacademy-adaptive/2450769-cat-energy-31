@@ -1,6 +1,7 @@
 {
 	"extends": "linthtml-config-htmlacademy",
 	"rules": {
+		"htmlacademy/class-first": false,
 		"htmlacademy/req-preload-font": false
 	}
 }

@@ -1,0 +1,23 @@
+{
+	"maxDensity": 2,
+	"formats": [
+		"avif",
+		"webp"
+	],
+	"sizes": [
+		{
+			"breakpoint": 1280,
+			"width": 552,
+			"height": 499
+		},
+		{
+			"breakpoint": 768,
+			"width": 709,
+			"height": 609
+		},
+		{
+			"width": 280,
+			"height": 270
+		}
+	]
+}

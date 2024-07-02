@@ -23,10 +23,12 @@ export default function (context) {
 					multi: true,
 				},
 			],
-			"postcss-custom-media": {},
 			"postcss-lightningcss": {
 				lightningcssOptions: {
 					minify: !IS_DEVELOPMENT,
+					drafts: {
+						customMedia: true,
+					},
 				},
 			},
 		},

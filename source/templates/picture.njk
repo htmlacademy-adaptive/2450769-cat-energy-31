@@ -1,21 +1,28 @@
-{% macro picture(name, classes = "", alt = "") -%}
+{% macro picture(name, attributes) -%}
 
-	{% set formats = ["avif", "webp"] -%}
-	{% set image = images[name] -%}
-	{% set densities = range(1, (image.maxdppx or 1) + 1) -%}
+	{% set directory = project.root ~ "/images/" -%}
+	{% set sizes = images[name].sizes -%}
+	{% set formats = images[name].formats -%}
+	{% set maxDensity = images[name].maxDensity -%}
+	{% set densities = range(1, (maxDensity or 1) + 1) | reverse -%}
 
+	{{- "\n\t" -}}
 	<picture>
 		{%- for format in formats %}
 			{%- set lastFormat = loop.last %}
 
-			{%- for size in image.sizes | reverse %}
+			{%- for size in sizes %}
 				{%- set isImgTag = lastFormat and loop.last %}
+				{%- set suffix = ("-" ~ size.breakpoint) if size.breakpoint else "" %}
+				{%- set path = "" %}
 				{%- set srcset %}
 					{%- set comma = joiner(", ") %}
 
-					{%- for dppx in densities %}
-						{%- if not isImgTag or not loop.first -%}
-							{{ comma() }}{{ project.root }}/images/{{ name }}{{ ("-" ~ size.breakpoint) if size.breakpoint }}@{{ dppx }}x.{{ format }} {{ dppx }}x
+					{%- for density in densities %}
+						{%- set descriptor = (" " ~ density ~ "x") if density !== 1 else "" %}
+						{%- set path = directory ~ name ~ suffix ~ "@" ~ density ~ "x." ~ format %}
+						{%- if not isImgTag or not loop.last -%}
+							{{ comma() }}{{ path }}{{ descriptor }}
 						{%- endif -%}
 					{%- endfor -%}
 				{%- endset %}
@@ -23,25 +30,33 @@
 				{{- "\n\t\t" -}}
 
 				<{{ "img" if isImgTag else "source" }}
-					{% if isImgTag %}
-						class="{{ classes }}"
-						src="{{ project.root }}/images/{{ name }}@1x.{{ format }}"
-					{% endif %}
 					{% if srcset %}
 						srcset="{{ srcset }}"
 					{% endif %}
-					width={{ size.width }}
-					height={{ size.height }}
 					{% if isImgTag %}
-						alt="{{ alt }}"
-					{% else %}
-						type="{{ "image/" ~ format }}"
+						src="{{ path }}"
 					{% endif %}
-					{% if size.breakpoint !== undefined -%}
-						media="(width >= {{ size.breakpoint }}px)"
-					{%- endif %}
+					width="{{ size.width }}"
+					height="{{ size.height }}"
+					{% if isImgTag %}
+						{% for name, value in attributes %}
+							{% if value === true %}
+								{{ name }}
+							{% elseif value !== false %}
+								{{ name }}="{{ value }}"
+							{% endif %}
+						{% endfor %}
+						{% if not attributes.alt %}
+							alt="{{ alt }}"
+						{% endif %}
+					{% else %}
+						type="image/{{ format }}"
+						{% if size.breakpoint -%}
+							media="(width >= {{ size.breakpoint }}px)"
+						{%- endif %}
+					{% endif %}
 				>
 			{%- endfor -%}
 		{%- endfor %}
 	</picture>
-{% endmacro %}
+{%- endmacro %}

@@ -1,6 +1,7 @@
 import { env } from 'node:process'
 import { error } from 'node:console'
-import { link, readFile, rm, stat } from 'node:fs/promises'
+import { extname } from "node:path"
+import { link, readdir, readFile, rm, stat } from 'node:fs/promises'
 
 import bemlinter from 'gulp-html-bemlinter'
 import browserslistToEsbuild from 'browserslist-to-esbuild'
@@ -51,8 +52,25 @@ export function getProjectRoot () {
 
 export async function processMarkup () {
 	const data = await readJsonFile(`${SRC}/data.json`)
+	let projectData = await readJsonFile(`${SRC}/manifest.webmanifest`)
 
-	data.project.root = getProjectRoot()
+	data.project = {
+		name: projectData.name,
+		description: projectData.description,
+		root: getProjectRoot(),
+	}
+	data.images = {}
+
+	let filePaths = await readdir(`${SRC}/images`, { recursive: true })
+
+	let jsonFiles = filePaths.filter((fileName) => extname(fileName) === `.json`)
+
+	for (let jsonFile of jsonFiles) {
+		let filePath = jsonFile.replace(/\\/g, `/`)
+		let imageData = await readJsonFile(`${SRC}/images/${filePath}`)
+
+		data.images[filePath.slice(0, -5)] = imageData
+	}
 
 	return src(`${SRC}/pages/**/*.{html,njk}`, { base: SRC })
 		.pipe(plumber(plumberOptions))
