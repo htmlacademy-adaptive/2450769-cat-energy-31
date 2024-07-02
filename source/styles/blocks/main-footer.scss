@@ -7,3 +7,15 @@
 		align-items: center;
 	}
 }
+
+.main-footer__logo {
+	@media (--not-mobile) {
+		justify-self: start;
+	}
+}
+
+.main-footer__copyright {
+	@media (--not-mobile) {
+		justify-self: end;
+	}
+}
