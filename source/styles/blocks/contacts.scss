@@ -1,0 +1,34 @@
+.contacts {
+	display: grid;
+
+	@media (--only-desktop) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.contacts__information {
+	@media (--only-desktop) {
+		background-color: var(--basic-white);
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		z-index: 1;
+		align-self: center;
+	}
+}
+
+.contacts__map-interactive {
+	@media (scripting: enabled) {
+		background-color: var(--basic-grey);
+	}
+}
+
+.contacts__map {
+	@media (--only-desktop) {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	}
+
+	@media (scripting: enabled) {
+		display: none;
+	}
+}

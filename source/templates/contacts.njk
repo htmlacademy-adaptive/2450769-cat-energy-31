@@ -1,11 +1,15 @@
 {%- from "./picture.njk" import picture with context -%}
 
 {% macro contacts() %}
-<aside class="contacts">
-	<div class="contacts__title">Приглашаем к сотрудничеству дилеров!</div>
-	<div class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
+<div class="contacts">
+	<div class="contacts__information page__centerer">
+		<div class="contacts__title">Приглашаем к сотрудничеству дилеров!</div>
+		<div class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
+	</div>
+
+	<div class="contacts__map-interactive"></div>
 
 	{{ picture("map", "contacts__map", "Карта") }}
 
-</aside>
+</div>
 {% endmacro %}
