@@ -1,0 +1,9 @@
+.main-footer {
+	display: grid;
+	justify-items: center;
+
+	@media (--not-mobile) {
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+	}
+}
