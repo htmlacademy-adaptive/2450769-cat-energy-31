@@ -1,0 +1,31 @@
+.selection-program {
+	display: grid;
+
+	@media (--only-desktop) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.selection-program__title {
+	@media (--only-desktop) {
+		grid-column: 1 / 3;
+	}
+}
+
+.selection-program__contacts {
+	@media (--only-desktop) {
+		grid-column: 1 / 3;
+	}
+}
+
+.selection-program__comments {
+	@media (--only-desktop) {
+		grid-column: 1 / 3;
+	}
+}
+
+.selection-program__additionally {
+	@media (--only-desktop) {
+		grid-column: 1 / 3;
+	}
+}

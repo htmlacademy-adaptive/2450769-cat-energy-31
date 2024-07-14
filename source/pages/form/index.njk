@@ -3,17 +3,17 @@
 {%- from "./templates/contacts.njk" import contacts with context -%}
 
 {%- set page = {
-	title: "Подбор программы",
-	link: "/form",
-	lang: "ru"
+title: "Подбор программы",
+link: "/form",
+lang: "ru"
 } -%}
 
 {% block main %}
 <main class="main-container">
 
-	<h1>{{ page.title }}</h1>
+	<h1 class="page__centerer">{{ page.title }}</h1>
 
-	<form class="selection-program" action="https://echo.htmlacademy.ru/" method="post">
+	<form class="selection-program page__centerer" action="https://echo.htmlacademy.ru/" method="post">
 		<h2 class="selection-program__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
 
 		<fieldset class="selection-program__main main-info">
