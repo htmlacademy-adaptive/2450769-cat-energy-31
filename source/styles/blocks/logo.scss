@@ -1,0 +1,13 @@
+.logo {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 14px;
+}
+
+.logo__text {
+	align-self: center;
+
+	@media (--only-mobile) {
+		justify-self: center;
+	}
+}
