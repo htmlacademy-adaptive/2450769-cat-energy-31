@@ -1,8 +1,14 @@
 .copyright__link {
+	font-family: var(--font-main);
+	font-size: 16px;
+	line-height: 125%;
 	display: flex;
-	gap: 23px;
+	text-decoration: none;
+	color: var(--special-dark-grey);
+	align-items: center;
 
 	@media (--only-mobile) {
+		padding-top: 40px;
 		justify-content: space-between;
 	}
 
