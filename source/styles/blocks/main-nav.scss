@@ -1,0 +1,17 @@
+.main-nav__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	@media (--not-mobile) {
+		display: flex;
+		gap: 33px;
+		flex-wrap: wrap;
+		justify-content: end;
+	}
+
+	@media (--only-mobile) {
+		display: grid;
+		justify-items: center;
+	}
+}

@@ -1,0 +1,20 @@
+.nav-list__item {
+	font-family: var(--font-accent);
+	font-size: 20px;
+	text-transform: uppercase;
+
+	@media (--only-mobile) {
+		line-height: 100%;
+		padding: 22px 0 24px 0;
+	}
+
+	@media (--only-tablet) {
+		font-size: 18px;
+		line-height: 133%;
+	}
+}
+
+.nav-list__link {
+	color: #000000;
+	text-decoration: none;
+}

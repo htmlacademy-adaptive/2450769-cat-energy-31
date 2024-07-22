@@ -1,12 +1,37 @@
+.specific__title {
+	font-family: var(--font-accent);
+	font-size: 36px;
+	line-height: 111%;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 40px;
+
+	@media (--not-mobile) {
+		font-size: 60px;
+		line-height: 100%;
+		padding-bottom: 71px;
+	}
+}
+
 .specific__list {
+	font-family: var(--font-main);
+	font-size: 14px;
+	line-height: 129%;
+	color: var(--special-dark-grey);
 	display: grid;
 	grid-template-columns: repeat(var(--column-count, 1), 1fr);
 	gap: 20px;
 	padding: 0;
+	margin: 0;
+
+	@media (--not-mobile) {
+		font-size: 16px;
+		line-height: 150%;
+	}
 
 	@media (--only-tablet) {
 		--column-count: 2;
-		gap: 60px;
+		gap: 160px 60px;
 	}
 
 	@media (--only-desktop) {
@@ -16,8 +41,16 @@
 }
 
 .specific__item {
+	display: grid;
+	gap: 0 20px;
+
+	@media (--only-mobile) {
+		grid-template-columns: auto 1fr;
+	}
+
 	@media (--not-mobile) {
 		--icon-size: 80px;
+		gap: 31px 0;
 	}
 
 	&--icon_leaf {
