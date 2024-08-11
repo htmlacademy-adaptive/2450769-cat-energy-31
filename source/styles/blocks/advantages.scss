@@ -82,14 +82,28 @@
 		padding-top: 22px;
 	}
 
+	@media (--not-mobile) {
+		--is-divided: none;
+	}
+
 	&::after {
-		content: "";
+		content: var(--is-divided, " ");
 		display: block;
 		position: absolute;
 		width: 100%;
 		height: 1px;
 		background-color: #d9d9d9;
 		bottom: -23px;
+	}
+}
+
+.advantages__text {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 14px;
+
+	&:last-child {
+		padding-bottom: 0;
 	}
 }
 
