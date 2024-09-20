@@ -1,5 +1,7 @@
 .main-footer {
 	display: grid;
+	background-color: var(--basic-grey);
+	box-shadow: 0 50vh 0 50vh var(--basic-grey);
 
 	@media (--not-mobile) {
 		grid-template-columns: repeat(3, 1fr);

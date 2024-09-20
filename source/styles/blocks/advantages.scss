@@ -41,6 +41,7 @@
 
 	@media (--only-tablet) {
 		--icon-size: 270px;
+		--icon-position: inline-end;
 	}
 
 	@media (--only-desktop) {
@@ -58,9 +59,9 @@
 	&::before {
 		content: "";
 		display: block;
-		float: inline-start;
 		width: var(--icon-size, 70px);
 		height: var(--icon-size, 70px);
+		float: var(--icon-position, inline-start);
 		background-image: var(--icon);
 		background-repeat: no-repeat;
 		background-position: center;

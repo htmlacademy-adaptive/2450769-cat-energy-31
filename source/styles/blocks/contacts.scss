@@ -4,6 +4,11 @@
 	@media (--only-desktop) {
 		grid-template-columns: 1fr;
 	}
+
+	@media (--not-desktop) {
+		background-color: var(--basic-grey);
+		box-shadow: 0 50vh 0 50vh var(--basic-grey);
+	}
 }
 
 .contacts__information {
