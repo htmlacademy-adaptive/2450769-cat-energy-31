@@ -1,6 +1,7 @@
 .main-footer {
 	display: grid;
-	justify-items: center;
+	background-color: var(--basic-grey);
+	box-shadow: 0 50vh 0 50vh var(--basic-grey);
 
 	@media (--not-mobile) {
 		grid-template-columns: repeat(3, 1fr);
@@ -9,8 +10,13 @@
 }
 
 .main-footer__logo {
+	@media (--only-mobile) {
+		padding-top: 40px;
+	}
+
 	@media (--not-mobile) {
 		justify-self: start;
+		padding: 55px 0 55px 0;
 	}
 }
 
