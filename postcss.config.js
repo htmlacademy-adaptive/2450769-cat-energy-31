@@ -1,7 +1,7 @@
 import sass from "@csstools/postcss-sass"
 
 export default function (context) {
-	const { IS_DEVELOPMENT } = context
+	let { IS_DEVELOPMENT } = context
 
 	return {
 		parser: `postcss-scss`,

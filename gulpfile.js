@@ -30,7 +30,7 @@ const ROOT_SHARED_PATHS = [
 ]
 
 async function readJsonFile (path) {
-	const file = await readFile(path)
+	let file = await readFile(path)
 
 	return JSON.parse(file)
 }
@@ -51,7 +51,7 @@ export function getProjectRoot () {
 }
 
 export async function processMarkup () {
-	const data = await readJsonFile(`${SRC}/data.json`)
+	let data = await readJsonFile(`${SRC}/data.json`)
 	let projectData = await readJsonFile(`${SRC}/manifest.webmanifest`)
 
 	data.project = {
@@ -89,7 +89,7 @@ export function lintBem () {
 }
 
 export function processStyles () {
-	const context = { IS_DEVELOPMENT }
+	let context = { IS_DEVELOPMENT }
 
 	return src(`${SRC}/styles/*.scss`, { sourcemaps: IS_DEVELOPMENT })
 		.pipe(plumber(plumberOptions))
@@ -100,7 +100,7 @@ export function processStyles () {
 }
 
 export function processScripts () {
-	const gulpEsbuild = createGulpEsbuild({ incremental: IS_DEVELOPMENT })
+	let gulpEsbuild = createGulpEsbuild({ incremental: IS_DEVELOPMENT })
 
 	return src(`${SRC}/scripts/*.js`)
 		.pipe(plumber(plumberOptions))
@@ -135,7 +135,7 @@ export async function linkRootStatic () {
 }
 
 export async function copyShared () {
-	const shared = ROOT_SHARED_PATHS
+	let shared = ROOT_SHARED_PATHS
 		.map((path) => `${SRC}${path}`)
 
 	shared.push(`!${SRC}/**/*.md`)
@@ -145,10 +145,10 @@ export async function copyShared () {
 }
 
 export function startServer () {
-	const serveStatic = ROOT_SHARED_PATHS
+	let serveStatic = ROOT_SHARED_PATHS
 		.map((path) => {
-			const route = path.replace(/(\/\*\*\/.*$)|\/$/, ``)
-			const dir = `${SRC}${route}`
+			let route = path.replace(/(\/\*\*\/.*$)|\/$/, ``)
+			let dir = `${SRC}${route}`
 
 			return { route, dir }
 		})
@@ -168,8 +168,8 @@ export function startServer () {
 		})
 	})
 
-	const sharedPaths = ROOT_SHARED_PATHS.map((PATH) => `${SRC}${PATH}`)
-	const staticPaths = ROOT_STATIC_PATHS.map((PATH) => `${SRC}${PATH}`)
+	let sharedPaths = ROOT_SHARED_PATHS.map((PATH) => `${SRC}${PATH}`)
+	let staticPaths = ROOT_STATIC_PATHS.map((PATH) => `${SRC}${PATH}`)
 
 	watch(`${SRC}/**/*.{html,njk,json}`, series(processMarkup))
 	watch(`${SRC}/**/*.scss`, series(processStyles))
