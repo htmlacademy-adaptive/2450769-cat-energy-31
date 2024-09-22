@@ -7,7 +7,7 @@ export default function (context) {
 		parser: `postcss-scss`,
 		plugins: {
 			"postcss-import": {
-				plugins: [sass()],
+				plugins: [sass({ silenceDeprecations: [`legacy-js-api`] })],
 			},
 			"postcss-url": [
 				{
