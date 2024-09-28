@@ -12,10 +12,10 @@ lang: "ru"
 {% block main %}
 <main class="main-container">
 
-	<h1 class="page__centerer">{{ page.title }}</h1>
+	<h1 class="main-container__title page__centerer">{{ page.title }}</h1>
 
 	<section class="main-container__products products page__centerer">
-		<h2 class="products__title">Основные товары</h2>
+		<h2 class="products__title visually-hidden">Основные товары</h2>
 		<div class="products__list">
 			{% for product in mainProducts %}
 			{{ card(product, "products__item") }}
