@@ -9,7 +9,7 @@
 	}
 
 	@media (--only-desktop) {
-		--bg-top-shift: 236px;
+		--bg-top-shift: 166px;
 		padding: 0;
 	}
 
@@ -22,7 +22,7 @@
 		top: var(--bg-top-shift, 0);
 		width: 100vw;
 		background-color: var(--basic-grey);
-		box-shadow: 100vw 0 0 0 var(--basic-grey);
+		box-shadow: 0 50vh 0 50vh var(--basic-grey);
 	}
 }
 
@@ -39,6 +39,11 @@
 	grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
 	width: min(100%, 560px);
 	aspect-ratio: 280/256;
+
+	@media (--only-desktop) {
+		padding-top: 30px;
+		aspect-ratio: 280/256;
+	}
 }
 
 .slider__image {

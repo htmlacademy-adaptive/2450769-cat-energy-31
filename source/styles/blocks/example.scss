@@ -1,10 +1,9 @@
 .example {
 	display: grid;
-	padding-top: 25px;
 
 	@media (--only-desktop) {
 		grid-template-columns: repeat(2, 1fr);
-		gap: 80px;
+		gap: 0 224px;
 	}
 }
 
@@ -14,6 +13,18 @@
 	font-size: 36px;
 	line-height: 111%;
 	margin: 0;
+	padding-top: 25px;
+
+
+	@media (--only-mobile) {
+		background-color: var(--basic-grey);
+		box-shadow: 0 50vh 0 50vh var(--basic-grey);
+	}
+
+	@media (--not-mobile) {
+		font-size: 60px;
+		line-height: 100%;
+	}
 }
 
 .example__description {
@@ -22,11 +33,28 @@
 	font-size: 14px;
 	line-height: 129%;
 	padding-top: 40px;
+
+	@media (--not-mobile) {
+		font-size: 16px;
+		line-height: 150%;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 146px;
+	}
 }
 
 .example__image {
 	@media (--only-desktop) {
 		grid-column: 2 / 3;
 		grid-row: 1 / 4;
+	}
+}
+
+.example__result {
+	padding-top: 20px;
+
+	@media (--only-tablet) {
+		padding-top: 55px;
 	}
 }

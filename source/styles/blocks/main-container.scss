@@ -19,3 +19,38 @@
 		padding-top: 74px;
 	}
 }
+
+.main-container__advantages {
+	padding-top: 20px;
+
+	@media (--only-tablet) {
+		padding-top: 0;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 82px;
+	}
+}
+
+.main-container__specific {
+	padding-top: 20px;
+
+	@media (--only-tablet) {
+		padding-top: 45px;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 71px;
+	}
+}
+
+.main-container__example {
+	@media (--only-tablet) {
+		padding-top: 92px;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 69px;
+		padding-bottom: 75px;
+	}
+}

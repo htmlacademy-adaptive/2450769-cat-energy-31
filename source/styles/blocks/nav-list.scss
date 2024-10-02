@@ -22,10 +22,11 @@
 		content: var(--is-divided, " ");
 		display: block;
 		position: absolute;
-		width: 100%;
+		width: 200vw;
 		height: 1px;
 		background-color: #e6e6e6;
 		top: 0;
+		left: -100vw;
 	}
 }
 
