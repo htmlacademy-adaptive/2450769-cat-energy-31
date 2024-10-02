@@ -31,6 +31,27 @@
 }
 
 .nav-list__link {
+	position: relative;
 	color: #000000;
 	text-decoration: none;
+
+	@media (--only-tablet) {
+		--underline-color: var(--basic-green);
+	}
+
+	@media (--only-desktop) {
+		--underline-color: var(--basic-white);
+	}
+
+
+	&[aria-current="page"]::after {
+		position: absolute;
+		content: "";
+		right: 0px;
+		left: 0px;
+		height: 2px;
+		background-color: var(--underline-color);
+		z-index: 1;
+		bottom: -10px;
+	}
 }
