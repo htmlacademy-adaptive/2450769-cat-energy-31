@@ -70,17 +70,30 @@
 	font-size: 16px;
 	line-height: 125%;
 	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--basic-white);
+	background-color: var(--basic-green);
+	padding: 10px 0 10px 0;
+	width: 100%;
+	text-align: center;
 
 	@media (--only-tablet) {
 		grid-row: 2 / 3;
 		grid-column: 1 / 2;
 		font-size: 20px;
 		line-height: 130%;
-		padding-top: 50px;
-		padding-left: 90px;
+		height: fit-content;
+		padding: 14px 26px;
+		width: fit-content;
+		margin-left: 90px;
 	}
 
 	@media (--only-desktop) {
-		padding-left: 80px;
+		font-size: 20px;
+		line-height: 130%;
+		height: fit-content;
+		padding: 14px 26px;
+		width: fit-content;
+		margin-left: 90px;
 	}
 }
