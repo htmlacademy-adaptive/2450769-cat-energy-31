@@ -3,11 +3,13 @@
 	grid-template-columns: auto auto;
 	gap: 32px 32px;
 	background-color: var(--basic-grey);
+	box-shadow: 0 50vh 0 50vh var(--basic-grey);
 	margin: 0;
 
 	@media (--only-tablet) {
 		grid-template-columns: 162px 162px 1fr;
 		background-color: var(--basic-white);
+		box-shadow: 0 50vh 0 50vh var(--basic-white);
 	}
 
 	@media (--not-mobile) {
