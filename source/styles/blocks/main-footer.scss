@@ -10,13 +10,43 @@
 }
 
 .main-footer__logo {
+	position: relative;
+
 	@media (--only-mobile) {
 		padding-top: 40px;
+		width: 128px;
+		height: 24px;
 	}
 
 	@media (--not-mobile) {
 		justify-self: start;
-		padding: 55px 0 55px 0;
+		padding: 60px 0 63px 0;
+	}
+
+	&::after {
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 280px;
+		height: 1px;
+		background-color: #d9d9d9;
+		bottom: -20px;
+		left: -77px;
+	}
+}
+
+.main-footer__social {
+	position: relative;
+
+	&::after {
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 280px;
+		height: 1px;
+		background-color: #d9d9d9;
+		bottom: -17px;
+		left: -75px;
 	}
 }
 

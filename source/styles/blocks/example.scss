@@ -21,6 +21,10 @@
 		box-shadow: 0 50vh 0 50vh var(--basic-grey);
 	}
 
+	@media (--only-tablet) {
+		padding-top: 23px;
+	}
+
 	@media (--not-mobile) {
 		font-size: 60px;
 		line-height: 100%;
@@ -37,6 +41,10 @@
 	@media (--not-mobile) {
 		font-size: 16px;
 		line-height: 150%;
+	}
+
+	@media (--only-tablet) {
+		padding-top: 60px;
 	}
 
 	@media (--only-desktop) {

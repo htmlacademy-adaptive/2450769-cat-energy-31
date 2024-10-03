@@ -22,6 +22,7 @@
 	grid-template-columns: repeat(var(--column-count, 1), 1fr);
 	gap: 20px;
 	padding: 0;
+	padding-bottom: 48px;
 	margin: 0;
 
 	@media (--not-mobile) {
@@ -48,7 +49,7 @@
 
 	@media (--only-mobile) {
 		grid-template-columns: auto 1fr;
-		--icon-parameter: 60% 60%;
+		--icon-parameter: 67% 100%;
 	}
 
 	@media (--not-mobile) {
@@ -80,6 +81,7 @@
 
 		@media (--only-mobile) {
 			--namber: none;
+			padding-right: 2px;
 		}
 	}
 
@@ -104,7 +106,7 @@
 		font-size: 280px;
 		line-height: 72%;
 		color: var(--basic-grey);
-		right: 0;
+		left: 115;
 		top: 0;
 		z-index: -1;
 	}

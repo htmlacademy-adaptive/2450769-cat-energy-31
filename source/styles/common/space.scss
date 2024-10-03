@@ -1,0 +1,6 @@
+.space {
+	&::after {
+		content: "\A";
+		white-space: pre;
+	}
+}

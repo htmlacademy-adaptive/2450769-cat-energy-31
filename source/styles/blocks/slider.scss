@@ -1,11 +1,15 @@
 .slider {
 	position: relative;
 	display: grid;
-	padding: 20px 0 40px 0;
+	padding: 20px 0 38px;
 
 	@media (--not-mobile) {
 		--bg-top-shift: calc(100% - 462px);
 		padding: 100px 0;
+	}
+
+	@media (--only-tablet) {
+		padding: 104px 0;
 	}
 
 	@media (--only-desktop) {

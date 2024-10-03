@@ -1,7 +1,7 @@
 .result {
 	display: grid;
 	grid-template-columns: auto auto;
-	gap: 32px 32px;
+	gap: 34px 32px;
 	background-color: var(--basic-grey);
 	box-shadow: 0 50vh 0 50vh var(--basic-grey);
 	margin: 0;
@@ -55,7 +55,7 @@
 	border: 1px solid var(--special-grey);
 	border-radius: 3px;
 	margin: 0;
-	padding: 15px 0 18px 0;
+	padding: 14px 0 17px 0;
 	width: 124px;
 	justify-self: center;
 
@@ -63,6 +63,10 @@
 		font-size: 30px;
 		line-height: 123%;
 		width: 162px;
+	}
+
+	@media (--only-tablet) {
+		padding: 14px 0 20px 0;
 	}
 
 	&--not_border {
@@ -103,7 +107,7 @@
 	background-color: var(--basic-grey);
 	justify-self: center;
 	width: 77px;
-	bottom: -24%;
+	bottom: -25%;
 	padding: 0 8px 0 8px;
 
 

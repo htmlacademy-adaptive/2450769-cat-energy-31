@@ -37,6 +37,7 @@
 	@media (--only-tablet) {
 		gap: 308px;
 		text-align: right;
+		padding: 58px 40px 60px;
 	}
 }
 
@@ -58,7 +59,7 @@
 	}
 }
 
-.contacts__address {
+.contacts__adress {
 	font-family: var(--font-main);
 	font-weight: 400;
 	font-size: 14px;
@@ -83,7 +84,7 @@
 		grid-row: 1 / 2;
 	}
 
-	@media (scripting: enabled) {
-		display: none;
-	}
+	//@media (scripting: enabled) {
+	//	display: none;
+	//}
 }
