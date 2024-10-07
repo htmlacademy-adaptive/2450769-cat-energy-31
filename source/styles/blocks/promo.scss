@@ -1,4 +1,5 @@
 .promo {
+	position: var(--bg-position, relative);
 	font-family: var(--font-accent);
 	font-weight: 400;
 	display: grid;
@@ -6,15 +7,48 @@
 
 	@media (--only-mobile) {
 		justify-items: center;
+		--bg-image: url("../../images/cat-licking@1x.avif");
 	}
 
 	@media (--only-tablet) {
 		padding-top: 65px;
+		--is-bg: none;
 	}
 
 	@media (--only-desktop) {
 		grid-template-columns: 1.5fr 2fr;
 		padding-top: 0;
+		--bg-width: 50%;
+		--bg-position-right: 0;
+		--bg-position-left: 50%;
+		--bg-height: 83%;
+		--bg-position: static;
+		--bg-image: url("../../images/cat-licking-1280@2x.avif");
+	}
+
+	&::before {
+		content: var(--is-bg, " ");
+		position: absolute;
+		top: 0;
+		left: var(--bg-position-left, 0);
+		width: var(--bg-width, 100%);
+		height: var(--bg-height, 302px);
+		background-image: var(--bg-image);
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
+
+	&::after {
+		content: var(--is-bg, " ");
+		position: absolute;
+		top: 0;
+		left: var(--bg-position-left);
+		right: var(--bg-position-right);
+		width: var(--bg-width, 100%);
+		height: var(--bg-height, 302px);
+		background-color: rgb(104 183 56 / 0.85);
+		z-index: -1;
 	}
 }
 
