@@ -1,3 +1,23 @@
+.specific {
+	position: relative;
+
+	@media (--only-tablet) {
+		--is-divided: "";
+	}
+
+	&::after {
+		content: var(--is-divided, none);
+		display: block;
+		position: absolute;
+		width: 200vw;
+		height: 1px;
+		background-color: #e6e6e6;
+		bottom: -78px;
+		left: -100vw;
+		z-index: 1;
+	}
+}
+
 .specific__title {
 	font-family: var(--font-accent);
 	font-size: 36px;
