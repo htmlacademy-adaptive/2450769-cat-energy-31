@@ -3,7 +3,7 @@
 
 	@media (--only-desktop) {
 		grid-template-columns: repeat(2, 1fr);
-		gap: 0 224px;
+		gap: 0 100px;
 	}
 }
 
@@ -48,7 +48,8 @@
 	}
 
 	@media (--only-desktop) {
-		padding-top: 146px;
+		padding-top: 145px;
+		padding-right: 127px;
 	}
 }
 

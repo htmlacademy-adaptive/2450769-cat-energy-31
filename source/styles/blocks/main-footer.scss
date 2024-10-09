@@ -21,10 +21,15 @@
 	@media (--not-mobile) {
 		justify-self: start;
 		padding: 60px 0 63px 0;
+		--is-divided: none;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 72px;
 	}
 
 	&::after {
-		content: " ";
+		content: var(--is-divided, " ");
 		display: block;
 		position: absolute;
 		width: 280px;
@@ -38,8 +43,12 @@
 .main-footer__social {
 	position: relative;
 
+	@media (--not-mobile) {
+		--is-divided: none;
+	}
+
 	&::after {
-		content: " ";
+		content: var(--is-divided, " ");
 		display: block;
 		position: absolute;
 		width: 280px;
