@@ -41,14 +41,13 @@ lang: "ru"
 				{% endfor %}
 			</div>
 			<div class="additional-products__present present">
-				<div class="present__image"></div>
 				<div class="present__description">Закажите все и получите чехол для кота в подарок!</div>
 			</div>
 		</div>
 	</section>
 
-	<form class="main-container__subscription input-form" action="https://echo.htmlacademy.ru/" method="post">
-		<fieldset class="input-form">
+	<form class="main-container__subscription input-form page__centerer" action="https://echo.htmlacademy.ru/" method="post">
+		<fieldset class="input-form__fieldset">
 			<legend class="input-form__title">Акции и новинки</legend>
 			<div class="input-form__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</div>
 			<div class=" input-form__item">
@@ -56,7 +55,7 @@ lang: "ru"
 				<input class="input-form__content" type="text" name="name" id="e-mail" placeholder="кuklachev@gmail.com">
 			</div>
 		</fieldset>
-		<button class="input-form__button" type="submit">Подписаться</button>
+		<button class="input-form__button button" type="submit">Подписаться</button>
 	</form>
 
 	{{ contacts() }}

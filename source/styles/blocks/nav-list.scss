@@ -34,20 +34,23 @@
 	position: relative;
 	color: #000000;
 	text-decoration: none;
+	--underline-color: var(--basic-green);
 
-	@media (--only-tablet) {
-		--underline-color: var(--basic-green);
+	@media (--only-mobile) {
+		--divided: none;
 	}
 
-	@media (--only-desktop) {
-		--underline-color: var(--basic-white);
-		color: var(--basic-white);
+	&--white-link {
+		@media (--only-desktop) {
+			--underline-color: var(--basic-white);
+			color: var(--basic-white);
+		}
 	}
 
 
 	&[aria-current="page"]::after {
 		position: absolute;
-		content: "";
+		content: var(--divided, " ");
 		right: 0px;
 		left: 0px;
 		height: 2px;
