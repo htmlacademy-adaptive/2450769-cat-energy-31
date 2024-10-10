@@ -6,6 +6,7 @@
 @import "./common/variables.scss";
 @import "./common/global.scss";
 @import "./common/visually-hidden.scss";
+@import "./common/space.scss";
 
 /* BLOCKS */
 @import "./blocks/page.scss";
@@ -28,6 +29,11 @@
 @import "./blocks/main-nav.scss";
 @import "./blocks/nav-list.scss";
 @import "./blocks/logo.scss";
+@import "./blocks/specs.scss";
+@import "./blocks/main-container.scss";
+@import "./blocks/result.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/input-form.scss";
 
 /* LIBRARIES */
 // @import "./common/outline.css" layer(outline);

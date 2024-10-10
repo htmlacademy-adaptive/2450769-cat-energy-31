@@ -1,7 +1,14 @@
 @use "../common/image.scss" as *;
 
 .present {
-	min-height: 300px;
+	display: grid;
+	justify-items: center;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	z-index: -1;
+	padding: 59px 61px 43px 58px;
 
 	@include image("cat-in-bag");
 
@@ -13,6 +20,11 @@
 		@include image("cat-in-bag-1280");
 	}
 
+	@media (--only-tablet) {
+		gap: 264px;
+	}
+
+
 	&::before {
 		content: "";
 		display: block;
@@ -22,5 +34,32 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
+	}
+
+	&::after {
+		content: var(--is-bg, " ");
+		position: absolute;
+		top: 0;
+		width: var(--bg-width, 100%);
+		height: var(--bg-height, 100%);
+		background-color: rgb(104 183 56 / 0.85);
+		z-index: -1;
+	}
+}
+
+.present__description {
+	font-family: var(--font-main);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 125%;
+	color: var(--basic-white);
+	text-align: center;
+	padding-top: 48px;
+
+	@media (--only-tablet) {
+		grid-column: 2 / 3;
+		align-self: center;
+		padding: 0;
+		text-align: left;
 	}
 }

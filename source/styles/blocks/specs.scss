@@ -1,0 +1,29 @@
+.specs {
+	margin: 0;
+}
+
+.specs__item {
+	display: grid;
+	position: relative;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+
+	@media (--only-mobile) {
+		--is-divided: none;
+	}
+
+	&::before {
+		content: var(--is-divided, " ");
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background-color: var(--special-grey);
+		bottom: 0;
+	}
+}
+
+.specs__value {
+	margin: 0;
+	justify-self: end;
+}
