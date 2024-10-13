@@ -46,16 +46,15 @@ lang: "ru"
 		</div>
 	</section>
 
-	<form class="main-container__subscription input-form page__centerer" action="https://echo.htmlacademy.ru/" method="post">
-		<fieldset class="input-form__fieldset">
-			<legend class="input-form__title">Акции и новинки</legend>
+	<form class="main-container__subscription input-form" action="https://echo.htmlacademy.ru/" method="post">
+		<div class="page__centerer">
+			<label class="input-form__title" for="e-mail">Акции и новинки</label>
 			<div class="input-form__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</div>
 			<div class=" input-form__item">
-				<label class="input-form__label" for="e-mail"></label>
 				<input class="input-form__content" type="text" name="name" id="e-mail" placeholder="кuklachev@gmail.com">
+				<button class="input-form__button button" type="submit">Подписаться</button>
 			</div>
-		</fieldset>
-		<button class="input-form__button button" type="submit">Подписаться</button>
+		</div>
 	</form>
 
 	{{ contacts() }}
