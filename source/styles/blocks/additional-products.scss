@@ -4,21 +4,37 @@
 	font-size: 24px;
 	line-height: 100%;
 	margin: 0;
+
+	@media (--only-tablet) {
+		font-size: 32px;
+	}
+
+	@media (--only-desktop) {
+		font-size: 40px;
+	}
 }
 
 .additional-products__list {
 	display: grid;
 
+
 	@media (--only-desktop) {
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: 4fr 1fr;
 		gap: 80px;
 	}
 }
 
-.additional-products__list-items {
-	display: grid;
+.additional-products__item {
+	justify-content: stretch;
+	background: none;
+
+	@media (--only-tablet) {
+		padding: 26px 38px;
+	}
 
 	@media (--only-desktop) {
-		grid-column: 1 / 4;
+		padding: 15px 0;
+		grid-template-rows: 1fr;
+		align-items: center;
 	}
 }

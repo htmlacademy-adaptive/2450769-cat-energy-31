@@ -1,6 +1,6 @@
 {%- extends "./layouts/base.njk" -%}
 
-{%- from "./templates/card.njk" import card with context -%}
+{%- from "./templates/card.njk" import card, cardAdditional with context -%}
 {%- from "./templates/contacts.njk" import contacts with context -%}
 
 {%- set page = {
@@ -37,7 +37,7 @@ lang: "ru"
 		<div class="additional-products__list">
 			<div class="additional-products__list-items">
 				{% for product in additionalProducts %}
-				{{ card(product, "card--view_line additional-products__item") }}
+				{{ cardAdditional(product, "card--view_line additional-products__item") }}
 				{% endfor %}
 			</div>
 			<div class="additional-products__present present">

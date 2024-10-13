@@ -8,6 +8,7 @@
 	@media (--only-mobile) {
 		justify-items: center;
 		--bg-image: url("../../images/cat-licking@1x.avif");
+		--bg-width: 100%;
 	}
 
 	@media (--only-tablet) {
@@ -18,7 +19,6 @@
 	@media (--only-desktop) {
 		grid-template-columns: 1.5fr 2fr;
 		padding-top: 0;
-		--bg-width: 720px;
 		--bg-position-right: 0;
 		--bg-position-left: 50%;
 		--bg-height: 652px;
@@ -31,7 +31,8 @@
 		position: absolute;
 		top: 0;
 		left: var(--bg-position-left, 0);
-		width: var(--bg-width, 100%);
+		right: 0;
+		width: var(--bg-width, 50%);
 		height: var(--bg-height, 302px);
 		background-image: var(--bg-image);
 		background-size: cover;
@@ -45,7 +46,7 @@
 		top: 0;
 		left: var(--bg-position-left);
 		right: var(--bg-position-right);
-		width: var(--bg-width, 100%);
+		width: 100%;
 		height: var(--bg-height, 302px);
 		background-color: rgb(104 183 56 / 0.85);
 		z-index: -1;

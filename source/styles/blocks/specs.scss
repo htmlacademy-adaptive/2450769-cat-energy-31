@@ -1,5 +1,23 @@
 .specs {
 	margin: 0;
+
+	&--additional {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		grid-column: 1 / 3;
+
+		@media (--not-mobile) {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+			padding: 0;
+		}
+
+		@media (--only-tablet) {
+			justify-content: right;
+			padding-bottom: 25px;
+		}
+	}
 }
 
 .specs__item {
@@ -9,6 +27,11 @@
 	justify-content: space-between;
 
 	@media (--only-mobile) {
+		--is-divided: none;
+	}
+
+	&--additional {
+		display: block;
 		--is-divided: none;
 	}
 
@@ -23,7 +46,24 @@
 	}
 }
 
+.specs__name {
+	&--not_visible {
+		display: none;
+	}
+}
+
 .specs__value {
 	margin: 0;
 	justify-self: end;
+
+	&--additional {
+		font-size: 14px;
+		line-height: 100%;
+
+		@media (--only-tablet) {
+			margin-left: 50px;
+			font-size: 16px;
+			line-height: 125%;
+		}
+	}
 }
