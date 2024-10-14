@@ -17,4 +17,9 @@
 		display: grid;
 		justify-items: center;
 	}
+
+	@media (--only-tablet) {
+		gap: 34px;
+		padding-right: 2px;
+	}
 }

@@ -20,15 +20,14 @@ lang: "ru"
 			{% for product in mainProducts %}
 			{{ card(product, "products__item") }}
 			{% endfor %}
-			{% set showMore = {
-			"title": "Показать еще 100500 товаров",
-			"description": "На самом деле вкусов гораздо больше!",
-			"cta": {
-			"text": "Показать все",
-			"url": "#"
-			}
-			} %}
-			{{ card(showMore, "card--has-icon products__item") }}
+
+			<article class="card card--has-icon products__item">
+				<h3 class="card__title card__title--show-more">
+					<a class="card__link card__link--show-more" href="#">Показать еще 100500 товаров</a>
+				</h3>
+				<div class="card__description card__description--show-more">На&nbsp;самом деле вкусов гораздо больше!</div>
+				<a class="card__button button card__button--show-more" href="#">Показать все</a>
+			</article>
 		</div>
 	</section>
 
