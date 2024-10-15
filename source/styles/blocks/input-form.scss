@@ -20,17 +20,40 @@
 }
 
 .input-form__title {
+	position: relative;
 	font-size: 24px;
 	line-height: 100%;
 	text-align: left;
+	padding-right: 40px;
+	background-color: var(--basic-white);
+	box-shadow: -25vw 0 0 0 var(--basic-white);
+	--divided-top: 20px;
+
+	@media (--not-mobile) {
+		box-shadow: none;
+		--divided-top: 30px;
+		padding-left: 40px;
+	}
 
 	@media (--only-tablet) {
 		font-size: 32px;
-		padding-bottom: 80px;
 	}
 
 	@media (--only-desktop) {
 		font-size: 40px;
+		margin-left: -40px;
+	}
+
+	&::before {
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 200vw;
+		height: 2px;
+		background-color: #68b738;
+		top: var(--divided-top);
+		left: -100vw;
+		z-index: -1;
 	}
 }
 
