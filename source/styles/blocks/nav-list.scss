@@ -40,10 +40,26 @@
 		--divided: none;
 	}
 
+	&:hover {
+		color: rgba($color: #000000, $alpha: 0.6);
+	}
+
+	&:active {
+		color: rgba($color: #000000, $alpha: 0.3);
+	}
+
 	&--white-link {
 		@media (--only-desktop) {
 			--underline-color: var(--basic-white);
 			color: var(--basic-white);
+		}
+
+		&:hover {
+			color: rgba($color: #ffffff, $alpha: 0.6);
+		}
+
+		&:active {
+			color: rgba($color: #ffffff, $alpha: 0.3);
 		}
 	}
 

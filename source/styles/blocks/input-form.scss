@@ -102,6 +102,10 @@
 	padding: 13px;
 	margin: 0;
 	box-sizing: border-box;
+
+	&:invalid {
+		border: 1px solid #ff8282;
+	}
 }
 
 .input-form__button {
