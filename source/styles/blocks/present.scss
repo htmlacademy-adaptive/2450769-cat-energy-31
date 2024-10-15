@@ -18,10 +18,14 @@
 
 	@media (--only-desktop) {
 		@include image("cat-in-bag-1280");
+		padding: 56px 40px 23px 45px;
 	}
 
 	@media (--only-tablet) {
 		gap: 264px;
+		padding-top: 60px;
+		padding-left: 80px;
+		padding-bottom: 60px;
 	}
 
 
@@ -61,5 +65,10 @@
 		align-self: center;
 		padding: 0;
 		text-align: left;
+		padding-right: 38px;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 30px;
 	}
 }

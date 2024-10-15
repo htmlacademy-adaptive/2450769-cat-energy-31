@@ -5,6 +5,12 @@
 	line-height: 100%;
 	margin: 0;
 	padding-top: 25px;
+	padding-bottom: 36px;
+
+	@media (--not-mobile) {
+		padding-top: 74px;
+		padding-bottom: 80px;
+	}
 
 	@media (--only-tablet) {
 		font-size: 32px;
@@ -28,14 +34,29 @@
 .additional-products__item {
 	justify-content: stretch;
 	background: none;
+	padding-top: 12px;
+	padding-bottom: 18px;
 
 	@media (--only-tablet) {
-		padding: 26px 38px;
+		padding: 26px 38px 28px;
 	}
 
 	@media (--only-desktop) {
-		padding: 15px 0;
+		grid-template-columns: 1fr 2fr 1.1fr;
 		grid-template-rows: 1fr;
 		align-items: center;
+		padding: 15px 0 16px;
+	}
+}
+
+.additional-products__present {
+	margin-top: 35px;
+
+	@media (--only-tablet) {
+		margin-top: 70px;
+	}
+
+	@media (--only-desktop) {
+		margin: 0;
 	}
 }
