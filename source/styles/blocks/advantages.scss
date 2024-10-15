@@ -40,11 +40,13 @@
 		gap: 11px;
 		margin-top: -6px;
 		margin-left: -10px;
+		padding-bottom: 11px;
 	}
 
 	@media (--only-tablet) {
 		font-size: 36px;
 		line-height: 100%;
+		padding-bottom: 25px;
 		--icon-size: 270px;
 		--icon-position: inline-end;
 		--icon-margin-top: -20px;
@@ -54,8 +56,7 @@
 		font-size: 36px;
 		line-height: 100%;
 		--icon-size: 140px;
-		padding-top: 55px;
-		padding-left: 10px;
+		padding: 55px 0 73px 10px;
 		--icon-margin-top: -50px;
 		--icon-margin-right: 43px;
 	}
@@ -93,10 +94,6 @@
 	margin: 0;
 	padding: 0;
 
-	@media (--only-mobile) {
-		padding-top: 11px;
-	}
-
 	@media (--not-mobile) {
 		--is-divided: none;
 	}
@@ -124,13 +121,11 @@
 	@media (--only-tablet) {
 		font-size: 16px;
 		line-height: 150%;
-		padding-top: 25px;
 	}
 
 	@media (--only-desktop) {
 		font-size: 16px;
 		line-height: 150%;
-		padding-top: 73px;
 		padding-left: 30px;
 		padding-right: 7px;
 	}
