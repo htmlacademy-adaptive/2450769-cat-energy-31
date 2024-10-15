@@ -1,22 +1,162 @@
 .promo {
+	position: var(--bg-position, relative);
+	font-family: var(--font-accent);
+	font-weight: 400;
 	display: grid;
+	padding-top: 27px;
+
+	@media (--only-mobile) {
+		justify-items: center;
+		--bg-image: url("../../images/cat-licking@1x.avif");
+		--bg-width: 100%;
+	}
+
+	@media (--only-tablet) {
+		padding-top: 65px;
+		--is-bg: none;
+	}
+
+	@media (--only-desktop) {
+		grid-template-columns: 1.5fr 2fr;
+		padding-top: 0;
+		--bg-position-right: 0;
+		--bg-position-left: 50%;
+		--bg-height: 652px;
+		--bg-position: static;
+		--bg-image: url("../../images/cat-licking-1280@2x.avif");
+	}
+
+	&::before {
+		content: var(--is-bg, " ");
+		position: absolute;
+		top: 0;
+		left: var(--bg-position-left, 0);
+		right: 0;
+		width: var(--bg-width, 50%);
+		height: var(--bg-height, 302px);
+		background-image: var(--bg-image);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: left;
+		z-index: -1;
+	}
+
+	&::after {
+		content: var(--is-bg, " ");
+		position: absolute;
+		top: 0;
+		left: var(--bg-position-left);
+		right: var(--bg-position-right);
+		width: 100%;
+		height: var(--bg-height, 302px);
+		background-color: rgb(104 183 56 / 0.85);
+		z-index: -1;
+	}
+}
+
+.promo__title {
+	font-size: 36px;
+	line-height: 100%;
+	margin: 0;
+
+	@media (--not-mobile) {
+		font-size: 60px;
+	}
+
+	@media (--only-tablet) {
+		font-size: 60px;
+		padding-right: 60px;
+	}
+
+	@media (--only-desktop) {
+		padding-right: 20px;
+	}
+}
+
+.promo__description {
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0;
+	padding-top: 21px;
+
+	@media (--not-mobile) {
+		font-size: 20px;
+	}
+
+	@media (--only-tablet) {
+		font-size: 20px;
+		padding-top: 36px;
+		padding-bottom: 44px;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 37px;
+	}
+}
+
+.promo__text {
+	@media (--only-mobile) {
+		text-align: center;
+	}
+
+	@media (--only-tablet) {
+		padding-left: 90px;
+	}
+
+	@media (--only-desktop) {
+		padding-left: 80px;
+		padding-top: 110px;
+	}
 }
 
 .promo__image {
+	padding-top: 26px;
+	padding-bottom: 3px;
+
 	@media (--only-tablet) {
 		grid-row: 2 / 3;
 		grid-column: 1 / 2;
+		padding: 0;
+		margin-top: -30px;
 	}
 
 	@media (--only-desktop) {
 		grid-row: 1 / 3;
 		grid-column: 2 / 3;
+		padding-top: 30px;
+		margin-left: -75px;
 	}
 }
 
 .promo__link {
+	font-size: 16px;
+	line-height: 125%;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--basic-white);
+	background-color: var(--basic-green);
+	padding: 10px 0 10px 0;
+	width: 100%;
+	text-align: center;
+
 	@media (--only-tablet) {
 		grid-row: 2 / 3;
 		grid-column: 1 / 2;
+		font-size: 20px;
+		line-height: 130%;
+		height: fit-content;
+		padding: 14px 26px;
+		width: fit-content;
+		margin-left: 92px;
+	}
+
+	@media (--only-desktop) {
+		font-size: 20px;
+		line-height: 130%;
+		height: fit-content;
+		padding: 14px 26px;
+		width: fit-content;
+		margin-left: 80px;
+		margin-top: -73px;
 	}
 }

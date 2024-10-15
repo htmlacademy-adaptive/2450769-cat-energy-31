@@ -2,4 +2,12 @@
 	font-family: var(--font-accent);
 	background-color: var(--basic-green);
 	color: var(--basic-white);
+
+	&:hover {
+		background-color: var(--basic-green-2);
+	}
+
+	&:active {
+		color: rgba($color: #ffffff, $alpha: 0.3);
+	}
 }

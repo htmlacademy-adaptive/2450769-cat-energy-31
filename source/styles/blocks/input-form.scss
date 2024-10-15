@@ -1,0 +1,129 @@
+.input-form {
+	font-family: var(--font-accent);
+	font-weight: 400;
+	color: #000000;
+	border: none;
+	padding: 0;
+	margin: 0;
+	padding-top: 39px;
+	padding-bottom: 40px;
+
+	@media (--only-tablet) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 100px;
+		padding-bottom: 96px;
+	}
+}
+
+.input-form__title {
+	position: relative;
+	font-size: 24px;
+	line-height: 100%;
+	text-align: left;
+	padding-right: 40px;
+	background-color: var(--basic-white);
+	box-shadow: -25vw 0 0 0 var(--basic-white);
+	--divided-top: 20px;
+
+	@media (--not-mobile) {
+		box-shadow: none;
+		--divided-top: 30px;
+		padding-left: 40px;
+	}
+
+	@media (--only-tablet) {
+		font-size: 32px;
+	}
+
+	@media (--only-desktop) {
+		font-size: 40px;
+		margin-left: -40px;
+	}
+
+	&::before {
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 200vw;
+		height: 2px;
+		background-color: #68b738;
+		top: var(--divided-top);
+		left: -100vw;
+		z-index: -1;
+	}
+}
+
+.input-form__description {
+	font-size: 16px;
+	line-height: 150%;
+	padding-top: 29px;
+	text-align: center;
+
+	@media (--not-mobile) {
+		font-size: 24px;
+		line-height: 133%;
+	}
+
+	@media (--only-tablet) {
+		padding: 64px 29px 0;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 70px;
+	}
+}
+
+.input-form__item {
+	display: grid;
+	padding-top: 22px;
+
+	@media (--only-tablet) {
+		padding: 23px 38px 0;
+		grid-template-columns: 2fr 1.35fr;
+	}
+
+	@media (--only-desktop) {
+		grid-template-columns: 2fr 1fr;
+		padding: 23px 233px 0;
+	}
+}
+
+.input-form__content {
+	font-family: var(--font-accent);
+	font-weight: 400;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: var(--special-dark-grey);
+	border: 1px solid var(--basic-grey);
+	padding: 13px;
+	margin: 0;
+	box-sizing: border-box;
+
+	&:invalid {
+		border: 1px solid #ff8282;
+	}
+}
+
+.input-form__button {
+	border: none;
+	font-size: 20px;
+	line-height: 130%;
+	text-transform: uppercase;
+	text-align: center;
+	color: #ffffff;
+	width: 100%;
+	padding: 15px 0;
+
+	@media (--not-mobile) {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+	}
+
+	@media (--only-mobile) {
+		margin-top: 15px;
+	}
+}
