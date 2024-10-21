@@ -1,19 +1,20 @@
-import { env } from 'node:process'
-import { error } from 'node:console'
+import { env } from "node:process"
+import { error } from "node:console"
 import { extname } from "node:path"
-import { link, readdir, readFile, rm, stat } from 'node:fs/promises'
+import { link, readdir, readFile, rm, stat } from "node:fs/promises"
 
-import bemlinter from 'gulp-html-bemlinter'
-import browserslistToEsbuild from 'browserslist-to-esbuild'
-import { createGulpEsbuild } from 'gulp-esbuild'
-import htmlmin from 'gulp-htmlmin'
+import bemlinter from "gulp-html-bemlinter"
+import browserslistToEsbuild from "browserslist-to-esbuild"
+import { createGulpEsbuild } from "gulp-esbuild"
+import { minify } from "html-minifier-terser"
 import { nunjucksCompile } from "gulp-nunjucks"
-import plumber from 'gulp-plumber'
-import postcss from 'gulp-postcss'
-import rename from 'gulp-rename'
-import server from 'browser-sync'
-import { stacksvg } from 'gulp-stacksvg'
-import { dest, parallel, series, src, watch } from 'gulp'
+import plumber from "gulp-plumber"
+import postcss from "gulp-postcss"
+import rename from "gulp-rename"
+import server from "browser-sync"
+import { stacksvg } from "gulp-stacksvg"
+import through2 from "through2"
+import { dest, parallel, series, src, watch } from "gulp"
 
 const IS_DEVELOPMENT = env.NODE_ENV !== `production`
 const SRC = `./source`
@@ -75,7 +76,17 @@ export async function processMarkup () {
 	return src(`${SRC}/pages/**/*.{html,njk}`, { base: SRC })
 		.pipe(plumber(plumberOptions))
 		.pipe(nunjucksCompile(data))
-		.pipe(htmlmin({ collapseWhitespace: !IS_DEVELOPMENT }))
+		.pipe(through2.obj(async (file, enc, cb) => {
+			let minified = await minify(file.contents.toString(), {
+				collapseWhitespace: !IS_DEVELOPMENT,
+				conservativeCollapse: !IS_DEVELOPMENT,
+				decodeEntities: !IS_DEVELOPMENT,
+				removeComments: !IS_DEVELOPMENT,
+			})
+
+			file.contents = Buffer.from(minified)
+			cb(null, file)
+		}))
 		.pipe(rename((path) => {
 			path.dirname = path.dirname.replace(`pages`, ``)
 		}))
