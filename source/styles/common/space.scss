@@ -1,0 +1,19 @@
+.space {
+	&--2 {
+		@media (--only-mobile) {
+			--space: none;
+		}
+	}
+
+	&--3 {
+		@media (--only-desktop) {
+			--space: none;
+		}
+	}
+
+
+	&::after {
+		content: var(--space, "\A");
+		white-space: pre;
+	}
+}

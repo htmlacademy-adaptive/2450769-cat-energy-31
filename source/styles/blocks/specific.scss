@@ -1,3 +1,23 @@
+.specific {
+	position: relative;
+
+	@media (--only-tablet) {
+		--is-divided: "";
+	}
+
+	&::after {
+		content: var(--is-divided, none);
+		display: block;
+		position: absolute;
+		width: 200vw;
+		height: 1px;
+		background-color: #e6e6e6;
+		bottom: -78px;
+		left: -100vw;
+		z-index: 1;
+	}
+}
+
 .specific__title {
 	font-family: var(--font-accent);
 	font-size: 36px;
@@ -22,6 +42,7 @@
 	grid-template-columns: repeat(var(--column-count, 1), 1fr);
 	gap: 20px;
 	padding: 0;
+	padding-bottom: 48px;
 	margin: 0;
 
 	@media (--not-mobile) {
@@ -43,9 +64,12 @@
 .specific__item {
 	display: grid;
 	gap: 0 20px;
+	position: relative;
+	--icon-parameter: 50% 50%;
 
 	@media (--only-mobile) {
 		grid-template-columns: auto 1fr;
+		--icon-parameter: 67% 100%;
 	}
 
 	@media (--not-mobile) {
@@ -55,22 +79,56 @@
 
 	&--icon_leaf {
 		--icon: var(--icon-leaf);
+		--namber: "1";
+
+		@media (--only-mobile) {
+			--namber: none;
+		}
 	}
 
 	&--icon_flask {
 		--icon: var(--icon-flask);
+		--namber: "2";
+
+		@media (--only-mobile) {
+			--namber: none;
+		}
 	}
 
 	&--icon_scales {
 		--icon: var(--icon-scales);
+		--namber: "4";
+
+		@media (--only-mobile) {
+			--namber: none;
+			padding-right: 2px;
+		}
 	}
 
 	&--icon_tambleware {
 		--icon: var(--icon-tableware);
+		--namber: "3";
+
+		@media (--only-mobile) {
+			--namber: none;
+		}
 	}
 
 	&::marker {
 		color: transparent;
+	}
+
+	&::after {
+		position: absolute;
+		content: var(--namber);
+		font-family: var(--font-accent);
+		font-weight: 400;
+		font-size: 280px;
+		line-height: 72%;
+		color: var(--basic-grey);
+		left: 115;
+		top: 0;
+		z-index: -1;
 	}
 
 	&::before {
@@ -81,7 +139,7 @@
 		background-image: var(--icon);
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: contain;
+		background-size: var(--icon-parameter);
 		background-color: var(--basic-green);
 	}
 }

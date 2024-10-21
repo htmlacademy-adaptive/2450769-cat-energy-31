@@ -1,0 +1,56 @@
+.main-container__title {
+	font-family: var(--font-accent);
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 100%;
+	color: #000000;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	@media (--not-mobile) {
+		font-size: 60px;
+	}
+
+	@media (--only-tablet) {
+		padding-top: 65px;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 74px;
+	}
+}
+
+.main-container__advantages {
+	padding-top: 20px;
+
+	@media (--only-tablet) {
+		padding-top: 0;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 82px;
+	}
+}
+
+.main-container__specific {
+	padding-top: 20px;
+
+	@media (--only-tablet) {
+		padding-top: 45px;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 71px;
+	}
+}
+
+.main-container__example {
+	@media (--only-tablet) {
+		padding-top: 100px;
+	}
+
+	@media (--only-desktop) {
+		padding-top: 53px;
+		padding-bottom: 75px;
+	}
+}

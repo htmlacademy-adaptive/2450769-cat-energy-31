@@ -1,14 +1,19 @@
 .products__list {
 	display: grid;
 	grid-template-columns: repeat(var(--column-count, 1), 1fr);
+	padding-top: 41px;
+
+	@media (--not-mobile) {
+		padding-top: 165px;
+	}
 
 	@media (--only-tablet) {
 		--column-count: 2;
-		gap: 60px;
+		gap: 141px 60px;
 	}
 
 	@media (--only-desktop) {
 		--column-count: 4;
-		gap: 80px;
+		gap: 144px 80px;
 	}
 }

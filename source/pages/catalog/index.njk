@@ -1,6 +1,6 @@
 {%- extends "./layouts/base.njk" -%}
 
-{%- from "./templates/card.njk" import card with context -%}
+{%- from "./templates/card.njk" import card, cardAdditional with context -%}
 {%- from "./templates/contacts.njk" import contacts with context -%}
 
 {%- set page = {
@@ -12,23 +12,22 @@ lang: "ru"
 {% block main %}
 <main class="main-container">
 
-	<h1 class="page__centerer">{{ page.title }}</h1>
+	<h1 class="main-container__title page__centerer">{{ page.title }}</h1>
 
 	<section class="main-container__products products page__centerer">
-		<h2 class="products__title">Основные товары</h2>
+		<h2 class="products__title visually-hidden">Основные товары</h2>
 		<div class="products__list">
 			{% for product in mainProducts %}
 			{{ card(product, "products__item") }}
 			{% endfor %}
-			{% set showMore = {
-			"title": "Показать еще 100500 товаров",
-			"description": "На самом деле вкусов гораздо больше!",
-			"cta": {
-			"text": "Показать все",
-			"url": "#"
-			}
-			} %}
-			{{ card(showMore, "card--has-icon products__item") }}
+
+			<article class="card card--has-icon products__item">
+				<h3 class="card__title card__title--show-more">
+					<a class="card__link card__link--show-more" href="#">Показать еще 100500 товаров</a>
+				</h3>
+				<div class="card__description card__description--show-more">На&nbsp;самом деле вкусов гораздо больше!</div>
+				<a class="card__button button card__button--show-more" href="#">Показать все</a>
+			</article>
 		</div>
 	</section>
 
@@ -37,26 +36,24 @@ lang: "ru"
 		<div class="additional-products__list">
 			<div class="additional-products__list-items">
 				{% for product in additionalProducts %}
-				{{ card(product, "card--view_line additional-products__item") }}
+				{{ cardAdditional(product, "card--view_line additional-products__item") }}
 				{% endfor %}
 			</div>
 			<div class="additional-products__present present">
-				<div class="present__image"></div>
-				<div class="present__description">Закажите все и получите чехол для кота в подарок!</div>
+				<div class="present__description">Закажите все и получите чехол для кота в подарок!</div>
 			</div>
 		</div>
 	</section>
 
 	<form class="main-container__subscription input-form" action="https://echo.htmlacademy.ru/" method="post">
-		<fieldset class="input-form">
-			<legend class="input-form__title">Акции и новинки</legend>
+		<div class="page__centerer">
+			<label class="input-form__title" for="e-mail">Акции и новинки</label>
 			<div class="input-form__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</div>
 			<div class=" input-form__item">
-				<label class="input-form__label" for="e-mail"></label>
 				<input class="input-form__content" type="text" name="name" id="e-mail" placeholder="кuklachev@gmail.com">
+				<button class="input-form__button button" type="submit">Подписаться</button>
 			</div>
-		</fieldset>
-		<button class="input-form__button" type="submit">Подписаться</button>
+		</div>
 	</form>
 
 	{{ contacts() }}

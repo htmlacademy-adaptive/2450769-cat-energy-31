@@ -1,0 +1,28 @@
+{
+	"maxDensity": 2,
+	"formats": [
+		"avif",
+		"webp"
+	],
+	"sizes": [
+		{
+			"width": 1041,
+			"height": 694,
+			"breakpoint": 1280
+		},
+		{
+			"width": 320,
+			"height": 302
+		}
+	],
+	"paths": [
+		"./cat-licking@2x.avif",
+		"./cat-licking@1x.avif",
+		"./cat-licking@2x.webp",
+		"./cat-licking@1x.webp",
+		"./cat-licking-1280@2x.avif",
+		"./cat-licking-1280@1x.avif",
+		"./cat-licking-1280@2x.webp",
+		"./cat-licking-1280@1x.webp"
+	]
+}

@@ -21,3 +21,22 @@
 	<a class="card__button button" href="{{ product.cta.url }}">{{ product.cta.text }}</a>
 </article>
 {%endmacro%}
+
+{% macro cardAdditional(product, classes = "") %}
+
+<article class="card {{ classes }}">
+	<h3 class="card__title card__title--additional"><a class="card__link card__link--additional" href="#">{{ product.title }}</a></h3>
+	{% if product.description %}
+	<div class="card__description card__description--additional">{{ product.description }}</div>
+	{% endif %}
+	<dl class="card__specs specs specs--additional">
+		{% for spec in product.specs %}
+		<div class="specs__item specs__item--additional">
+			<dt class="specs__name specs__name--not_visible">{{ spec.name }}</dt>
+			<dd class="specs__value specs__value--additional">{{ spec.value }}</dd>
+		</div>
+		{% endfor %}
+	</dl>
+	<a class="card__button button card__button--additional" href="{{ product.cta.url }}">{{ product.cta.text }}</a>
+</article>
+{%endmacro%}

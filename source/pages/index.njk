@@ -18,7 +18,7 @@ lang: "ru"
 			<div class="promo__description">Занялся собой? Займись котом!</div>
 		</div>
 		{{ picture("hero", { class: "promo__image", alt: "Промо" }) }}
-		<a class="promo__link" href="#">Подобрать программу</a>
+		<a class="promo__link button" href="#">Подобрать программу</a>
 	</section>
 
 	<section class="main-container__advantages page__centerer">
@@ -33,7 +33,7 @@ lang: "ru"
 			<div class="advantages__item">
 				<h2 class="advantages__title advantages__title--icon_catgo">Набор массы</h2>
 				<div class="advantages__description">
-					<p class="advantages__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+					<p class="advantages__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые<span class="space space--3"></span> мышцы!</p>
 				</div>
 				<a class="advantages__link" href="catalog.html">Каталог pro</a>
 			</div>
@@ -70,14 +70,25 @@ lang: "ru"
 				<dt class="result__description">затрачено времени</dt>
 				<dd class="result__value">60 дней</dd>
 			</div>
-			<div class="result__item">
-				<dt class="result__description">Затраты на питание:</dt>
-				<dd class="result__value">15 000 РУБ.</dd>
+			<div class="result__item result__item--not_border">
+				<dt class="result__description result__description--not_border">Затраты на питание:</dt>
+				<dd class="result__value result__value--not_border">&nbsp;15 000 РУБ.</dd>
 			</div>
 		</dl>
-		<div class="example__image">
-			{{ picture("slider-fat", { class: "example__slider", alt: "Толстый кот" }) }}
-			{{ picture("slider-thin", { class: "example__slider", alt: "Худой кот" }) }}
+		<div class="example__image slider">
+			<figure class="slider__figure">
+				<figcaption class="visually-hidden">Кот до и после питания кормом Cat Energy Slim.
+				</figcaption>
+				<div class="slider__wrapper">
+					{{ picture("slider-fat", { class: "slider__image slider__image--state_before", alt: "Толстый кот" }) }}
+					<div class="slider__curtain">
+						<button class="slider__thumb" type="button">
+							<span class="visually-hidden">Ползунок слайдера</span>
+						</button>
+					</div>
+					{{ picture("slider-thin", { class: "slider__image slider__image--state_after", alt: "Худой кот" }) }}
+				</div>
+			</figure>
 		</div>
 	</section>
 
