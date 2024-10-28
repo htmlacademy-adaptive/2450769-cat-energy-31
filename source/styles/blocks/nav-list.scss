@@ -55,11 +55,15 @@
 		}
 
 		&:hover {
-			color: rgba($color: #ffffff, $alpha: 0.6);
+			@media (--only-desktop) {
+				color: rgba($color: #ffffff, $alpha: 0.6);
+			}
 		}
 
 		&:active {
-			color: rgba($color: #ffffff, $alpha: 0.3);
+			@media (--only-desktop) {
+				color: rgba($color: #ffffff, $alpha: 0.6);
+			}
 		}
 	}
 
