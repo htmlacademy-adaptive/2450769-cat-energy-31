@@ -12,13 +12,15 @@ lang: "ru"
 {% block main %}
 <main class="main-container">
 
-	<section class="main-container__promo promo page__centerer">
-		<div class="promo__text">
-			<h1 class="promo__title">Функциональное питание для котов</h1>
-			<div class="promo__description">Занялся собой? Займись котом!</div>
+	<section class="main-container__promo promo">
+		<div class="promo__content page__centerer">
+			<div class="promo__text">
+				<h1 class="promo__title">Функциональное питание для котов</h1>
+				<div class="promo__description">Занялся собой? Займись котом!</div>
+			</div>
+			{{ picture("hero", { class: "promo__image", alt: "Промо" }) }}
+			<a class="promo__link button" href="#">Подобрать программу</a>
 		</div>
-		{{ picture("hero", { class: "promo__image", alt: "Промо" }) }}
-		<a class="promo__link button" href="#">Подобрать программу</a>
 	</section>
 
 	<section class="main-container__advantages page__centerer">

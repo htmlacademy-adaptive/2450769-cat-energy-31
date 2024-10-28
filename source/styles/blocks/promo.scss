@@ -1,24 +1,17 @@
 .promo {
 	position: var(--bg-position, relative);
-	font-family: var(--font-accent);
-	font-weight: 400;
-	display: grid;
-	padding-top: 27px;
+
 
 	@media (--only-mobile) {
-		justify-items: center;
 		--bg-image: url("../../images/cat-licking@1x.avif");
 		--bg-width: 100%;
 	}
 
 	@media (--only-tablet) {
-		padding-top: 65px;
 		--is-bg: none;
 	}
 
 	@media (--only-desktop) {
-		grid-template-columns: 1.5fr 2fr;
-		padding-top: 0;
 		--bg-position-right: 0;
 		--bg-position-left: 50%;
 		--bg-height: 652px;
@@ -54,13 +47,39 @@
 	}
 }
 
+.promo__content {
+	font-family: var(--font-accent);
+	font-weight: 400;
+	display: grid;
+	padding-top: 27px;
+
+	@media (--only-mobile) {
+		justify-items: center;
+	}
+
+	@media (--only-tablet) {
+		padding-top: 65px;
+	}
+
+	@media (--only-desktop) {
+		grid-template-columns: 1.5fr 2fr;
+		padding-top: 0;
+	}
+}
+
 .promo__title {
+	font-family: var(--font-accent);
+	font-weight: 400;
 	font-size: 36px;
 	line-height: 100%;
 	margin: 0;
 
 	@media (--not-mobile) {
 		font-size: 60px;
+	}
+
+	@media (--only-mobile) {
+		color: var(--basic-white);
 	}
 
 	@media (--only-tablet) {
@@ -74,6 +93,7 @@
 }
 
 .promo__description {
+	font-family: var(--font-accent);
 	font-size: 14px;
 	text-transform: uppercase;
 	margin: 0;
@@ -81,6 +101,10 @@
 
 	@media (--not-mobile) {
 		font-size: 20px;
+	}
+
+	@media (--only-mobile) {
+		color: var(--basic-white);
 	}
 
 	@media (--only-tablet) {
