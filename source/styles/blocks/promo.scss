@@ -16,6 +16,8 @@
 		--bg-height: 652px;
 		--bg-position: static;
 		--bg-image: url("../../images/cat-licking-1280@2x.avif");
+		--bg-size: 1040px 694px;
+		--bg: 0px -45px;
 	}
 
 	&::before {
@@ -27,9 +29,10 @@
 		width: var(--bg-width, 50%);
 		height: var(--bg-height, 302px);
 		background-image: var(--bg-image);
-		background-size: cover;
+		background-size: var(--bg-size, content);
 		background-repeat: no-repeat;
-		background-position: left;
+		background-position: var(--bg, center);
+		background-color: #434448;
 		z-index: -1;
 		border-image: fill 0 linear-gradient(rgb(104 183 56 / 0.85) 0 100%);
 	}
