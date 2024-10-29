@@ -67,11 +67,12 @@
 		content: var(--is-divided, " ");
 		display: block;
 		position: absolute;
-		width: 200vw;
+		width: 150vw;
 		height: 1px;
 		background-color: #e6e6e6;
 		top: -1px;
 		left: -100vw;
+		box-shadow: 50vw 0 0 0 #e6e6e6;
 	}
 }
 

@@ -48,7 +48,7 @@
 	position: relative;
 
 	@media (--only-mobile) {
-		width: 100vw;
+		width: 100%;
 		justify-content: center;
 	}
 
@@ -70,6 +70,7 @@
 
 .main-footer__copyright {
 	@media (--not-mobile) {
+		width: 100%;
 		justify-self: end;
 	}
 }
