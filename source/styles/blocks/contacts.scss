@@ -2,6 +2,7 @@
 	display: grid;
 
 	@media (--only-desktop) {
+		height: 405px;
 		grid-template-columns: 1fr;
 	}
 
@@ -32,12 +33,15 @@
 		box-shadow: none;
 		padding: 60px 79px;
 		width: 407px;
+		margin-top: -45px;
 	}
 
 	@media (--only-tablet) {
 		gap: 308px;
 		text-align: right;
 		padding: 58px 40px 60px;
+		background-color: var(--basic-grey);
+		box-shadow: 0 50vh 0 50vh var(--basic-grey);
 	}
 }
 
@@ -79,6 +83,8 @@
 }
 
 .contacts__map {
+	width: 100%;
+
 	@media (--only-desktop) {
 		grid-column: 1 / 2;
 		grid-row: 1 / 2;

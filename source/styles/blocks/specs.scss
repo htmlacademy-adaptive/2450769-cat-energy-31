@@ -22,7 +22,10 @@
 		}
 
 		@media (--only-desktop) {
-			justify-content: space-around;
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			padding: 0;
+			margin-right: 45px;
 		}
 	}
 }
@@ -48,6 +51,11 @@
 
 		@media (--only-tablet) {
 			padding: 0;
+		}
+
+		@media (--only-desktop) {
+			padding: 0;
+			padding-left: 105px;
 		}
 	}
 
@@ -80,6 +88,12 @@
 			margin-left: 52px;
 			font-size: 16px;
 			line-height: 125%;
+		}
+
+		@media (--only-desktop) {
+			margin: 0;
+			padding: 0;
+			justify-self: left;
 		}
 	}
 }
