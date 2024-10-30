@@ -23,9 +23,8 @@
 
 		@media (--only-desktop) {
 			display: grid;
-			grid-template-columns: 2fr 1fr;
+			grid-template-columns: 1.25fr 1fr;
 			padding: 0;
-			margin-right: 45px;
 		}
 	}
 }
