@@ -35,6 +35,11 @@
 		padding-left: 40px;
 	}
 
+	@media (--only-mobile) {
+		--divided-width: 50vw;
+		--divided-left: 0;
+	}
+
 	@media (--only-tablet) {
 		font-size: 32px;
 	}
@@ -48,11 +53,12 @@
 		content: " ";
 		display: block;
 		position: absolute;
-		width: 200vw;
+		width: var(--divided-width, 200vw);
 		height: 2px;
 		background-color: #68b738;
+		box-shadow: 50vw 0 0 0 #68b738;
 		top: var(--divided-top);
-		left: -100vw;
+		left: var(--divided-left, -100vw);
 		z-index: -1;
 	}
 }

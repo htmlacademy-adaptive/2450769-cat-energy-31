@@ -1,29 +1,23 @@
 .promo {
 	position: var(--bg-position, relative);
-	font-family: var(--font-accent);
-	font-weight: 400;
-	display: grid;
-	padding-top: 27px;
+
 
 	@media (--only-mobile) {
-		justify-items: center;
 		--bg-image: url("../../images/cat-licking@1x.avif");
 		--bg-width: 100%;
 	}
 
 	@media (--only-tablet) {
-		padding-top: 65px;
 		--is-bg: none;
 	}
 
 	@media (--only-desktop) {
-		grid-template-columns: 1.5fr 2fr;
-		padding-top: 0;
-		--bg-position-right: 0;
 		--bg-position-left: 50%;
 		--bg-height: 652px;
 		--bg-position: static;
 		--bg-image: url("../../images/cat-licking-1280@2x.avif");
+		--bg-size: 1040px 694px;
+		--bg: 0px -40px;
 	}
 
 	&::before {
@@ -35,32 +29,48 @@
 		width: var(--bg-width, 50%);
 		height: var(--bg-height, 302px);
 		background-image: var(--bg-image);
-		background-size: cover;
+		background-size: var(--bg-size, content);
 		background-repeat: no-repeat;
-		background-position: left;
+		background-position: var(--bg, center);
+		background-color: #434448;
 		z-index: -1;
+		border-image: fill 0 linear-gradient(rgb(104 183 56 / 0.85) 0 100%);
+	}
+}
+
+.promo__content {
+	font-family: var(--font-accent);
+	font-weight: 400;
+	display: grid;
+	padding-top: 27px;
+
+	@media (--only-mobile) {
+		justify-items: center;
 	}
 
-	&::after {
-		content: var(--is-bg, " ");
-		position: absolute;
-		top: 0;
-		left: var(--bg-position-left);
-		right: var(--bg-position-right);
-		width: 100%;
-		height: var(--bg-height, 302px);
-		background-color: rgb(104 183 56 / 0.85);
-		z-index: -1;
+	@media (--only-tablet) {
+		padding-top: 65px;
+	}
+
+	@media (--only-desktop) {
+		grid-template-columns: 1.5fr 2fr;
+		padding-top: 0;
 	}
 }
 
 .promo__title {
+	font-family: var(--font-accent);
+	font-weight: 400;
 	font-size: 36px;
 	line-height: 100%;
 	margin: 0;
 
 	@media (--not-mobile) {
 		font-size: 60px;
+	}
+
+	@media (--only-mobile) {
+		color: var(--basic-white);
 	}
 
 	@media (--only-tablet) {
@@ -74,6 +84,7 @@
 }
 
 .promo__description {
+	font-family: var(--font-accent);
 	font-size: 14px;
 	text-transform: uppercase;
 	margin: 0;
@@ -81,6 +92,10 @@
 
 	@media (--not-mobile) {
 		font-size: 20px;
+	}
+
+	@media (--only-mobile) {
+		color: var(--basic-white);
 	}
 
 	@media (--only-tablet) {
