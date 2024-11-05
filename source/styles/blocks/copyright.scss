@@ -10,6 +10,8 @@
 
 	@media (--not-mobile) {
 		padding-right: 50px;
+		justify-content: right;
+		width: fit-content;
 	}
 
 	@media (--only-mobile) {
