@@ -24,12 +24,12 @@
 
 	@media (--not-mobile) {
 		justify-self: start;
-		padding: 60px 0 63px 0;
+		margin: 60px 0 63px 0;
 		--is-divided: none;
 	}
 
 	@media (--only-desktop) {
-		padding-top: 72px;
+		margin-top: 72px;
 	}
 
 	&::after {
