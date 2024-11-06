@@ -1,3 +1,53 @@
+.main-nav__wrapper {
+	@media (--only-mobile) {
+		&:not([hidden]) ~ & {
+			position: absolute;
+		}
+
+		&[aria-expanded="false"] ~ & {
+			display: none;
+		}
+	}
+}
+
+.main-nav__nav-toggle {
+	&:not([hidden]) {
+		@media (--only-mobile) {
+			display: block flex;
+			position: absolute;
+			height: 24px;
+			width: 24px;
+			padding: 0;
+			border: none;
+			background-color: #000000;
+			cursor: pointer;
+			mask-image: var(--icon);
+			top: 15px;
+			right: 0;
+
+			&:hover {
+				opacity: 0.5;
+			}
+
+			&:active {
+				opacity: 0.3;
+			}
+		}
+	}
+
+	@media (--not-mobile) {
+		display: none;
+	}
+
+	&[aria-expanded="false"] {
+		--icon: var(--icon-burger);
+	}
+
+	&[aria-expanded="true"] {
+		--icon: var(--icon-cross);
+	}
+}
+
 .main-nav__list {
 	list-style: none;
 	margin: 0;
