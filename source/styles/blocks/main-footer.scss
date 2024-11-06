@@ -70,7 +70,8 @@
 
 .main-footer__copyright {
 	@media (--not-mobile) {
+		display: grid;
 		width: 100%;
-		justify-items: right;
+		justify-content: end;
 	}
 }
