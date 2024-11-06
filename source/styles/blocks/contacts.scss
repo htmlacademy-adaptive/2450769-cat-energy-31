@@ -2,7 +2,9 @@
 	display: grid;
 
 	@media (--only-desktop) {
+		min-height: 400px;
 		grid-template-columns: 1fr;
+		box-shadow: 0 0 0 100px var(--basic-grey);
 	}
 
 	@media (--not-desktop) {
@@ -31,13 +33,15 @@
 		gap: 87px;
 		box-shadow: none;
 		padding: 60px 79px;
-		width: 407px;
+		width: 565px;
 	}
 
 	@media (--only-tablet) {
 		gap: 308px;
 		text-align: right;
 		padding: 58px 40px 60px;
+		background-color: var(--basic-grey);
+		box-shadow: 0 50vh 0 50vh var(--basic-grey);
 	}
 }
 
@@ -73,15 +77,47 @@
 }
 
 .contacts__map-interactive {
+	height: 362px;
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	z-index: 0;
+
+	@media (--only-desktop) {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		max-width: 1440px;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 50vh 0 50vh var(--basic-grey);
+	}
+
+
 	@media (scripting: enabled) {
 		background-color: var(--basic-grey);
 	}
 }
 
+.contacts__map-interactive iframe {
+	width: 100%;
+	height: 100%;
+}
+
 .contacts__map {
+	object-fit: cover;
+	width: 100%;
+	max-width: 1440px;
+	margin: auto;
+	height: 362px;
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	z-index: 1;
+
 	@media (--only-desktop) {
 		grid-column: 1 / 2;
 		grid-row: 1 / 2;
+		height: 100%;
+		box-shadow: 0 50vh 0 50vh var(--basic-grey);
 	}
 
 	@media (scripting: enabled) {

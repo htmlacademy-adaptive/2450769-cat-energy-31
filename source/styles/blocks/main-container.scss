@@ -6,9 +6,15 @@
 	color: #000000;
 	margin-top: 0;
 	margin-bottom: 0;
+	position: relative;
+
+	@media (--only-mobile) {
+		padding-top: 42px;
+	}
 
 	@media (--not-mobile) {
 		font-size: 60px;
+		--is-divided: none;
 	}
 
 	@media (--only-tablet) {
@@ -17,6 +23,24 @@
 
 	@media (--only-desktop) {
 		padding-top: 74px;
+	}
+
+	&::before {
+		content: var(--is-divided, " ");
+		display: block;
+		position: absolute;
+		width: 150vw;
+		height: 1px;
+		background-color: #e6e6e6;
+		top: 14px;
+		left: -100vw;
+		box-shadow: 50vw 0 0 0 #e6e6e6;
+	}
+}
+
+.main-container__promo {
+	@media (--only-mobile) {
+		padding-top: 20px;
 	}
 }
 

@@ -5,6 +5,7 @@
 	@media (--only-mobile) {
 		--bg-image: url("../../images/cat-licking@1x.avif");
 		--bg-width: 100%;
+		--top: 14px;
 	}
 
 	@media (--only-tablet) {
@@ -23,7 +24,7 @@
 	&::before {
 		content: var(--is-bg, " ");
 		position: absolute;
-		top: 0;
+		top: var(--top, 0);
 		left: var(--bg-position-left, 0);
 		right: 0;
 		width: var(--bg-width, 50%);
@@ -46,6 +47,8 @@
 
 	@media (--only-mobile) {
 		justify-items: center;
+		padding: 0;
+		padding-top: 22px;
 	}
 
 	@media (--only-tablet) {

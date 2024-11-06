@@ -8,11 +8,12 @@
 		</picture>
 		<img class="logo__text" src="{{ project.root }}/images/logo-text.svg" srcset="{{ project.root }}/images/logo-text.svg" width="118" height="21" alt="Логотип Сat Energy">
 	</a>
-	<button class="main-header__toggle" type="button">
-		<span class="visually-hidden">Открыть меню</span>
-	</button>
+
 	<nav class="main-header__nav main-nav">
-		<div class="main-nav__wrapper">
+		<button class="main-nav__nav-toggle" type="button" aria-controls="main-nav">
+			<span class="visually-hidden">Открыть меню</span>
+		</button>
+		<div class="main-nav__wrapper" id="main-nav">
 			<ul class="main-nav__list nav-list">
 				{% for link in navLinks %}
 				<li class="nav-list__item">
