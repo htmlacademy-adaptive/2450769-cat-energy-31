@@ -1,1 +1,5 @@
-/* в этот файл добавляй скрипты */
+import { activateNavigation } from "./main-nav.js"
+
+let navigations = document.querySelectorAll(`.main-nav`)
+
+navigations.forEach((navigation) => { activateNavigation(navigation) })

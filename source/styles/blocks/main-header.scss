@@ -15,3 +15,9 @@
 		justify-self: center;
 	}
 }
+
+.main-header__logo {
+	@media (--only-mobile) {
+		padding-bottom: 43px;
+	}
+}

@@ -13,24 +13,27 @@
 	}
 }
 
+.contacts__wrapper {
+	@media (--only-desktop) {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		z-index: 1;
+		align-self: center;
+	}
+}
+
 .contacts__information {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	background-color: var(--basic-white);
 	box-shadow: 0 50vh 0 50vh var(--basic-white);
 	padding: 26px 0 26px 0;
-	grid-column: 1 / 2;
-	grid-row: 1 / 2;
 
 	@media (--only-desktop) {
 		gap: 87px;
 		box-shadow: none;
 		padding: 60px 79px;
 		width: 565px;
-		grid-column: 1 / 2;
-		grid-row: 1 / 2;
-		z-index: 1;
-		align-self: center;
 	}
 
 	@media (--only-tablet) {

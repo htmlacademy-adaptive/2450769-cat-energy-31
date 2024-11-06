@@ -1,11 +1,11 @@
 .main-nav__wrapper {
 	@media (--only-mobile) {
-		&:not([hidden]) ~ & {
-			position: absolute;
+		[aria-expanded="false"] ~ & {
+			display: none;
 		}
 
-		&[aria-expanded="false"] ~ & {
-			display: none;
+		&:not([hidden]) ~ & {
+			position: absolute;
 		}
 	}
 }
@@ -22,7 +22,7 @@
 			background-color: #000000;
 			cursor: pointer;
 			mask-image: var(--icon);
-			top: 15px;
+			top: 20px;
 			right: 0;
 
 			&:hover {
@@ -53,6 +53,7 @@
 	margin: 0;
 	padding: 0;
 	padding-top: 15px;
+	padding-bottom: 24px;
 
 	@media (--not-mobile) {
 		display: flex;

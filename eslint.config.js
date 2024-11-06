@@ -6,7 +6,7 @@ export default [
 		ignores: [`build/`],
 	},
 	{
-		ignores: [`src/`],
+		ignores: [`source/`],
 		languageOptions: {
 			globals: {
 				...globals.nodeBuiltin,
@@ -14,7 +14,7 @@ export default [
 		},
 	},
 	{
-		files: [`src/**/*.js`],
+		files: [`source/**/*.js`],
 		languageOptions: {
 			globals: {
 				...globals.browser,

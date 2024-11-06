@@ -4,6 +4,12 @@
 	gap: 14px;
 	width: fit-content;
 
+	@media (--only-mobile) {
+		gap: 0;
+		width: auto;
+		margin-right: 32px;
+	}
+
 	&:hover {
 		opacity: 0.8;
 	}
