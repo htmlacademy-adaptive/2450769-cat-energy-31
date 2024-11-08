@@ -12,7 +12,7 @@
 		width: 200vw;
 		height: 1px;
 		background-color: #e6e6e6;
-		bottom: -78px;
+		bottom: -60px;
 		left: -100vw;
 		z-index: 1;
 	}
@@ -42,7 +42,7 @@
 	grid-template-columns: repeat(var(--column-count, 1), 1fr);
 	gap: 20px;
 	padding: 0;
-	padding-bottom: 48px;
+	padding-bottom: 45px;
 	margin: 0;
 
 	@media (--not-mobile) {
@@ -52,7 +52,7 @@
 
 	@media (--only-tablet) {
 		--column-count: 2;
-		gap: 160px 60px;
+		gap: 135px 60px;
 	}
 
 	@media (--only-desktop) {
@@ -70,6 +70,10 @@
 	@media (--only-mobile) {
 		grid-template-columns: auto 1fr;
 		--icon-parameter: 67% 100%;
+	}
+
+	@media (--only-tablet) {
+		padding-right: 56px;
 	}
 
 	@media (--not-mobile) {

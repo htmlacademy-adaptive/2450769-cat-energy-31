@@ -80,4 +80,8 @@
 		gap: 34px;
 		padding-right: 2px;
 	}
+
+	@media (--only-desktop) {
+		padding: 0;
+	}
 }

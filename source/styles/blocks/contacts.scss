@@ -1,6 +1,10 @@
 .contacts {
 	display: grid;
 
+	@media (--only-tablet) {
+		padding-bottom: 39px;
+	}
+
 	@media (--only-desktop) {
 		min-height: 400px;
 		grid-template-columns: 1fr;
@@ -30,18 +34,17 @@
 	padding: 26px 0 26px 0;
 
 	@media (--only-desktop) {
-		gap: 87px;
+		gap: 93px;
 		box-shadow: none;
 		padding: 60px 79px;
-		width: 565px;
+		width: 407px;
+		margin-top: -8px;
 	}
 
 	@media (--only-tablet) {
 		gap: 308px;
 		text-align: right;
 		padding: 58px 40px 60px;
-		background-color: var(--basic-grey);
-		box-shadow: 0 50vh 0 50vh var(--basic-grey);
 	}
 }
 

@@ -14,7 +14,7 @@
 	}
 
 	@media (--only-desktop) {
-		padding-top: 100px;
+		padding-top: 95px;
 		padding-bottom: 102px;
 	}
 }
@@ -29,6 +29,10 @@
 	box-shadow: -25vw 0 0 0 var(--basic-white);
 	--divided-top: 20px;
 
+	@media (--only-mobile) {
+		--divided-top: 16px;
+	}
+
 	@media (--not-mobile) {
 		box-shadow: none;
 		--divided-top: 30px;
@@ -37,6 +41,7 @@
 
 	@media (--only-tablet) {
 		font-size: 32px;
+		--divided-top: 22px;
 	}
 
 	@media (--only-desktop) {

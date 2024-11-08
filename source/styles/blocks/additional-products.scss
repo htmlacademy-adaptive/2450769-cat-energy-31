@@ -8,7 +8,7 @@
 	margin: 0;
 	background-color: var(--basic-white);
 	box-shadow: -30vw 0 0 0 var(--basic-white);
-	--divided-top: 40px;
+	--divided-top: 35px;
 	padding: 25px 40px 36px 0;
 
 	@media (--not-mobile) {
@@ -20,6 +20,7 @@
 
 	@media (--only-tablet) {
 		font-size: 32px;
+		--divided-top: 88px;
 	}
 
 	@media (--only-desktop) {
@@ -92,7 +93,7 @@
 		grid-template-columns: 1fr 2fr 1.1fr;
 		grid-template-rows: 1fr;
 		align-items: center;
-		padding: 18px 0 14px;
+		padding: 16px 0 16px;
 	}
 
 	&::before {
