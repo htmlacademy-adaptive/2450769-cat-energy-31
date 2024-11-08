@@ -5,6 +5,12 @@
 	position: relative;
 }
 
+.main-header__logo {
+	@media (--only-mobile) {
+		margin-right: 32px;
+	}
+}
+
 .main-header__nav {
 	@media (--not-mobile) {
 		align-self: center;

@@ -3,9 +3,9 @@
 {%- from "./templates/contacts.njk" import contacts with context -%}
 
 {%- set page = {
-title: "Подбор программы",
-link: "/form",
-lang: "ru"
+	title: "Подбор программы",
+	link: "/form",
+	lang: "ru"
 } -%}
 
 {% block main %}
@@ -17,7 +17,7 @@ lang: "ru"
 		<h2 class="selection-program__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
 
 		<fieldset class="selection-program__main main-info">
-			<legend class="selection-program__subtitle"></legend>
+			<legend class="selection-program__subtitle">Данные кота</legend>
 			<div class="main-info__item">
 				<label class="main-info__title" for="name">Имя:<span aria-hidden="true">*</span></label>
 				<input class="main-info__input" type="text" name="name" id="name" placeholder="Барсик" required>
@@ -33,17 +33,17 @@ lang: "ru"
 		</fieldset>
 
 		<fieldset class="selection-program__weight weight-info">
-			<legend class="selection-program__subtitle"></legend>
+			<legend class="selection-program__subtitle">Выберите программу питания</legend>
 			<div class="weight-info__item">
-				<input class="weight-info__radio" type="radio" name="weight_loss" value="loss" id="weight-loss" checked>
-				<label class="weight-info__lable" for="weight-loss">похудение</label>
+				<input class="weight-info__radio" type="radio" name="program" value="loss" id="weight-loss" checked>
+				<label class="weight-info__lable" for="weight-loss">Похудение</label>
 			</div>
 			<div class="weight-info__item">
-				<input class="weight-info__radio" type="radio" name="weight_gain" value="gain" id="weight-gain">
+				<input class="weight-info__radio" type="radio" name="program" value="gain" id="weight-gain">
 				<label class="weight-info__lable" for="weight-gain">Набор массы</label>
 			</div>
 			<div class="weight-info__item">
-				<input class="weight-info__radio" type="radio" name="advice" value="advice" id="advice">
+				<input class="weight-info__radio" type="radio" name="program" value="advice" id="advice">
 				<label class="weight-info__lable" for="advice">Не знаю (Нужен ваш совет)</label>
 			</div>
 		</fieldset>

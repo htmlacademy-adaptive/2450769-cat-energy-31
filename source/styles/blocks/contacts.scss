@@ -1,5 +1,6 @@
 .contacts {
 	display: grid;
+	background-color: var(--basic-grey);
 
 	@media (--only-tablet) {
 		padding-bottom: 39px;
@@ -8,12 +9,12 @@
 	@media (--only-desktop) {
 		min-height: 400px;
 		grid-template-columns: 1fr;
-		box-shadow: 0 0 0 100px var(--basic-grey);
+		// box-shadow: 0 0 0 100px var(--basic-grey);
 	}
 
 	@media (--not-desktop) {
-		background-color: var(--basic-grey);
-		box-shadow: 0 50vh 0 50vh var(--basic-grey);
+		--asdf: asdf;
+		// box-shadow: 0 50vh 0 50vh var(--basic-grey);
 	}
 }
 
@@ -27,13 +28,17 @@
 }
 
 .contacts__information {
+	--bg: var(--contacts-bg, var(--basic-grey));
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	background-color: var(--basic-white);
-	box-shadow: 0 50vh 0 50vh var(--basic-white);
+	background-color: var(--bg);
+	box-shadow:
+		50vw 0 0 0 var(--bg),
+		-50vh 0 0 0 var(--bg);
 	padding: 26px 0 26px 0;
 
 	@media (--only-desktop) {
+		--bg: var(--basic-white);
 		gap: 93px;
 		box-shadow: none;
 		padding: 60px 79px;
@@ -76,6 +81,12 @@
 	@media (--not-mobile) {
 		font-size: 16px;
 		line-height: 125%;
+	}
+
+	br {
+		@media (--not-mobile) {
+			margin-bottom: 1lh;
+		}
 	}
 }
 

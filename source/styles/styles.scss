@@ -3,10 +3,8 @@
 @import "./common/fonts.scss";
 @import "./common//colors.scss";
 @import "./common//icons.scss";
-@import "./common/variables.scss";
 @import "./common/global.scss";
 @import "./common/visually-hidden.scss";
-@import "./common/space.scss";
 
 /* BLOCKS */
 @import "./blocks/page.scss";
@@ -34,6 +32,3 @@
 @import "./blocks/result.scss";
 @import "./blocks/slider.scss";
 @import "./blocks/input-form.scss";
-
-/* LIBRARIES */
-// @import "./common/outline.css" layer(outline);
