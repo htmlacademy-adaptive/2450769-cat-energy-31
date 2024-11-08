@@ -37,7 +37,6 @@
 }
 
 .slider__wrapper {
-	--curtain-place: 0.5;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
