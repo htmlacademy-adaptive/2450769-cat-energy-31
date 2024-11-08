@@ -9,12 +9,6 @@
 	@media (--only-desktop) {
 		min-height: 400px;
 		grid-template-columns: 1fr;
-		// box-shadow: 0 0 0 100px var(--basic-grey);
-	}
-
-	@media (--not-desktop) {
-		--asdf: asdf;
-		// box-shadow: 0 50vh 0 50vh var(--basic-grey);
 	}
 }
 
