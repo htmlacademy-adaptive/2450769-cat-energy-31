@@ -161,8 +161,10 @@
 		--icon-arrow-padding-top: 7px;
 	}
 
-	&:hover {
-		--icon-shift: 0;
+	@media (hover: hover) {
+		&:hover {
+			--icon-shift: 0;
+		}
 	}
 
 	&:active {

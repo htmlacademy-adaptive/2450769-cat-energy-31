@@ -77,8 +77,10 @@
 	cursor: col-resize;
 	transition: color 0.2s, opacity 0.2s;
 
-	&:hover {
-		--curtain-color: var(--basic-green);
+	@media (hover: hover) {
+		&:hover {
+			--curtain-color: var(--basic-green);
+		}
 	}
 
 	&:active {

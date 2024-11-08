@@ -41,8 +41,10 @@
 		--divided: none;
 	}
 
-	&:hover {
-		color: rgba($color: #000000, $alpha: 0.6);
+	@media (hover: hover) {
+		&:hover {
+			color: rgba($color: #000000, $alpha: 0.6);
+		}
 	}
 
 	&:active {
@@ -55,14 +57,14 @@
 			color: var(--basic-white);
 		}
 
-		&:hover {
-			@media (--only-desktop) {
+		@media (--only-desktop) and (hover: hover) {
+			&:hover {
 				color: rgba($color: #ffffff, $alpha: 0.6);
 			}
 		}
 
-		&:active {
-			@media (--only-desktop) {
+		@media (--only-desktop) {
+			&:active {
 				color: rgba($color: #ffffff, $alpha: 0.6);
 			}
 		}

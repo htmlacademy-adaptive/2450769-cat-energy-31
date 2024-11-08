@@ -3,8 +3,10 @@
 	background-color: var(--basic-green);
 	color: var(--basic-white);
 
-	&:hover {
-		background-color: var(--basic-green-2);
+	@media (hover: hover) {
+		&:hover {
+			background-color: var(--basic-green-2);
+		}
 	}
 
 	&:active {

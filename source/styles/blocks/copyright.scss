@@ -19,8 +19,10 @@
 		justify-content: space-between;
 	}
 
-	&:hover {
-		--icon-color: var(--basic-green);
+	@media (hover: hover) {
+		&:hover {
+			--icon-color: var(--basic-green);
+		}
 	}
 
 	&:active {
