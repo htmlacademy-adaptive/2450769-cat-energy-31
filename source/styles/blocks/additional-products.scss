@@ -26,6 +26,8 @@
 	@media (--only-desktop) {
 		font-size: 40px;
 		margin-left: -40px;
+		padding-top: 70px;
+		--divided-top: 90px;
 	}
 
 	&::after {

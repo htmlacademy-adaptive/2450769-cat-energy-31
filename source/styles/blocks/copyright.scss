@@ -25,6 +25,10 @@
 		}
 	}
 
+	&:focus {
+		--icon-color: var(--basic-green);
+	}
+
 	&:active {
 		opacity: 0.3;
 	}

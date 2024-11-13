@@ -99,7 +99,7 @@
 
 	@media (--only-tablet) {
 		width: 60%;
-		padding-top: 18px;
+		padding-top: 20px;
 		padding-left: 50px;
 	}
 
@@ -112,7 +112,7 @@
 	}
 
 	@media (--only-desktop) {
-		padding-top: 8px;
+		padding-top: 11px;
 	}
 
 	&--additional {
@@ -139,6 +139,7 @@
 
 		@media (--only-desktop) {
 			padding: 0;
+			margin-top: -6px;
 		}
 	}
 }
@@ -188,6 +189,10 @@
 		grid-row: 2 / 3;
 		padding-top: 15px;
 	}
+
+	@media (--only-desktop) {
+		padding-top: 11px;
+	}
 }
 
 .card__link {
@@ -199,7 +204,7 @@
 
 	@media (--not-mobile) {
 		grid-row: 1 / 2;
-		margin-top: -70px;
+		margin-top: -72px;
 	}
 
 	&--show-more {
@@ -213,7 +218,7 @@
 
 .card__image {
 	@media (--only-mobile) {
-		padding: 5px 0 0 35px;
+		padding: 6px 0 0 32px;
 	}
 }
 
@@ -227,6 +232,7 @@
 	color: #ffffff;
 	text-decoration: none;
 	padding: 10px 0 10px 0;
+	height: fit-content;
 
 
 	@media (--only-mobile) {
@@ -240,7 +246,7 @@
 	}
 
 	@media (--only-desktop) {
-		margin-top: 45px;
+		margin-top: 40px;
 	}
 
 	&--additional {

@@ -109,6 +109,10 @@
 	margin: 0;
 	box-sizing: border-box;
 
+	@media (--only-desktop) {
+		padding: 10px;
+	}
+
 	&:invalid {
 		border: 1px solid #ff8282;
 	}
@@ -131,5 +135,9 @@
 
 	@media (--only-mobile) {
 		margin-top: 15px;
+	}
+
+	@media (--only-desktop) {
+		margin-left: -4px;
 	}
 }

@@ -83,6 +83,10 @@
 		}
 	}
 
+	&:focus {
+		--curtain-color: var(--basic-green);
+	}
+
 	&:active {
 		opacity: 0.6;
 	}

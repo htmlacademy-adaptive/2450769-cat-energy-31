@@ -39,6 +39,10 @@
 		--is-divided: none;
 	}
 
+	@media (--only-tablet) {
+		--is-divided: none;
+	}
+
 	@media (--not-mobile) {
 		--is-divided: "";
 		padding-top: 13px;
@@ -55,6 +59,7 @@
 		@media (--only-desktop) {
 			padding: 0;
 			padding-left: 109px;
+			--position-bt: -8px;
 		}
 	}
 
@@ -65,7 +70,7 @@
 		width: 100%;
 		height: 1px;
 		background-color: var(--special-grey);
-		bottom: -8px;
+		bottom: var(--position-bt, -5px);
 	}
 }
 

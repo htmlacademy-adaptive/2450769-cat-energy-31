@@ -1,29 +1,29 @@
 {% macro header() %}
 
-	<header class="main-header page__centerer">
-		<a class="main-header__logo logo" href="{{ project.root }}/">
-			<picture>
-				<source type="image/svg+xml" media="(width >= 1280px)" srcset="{{ project.root }}/images/logo-1280.svg" width="70" height="59">
-				<source type="image/svg+xml" media="(width >= 768px)" srcset="{{ project.root }}/images/logo-768.svg" width="60" height="50">
-				<img src="images/logo.svg" srcset="{{ project.root }}/images/logo.svg" width="33" height="38" alt="Знак Cat Energy">
-			</picture>
-			<img class="logo__text" src="{{ project.root }}/images/logo-text.svg" width="118" height="21" alt="Логотип Сat Energy">
-		</a>
+<header class="main-header page__centerer">
+	<a class="main-header__logo logo" href="{{ project.root }}/">
+		<picture>
+			<source type="image/svg+xml" media="(width >= 1280px)" srcset="{{ project.root }}/images/logo-1280.svg" width="70" height="59">
+			<source type="image/svg+xml" media="(width >= 768px)" srcset="{{ project.root }}/images/logo-768.svg" width="60" height="50">
+			<img src="images/logo.svg" srcset="{{ project.root }}/images/logo.svg" width="33" height="38" alt="Знак Cat Energy">
+		</picture>
+		<img class="logo__text" src="{{ project.root }}/images/logo-text.svg" width="118" height="21" alt="Логотип Сat Energy">
+	</a>
 
-		<nav class="main-header__nav main-nav">
-			<button class="main-nav__nav-toggle" type="button" aria-controls="main-nav">
-				<span class="visually-hidden">Меню</span>
-			</button>
-			<div class="main-nav__wrapper" id="main-nav">
-				<ul class="main-nav__list nav-list">
-					{%- for link in navLinks %}
-					<li class="nav-list__item">
-						<a class="nav-list__link {{ " nav-list__link--white-link" if page.link === "/" }}" href="{{ project.root }}{{ link.path }}" {{ "aria-current=page" if link.path === page.link }}>{{ link.text }}</a>
-					</li>
-					{%- endfor %}
-				</ul>
-			</div>
-		</nav>
-	</header>
+	<nav class="main-header__nav main-nav">
+		<button class="main-nav__nav-toggle" type="button" aria-controls="main-nav" hidden>
+			<span class="visually-hidden">Меню</span>
+		</button>
+		<div class="main-nav__wrapper" id="main-nav">
+			<ul class="main-nav__list nav-list">
+				{%- for link in navLinks %}
+				<li class="nav-list__item">
+					<a class="nav-list__link {{ " nav-list__link--white-link" if page.link==="/" }}" href="{{ project.root }}{{ link.path }}" {{ "aria-current=page" if link.path===page.link }}>{{ link.text }}</a>
+				</li>
+				{%- endfor %}
+			</ul>
+		</div>
+	</nav>
+</header>
 
 {% endmacro %}

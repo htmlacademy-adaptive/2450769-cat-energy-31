@@ -12,7 +12,7 @@
 
 .main-nav__nav-toggle {
 	position: absolute;
-	top: 20px;
+	top: -30px;
 	right: 0;
 	border: none;
 	background-color: inherit;
@@ -75,7 +75,6 @@
 	@media (--only-mobile) {
 		display: grid;
 		justify-items: center;
-		margin-bottom: -10px;
 	}
 
 	@media (--only-tablet) {

@@ -1,25 +1,25 @@
 {% macro footer() %}
 
-	<footer class="main-footer ">
-		<div class="main-footer__wrapper page__centerer">
-			<a class="main-footer__logo logo logo--footer" href="{{ project.root }}/">
-				<img class="logo__text" src="images/logo-text.svg" srcset="{{ project.root }}/images/logo-text.svg" width="128" height="24" alt="Логотип Сat Energy">
-			</a>
-			<ul class="main-footer__social social">
-				{% for link in socialLinks -%}
-				<li class="social__item">
-					<a class="social__link social__link--icon_{{ link.name }}" href="{{ link.path }}">
-						<span class="visually-hidden">{{ link.text }}</span>
-					</a>
-				</li>
-				{% endfor -%}
-			</ul>
-			<div class="main-footer__copyright copyright">
-				<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-					HTML Academy
+<footer class="main-footer ">
+	<div class="main-footer__wrapper page__centerer">
+		<a class="main-footer__logo logo logo--footer" href="{{ project.root }}/">
+			<img class="logo__text logo__text--footer" src="images/logo-text.svg" srcset="{{ project.root }}/images/logo-text.svg" width="128" height="24" alt="Логотип Сat Energy">
+		</a>
+		<ul class="main-footer__social social">
+			{% for link in socialLinks -%}
+			<li class="social__item">
+				<a class="social__link social__link--icon_{{ link.name }}" href="{{ link.path }}">
+					<span class="visually-hidden">{{ link.text }}</span>
 				</a>
-			</div>
+			</li>
+			{% endfor -%}
+		</ul>
+		<div class="main-footer__copyright copyright">
+			<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+				HTML Academy
+			</a>
 		</div>
-	</footer>
+	</div>
+</footer>
 
 {% endmacro %}
