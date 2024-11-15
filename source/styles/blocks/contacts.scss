@@ -78,9 +78,10 @@
 		line-height: 125%;
 	}
 
-	br {
+	span::after {
 		@media (--not-mobile) {
-			margin-bottom: 1lh;
+			content: "\A";
+			white-space: pre;
 		}
 	}
 }

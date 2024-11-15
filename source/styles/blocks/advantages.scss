@@ -47,16 +47,18 @@
 		font-size: 36px;
 		line-height: 100%;
 		padding-bottom: 25px;
-		--icon-size: 270px;
+		--icon-size: 280px;
 		--icon-position: inline-end;
-		--icon-margin-top: -20px;
+		--icon-margin-top: -23px;
+		--icon-margin-right: -8px;
+		--icon-margin-bottom: -7px;
 	}
 
 	@media (--only-desktop) {
 		font-size: 36px;
 		line-height: 100%;
-		--icon-size: 140px;
 		padding: 55px 0 73px 10px;
+		--icon-size: 140px;
 		--icon-margin-top: -50px;
 		--icon-margin-right: 43px;
 	}
@@ -81,6 +83,7 @@
 		background-size: contain;
 		margin-top: var(--icon-margin-top, 1px);
 		margin-right: var(--icon-margin-right, 0);
+		margin-bottom: var(--icon-margin-bottom, 0);
 	}
 }
 
@@ -143,22 +146,20 @@
 	color: #000000;
 	text-decoration: none;
 	display: inline flex;
-	gap: 17px;
-	padding-top: 43px;
+	gap: 15px;
+	margin-top: 43px;
 
-	@media (--only-tablet) {
+	@media (--not-mobile) {
 		font-size: 20px;
-		padding-top: 58px;
-		gap: 27px;
+		margin-top: 58px;
+		gap: 25px;
 		--icon-arrow-padding-top: 7px;
 	}
 
 	@media (--only-desktop) {
-		font-size: 20px;
-		padding-left: 32px;
-		padding-top: 33px;
-		padding-bottom: 45px;
-		--icon-arrow-padding-top: 7px;
+		margin-left: 32px;
+		margin-top: 33px;
+		margin-bottom: 45px;
 	}
 
 	@media (hover: hover) {

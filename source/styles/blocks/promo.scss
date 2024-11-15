@@ -1,41 +1,37 @@
+@use "../common/image.scss" as *;
+
 .promo {
-	position: var(--bg-position, relative);
-
-
-	@media (--only-mobile) {
-		--bg-image: url("../../images/cat-licking@1x.avif");
-		--bg-width: 100%;
-		--top: 14px;
-	}
+	position: relative;
 
 	@media (--only-tablet) {
 		--is-bg: none;
 	}
 
-	@media (--only-desktop) {
-		--bg-position-left: 50%;
-		--bg-height: 652px;
-		--bg-position: static;
-		--bg-image: url("../../images/cat-licking-1280@2x.avif");
-		--bg-size: 1040px 694px;
-		--bg: 0px -40px;
-	}
-
 	&::before {
-		content: var(--is-bg, " ");
+		content: var(--is-bg, "");
 		position: absolute;
-		top: var(--top, 0);
-		left: var(--bg-position-left, 0);
+		z-index: -1;
+		top: var(--top, 14px);
+		left: var(--left, 0);
 		right: 0;
-		width: var(--bg-width, 50%);
-		height: var(--bg-height, 302px);
-		background-image: var(--bg-image);
-		background-size: var(--bg-size, content);
+		bottom: var(--bottom, 179px);
+		border-image: fill 0 linear-gradient(rgb(104 183 56 / 0.85) 0 100%);
+		background-color: #434448;
 		background-repeat: no-repeat;
 		background-position: var(--bg, center);
-		background-color: #434448;
-		z-index: -1;
-		border-image: fill 0 linear-gradient(rgb(104 183 56 / 0.85) 0 100%);
+		background-size: var(--bg-size, content);
+
+		@include image("cat-licking");
+
+		@media (--only-desktop) {
+			--top: -100vh;
+			--left: 50%;
+			--bottom: -48px;
+			--bg-size: 1040px 694px;
+			--bg: bottom left;
+
+			@include image("cat-licking-1280");
+		}
 	}
 }
 
